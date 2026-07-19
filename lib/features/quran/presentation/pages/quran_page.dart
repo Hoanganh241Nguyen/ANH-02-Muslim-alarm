@@ -345,6 +345,26 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
               ),
             ),
           );
+        } else if (_tabController.index == 1) {
+          // Tab Juz
+          return SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            sliver: SliverGrid(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                mainAxisSpacing: 16,
+                crossAxisSpacing: 16,
+                childAspectRatio: 0.8,
+              ),
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  final juzNumber = index + 1;
+                  return _buildJuzItem(juzNumber, provider);
+                },
+                childCount: 30,
+              ),
+            ),
+          );
         } else if (_tabController.index == 2) {
           // Tab Bookmarks
           if (provider.bookmarks.isEmpty) {
@@ -462,6 +482,67 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
             ),
           );
         },
+      ),
+    );
+  }
+
+  Widget _buildJuzItem(int juzNumber, QuranProvider provider) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.7),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.white.withOpacity(0.5)),
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () {
+            // Logic to go to first surah of Juz
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('Juz $juzNumber selected')),
+            );
+          },
+          borderRadius: BorderRadius.circular(20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 50,
+                height: 50,
+                decoration: const BoxDecoration(
+                  color: AppColors.accentEmerald,
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: Text(
+                    '$juzNumber',
+                    style: const TextStyle(
+                      color: AppColors.emerald,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
+              const Text(
+                'JUZ',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.primaryText,
+                  letterSpacing: 1,
+                ),
+              ),
+              Text(
+                'Part $juzNumber',
+                style: const TextStyle(
+                  fontSize: 12,
+                  color: AppColors.secondaryText,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

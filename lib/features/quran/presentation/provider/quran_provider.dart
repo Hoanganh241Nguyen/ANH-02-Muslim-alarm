@@ -94,6 +94,8 @@ class QuranProvider extends ChangeNotifier {
   final List<Ayah> _bookmarks = [];
   List<Ayah> get bookmarks => _bookmarks;
 
+  List<int> get juzList => List.generate(30, (index) => index + 1);
+
   void toggleBookmark(Ayah ayah) {
     final index = _bookmarks.indexWhere(
       (b) => b.number == ayah.number && b.surahNumber == ayah.surahNumber,
