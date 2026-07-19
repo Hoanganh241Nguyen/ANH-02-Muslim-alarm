@@ -62,8 +62,9 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   ElevatedButton(
-                    onPressed: () {
-                      BatteryService.requestIgnoreBatteryOptimizations();
+                    onPressed: () async {
+                      await BatteryService.requestIgnoreBatteryOptimizations();
+                      if (mounted) Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.emerald,
@@ -75,8 +76,9 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const SizedBox(height: 8),
                   ElevatedButton(
-                    onPressed: () {
-                      BatteryService.openAutostartSettings();
+                    onPressed: () async {
+                      await BatteryService.openAutostartSettings();
+                      if (mounted) Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.emerald,
