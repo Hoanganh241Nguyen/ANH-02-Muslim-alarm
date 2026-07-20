@@ -10,7 +10,8 @@ class SplashPage extends StatefulWidget {
   State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateMixin {
+class _SplashPageState extends State<SplashPage>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _fadeAnimation;
 
@@ -21,9 +22,10 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
       vsync: this,
       duration: const Duration(milliseconds: 1500),
     );
-    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeIn),
-    );
+    _fadeAnimation = Tween<double>(
+      begin: 0.0,
+      end: 1.0,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeIn));
     _controller.forward();
     _initializeApp();
   }
@@ -39,7 +41,9 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
     try {
       await Future.wait([
         AudioDownloadService().downloadAdhanFiles(),
-        Future.delayed(const Duration(seconds: 3)), // Đảm bảo splash hiện ít nhất 3s để cảm nhận UI
+        Future.delayed(
+          const Duration(seconds: 3),
+        ), // Đảm bảo splash hiện ít nhất 3s để cảm nhận UI
       ]);
     } catch (e) {
       debugPrint('Error during initialization: $e');
@@ -48,7 +52,8 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
     if (mounted) {
       Navigator.of(context).pushReplacement(
         PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) => const MainPage(),
+          pageBuilder: (context, animation, secondaryAnimation) =>
+              const MainPage(),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return FadeTransition(opacity: animation, child: child);
           },
@@ -75,9 +80,9 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.black.withOpacity(0.2),
+                  Colors.black.withValues(alpha: 0.2),
                   Colors.transparent,
-                  Colors.black.withOpacity(0.6),
+                  Colors.black.withValues(alpha: 0.6),
                 ],
               ),
             ),
@@ -96,7 +101,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
+                        color: Colors.black.withValues(alpha: 0.1),
                         blurRadius: 20,
                         spreadRadius: 5,
                       ),
@@ -122,22 +127,19 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
                 Text(
                   'PRAYER • QURAN • QIBLA',
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.8),
+                    color: Colors.white.withValues(alpha: 0.8),
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     letterSpacing: 3,
                   ),
                 ),
                 const Spacer(flex: 3),
-                const SpinKitThreeBounce(
-                  color: Colors.white,
-                  size: 24.0,
-                ),
+                const SpinKitThreeBounce(color: Colors.white, size: 24.0),
                 const SizedBox(height: 24),
                 Text(
                   'Preparing your spiritual journey...',
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.5),
+                    color: Colors.white.withValues(alpha: 0.5),
                     fontSize: 12,
                     fontStyle: FontStyle.italic,
                     letterSpacing: 1,

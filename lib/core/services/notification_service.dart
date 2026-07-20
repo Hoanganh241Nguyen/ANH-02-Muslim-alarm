@@ -45,6 +45,7 @@ class NotificationService {
           channelDescription: 'Immediate alerts',
           importance: Importance.max,
           priority: Priority.max,
+          playSound: false,
           color: AppColors.emerald,
         ),
         iOS: const DarwinNotificationDetails(
@@ -130,8 +131,7 @@ class NotificationService {
         'Fajr Prayer Alarms',
         description: 'Urgent notifications for Fajr prayer',
         importance: Importance.max,
-        playSound: true,
-        sound: RawResourceAndroidNotificationSound('adhan_fajr'),
+        playSound: false,
         enableVibration: true,
         enableLights: true,
       ),
@@ -143,8 +143,7 @@ class NotificationService {
         'Regular Prayer Alarms',
         description: 'Notifications for Dhuhr, Asr, Maghrib, Isha',
         importance: Importance.max,
-        playSound: true,
-        sound: RawResourceAndroidNotificationSound('adhan'),
+        playSound: false,
         enableVibration: true,
         enableLights: true,
       ),
@@ -207,21 +206,25 @@ class NotificationService {
 
     if (scheduledDate.isBefore(DateTime.now())) return;
 
+    final prayerName = payload ?? title;
+    final soundAsset = _soundAssetForPrayer(prayerName);
+
     if (defaultTargetPlatform == TargetPlatform.android) {
       await _nativeAlarmChannel.invokeMethod<bool>('scheduleNativeAlarm', {
         'id': id,
         'title': title,
         'body': body,
-        'payload': payload ?? title,
+        'payload': prayerName,
+        'prayerName': prayerName,
+        'soundAsset': soundAsset,
         'triggerAtMillis': scheduledDate.millisecondsSinceEpoch,
       });
       debugPrint('Scheduled native prayer alarm "$title" at $scheduledDate');
       return;
     }
 
-    final isFajr = (payload ?? title).toLowerCase().contains('fajr');
+    final isFajr = prayerName.toLowerCase().contains('fajr');
     final channelId = isFajr ? 'prayer_fajr_channel' : 'prayer_regular_channel';
-    final soundFile = isFajr ? 'adhan_fajr' : 'adhan';
 
     try {
       await _notificationsPlugin.zonedSchedule(
@@ -239,8 +242,7 @@ class NotificationService {
             fullScreenIntent: true,
             category: AndroidNotificationCategory.alarm,
             audioAttributesUsage: AudioAttributesUsage.alarm,
-            playSound: true,
-            sound: RawResourceAndroidNotificationSound(soundFile),
+            playSound: false,
             visibility: NotificationVisibility.public,
             color: AppColors.emerald,
             ongoing: true,
@@ -251,7 +253,7 @@ class NotificationService {
             presentAlert: true,
             presentSound: true,
             presentBanner: true,
-            sound: '$soundFile.wav',
+            sound: '$soundAsset.wav',
             interruptionLevel: InterruptionLevel.critical,
           ),
         ),
@@ -274,5 +276,9 @@ class NotificationService {
   Future<String?> getNativeLaunchPayload() async {
     if (defaultTargetPlatform != TargetPlatform.android) return null;
     return _nativeAlarmChannel.invokeMethod<String>('getInitialAlarmPayload');
+  }
+
+  String _soundAssetForPrayer(String prayerName) {
+    return prayerName.toLowerCase().contains('fajr') ? 'adhan_fajr' : 'adhan';
   }
 }

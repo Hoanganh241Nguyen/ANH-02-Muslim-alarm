@@ -206,49 +206,6 @@ class _HomePageState extends State<HomePage> {
             ),
             const Spacer(),
             IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder:
-                        (context) =>
-                            const PrayerAlarmPage(prayerName: 'Debug Fajr'),
-                  ),
-                );
-              },
-              icon: const Icon(
-                Icons.bug_report_outlined,
-                color: Colors.redAccent,
-                size: 20,
-              ),
-              padding: EdgeInsets.zero,
-              constraints: const BoxConstraints(),
-            ),
-            const SizedBox(width: 12),
-            IconButton(
-              tooltip: 'Test alarm 20s',
-              onPressed: _scheduleTestPrayerAlarm,
-              icon: const Icon(
-                Icons.timer_outlined,
-                color: Colors.orangeAccent,
-                size: 20,
-              ),
-              padding: EdgeInsets.zero,
-              constraints: const BoxConstraints(),
-            ),
-            if (_testAlarmRemainingSeconds > 0) ...[
-              const SizedBox(width: 4),
-              Text(
-                '${_testAlarmRemainingSeconds}s',
-                style: const TextStyle(
-                  color: Colors.orangeAccent,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-            ],
-            const SizedBox(width: 12),
-            IconButton(
               tooltip: 'Alarm permissions',
               onPressed: () {
                 NotificationService().requestPermissions(

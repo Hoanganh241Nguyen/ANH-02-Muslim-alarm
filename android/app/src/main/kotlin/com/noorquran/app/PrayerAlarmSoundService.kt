@@ -17,6 +17,7 @@ import android.os.Vibrator
 import android.os.VibratorManager
 import android.util.Log
 import androidx.core.content.ContextCompat
+import java.io.File
 
 class PrayerAlarmSoundService : Service() {
     private var mediaPlayer: MediaPlayer? = null
@@ -81,8 +82,13 @@ class PrayerAlarmSoundService : Service() {
 
         mediaPlayer = MediaPlayer().apply {
             setAudioAttributes(alarmAudioAttributes())
-            val flutterAsset = openFlutterAudioAsset(alarm.soundAsset)
-            if (flutterAsset != null) {
+            val localFile = resolveDownloadedSoundFile(alarm.soundAsset)
+            val flutterAsset = if (localFile == null) openFlutterAudioAsset(alarm.soundAsset) else null
+            if (localFile != null) {
+                Log.d(TAG, "Playing downloaded prayer alarm sound: ${localFile.absolutePath}")
+                setDataSource(localFile.absolutePath)
+            } else if (flutterAsset != null) {
+                Log.d(TAG, "Playing bundled Flutter prayer alarm sound: ${alarm.soundAsset}")
                 setDataSource(
                     flutterAsset.fileDescriptor,
                     flutterAsset.startOffset,
@@ -90,7 +96,20 @@ class PrayerAlarmSoundService : Service() {
                 )
                 flutterAsset.close()
             } else {
-                setDataSource(this@PrayerAlarmSoundService, resolveSoundUri(alarm.soundAsset))
+                val rawUri = resolveSoundUri(alarm.soundAsset)
+                if (rawUri != null) {
+                    Log.d(TAG, "Playing raw prayer alarm sound: $rawUri")
+                    setDataSource(this@PrayerAlarmSoundService, rawUri)
+                } else {
+                    val remoteUrl = remoteSoundUrl(alarm.soundAsset)
+                    if (remoteUrl != null) {
+                        Log.w(TAG, "Prayer alarm sound is not local; streaming fallback: $remoteUrl")
+                        setDataSource(remoteUrl)
+                    } else {
+                        Log.w(TAG, "Prayer alarm sound not found; using fallback tone")
+                        setDataSource(this@PrayerAlarmSoundService, fallbackSoundUri())
+                    }
+                }
             }
             isLooping = true
             setOnPreparedListener { it.start() }
@@ -146,25 +165,55 @@ class PrayerAlarmSoundService : Service() {
         }
     }
 
-    private fun resolveSoundUri(soundAsset: String): Uri {
-        val resourceName = soundAsset.substringBeforeLast(".")
+    private fun resolveSoundUri(soundAsset: String): Uri? {
+        val resourceName = normalizeSoundName(soundAsset)
         val resId = resources.getIdentifier(resourceName, "raw", packageName)
-        val appSoundId = if (resId != 0) resId else R.raw.prayer_alarm_tone
-        return Uri.parse("android.resource://$packageName/$appSoundId")
+        return if (resId != 0) Uri.parse("android.resource://$packageName/$resId") else null
+    }
+
+    private fun fallbackSoundUri(): Uri =
+        Uri.parse("android.resource://$packageName/${R.raw.prayer_alarm_tone}")
+
+    private fun resolveDownloadedSoundFile(soundAsset: String): File? {
+        val name = normalizeSoundName(soundAsset)
+        val candidates = listOf(
+            File(getDir("flutter", Context.MODE_PRIVATE), "$name.mp3"),
+            File(getDir("flutter", Context.MODE_PRIVATE), "$name.wav"),
+            File(getDir("flutter", Context.MODE_PRIVATE), "$name.ogg"),
+            File(filesDir, "$name.mp3"),
+            File(filesDir, "$name.wav"),
+            File(filesDir, "$name.ogg"),
+            File(cacheDir, "$name.mp3"),
+            File(cacheDir, "$name.wav"),
+            File(cacheDir, "$name.ogg"),
+        )
+        return candidates.firstOrNull { it.exists() && it.length() > 0L }
     }
 
     private fun openFlutterAudioAsset(soundAsset: String) =
+        normalizeSoundName(soundAsset).let { name ->
         listOf(
-            "flutter_assets/assets/audio/$soundAsset",
-            "flutter_assets/assets/audio/$soundAsset.mp3",
-            "flutter_assets/assets/audio/$soundAsset.wav",
-            "flutter_assets/assets/audio/$soundAsset.ogg",
+            "flutter_assets/assets/audio/$name",
+            "flutter_assets/assets/audio/$name.mp3",
+            "flutter_assets/assets/audio/$name.wav",
+            "flutter_assets/assets/audio/$name.ogg",
         ).firstNotNullOfOrNull { path ->
             try {
                 assets.openFd(path)
             } catch (_: Exception) {
                 null
             }
+        }
+    }
+
+    private fun normalizeSoundName(soundAsset: String): String =
+        soundAsset.substringAfterLast('/').substringBeforeLast(".")
+
+    private fun remoteSoundUrl(soundAsset: String): String? =
+        when (normalizeSoundName(soundAsset)) {
+            "adhan_fajr" -> "https://www.islamcan.com/common/adhan/adhan2.mp3"
+            "adhan" -> "https://www.islamcan.com/common/adhan/adhan1.mp3"
+            else -> null
         }
 
     private fun alarmAudioAttributes(): AudioAttributes =
@@ -184,11 +233,15 @@ class PrayerAlarmSoundService : Service() {
         }
 
         fun stop(context: Context) {
-            context.startService(
-                Intent(context, PrayerAlarmSoundService::class.java).apply {
-                    action = ACTION_STOP
-                },
-            )
+            val intent = Intent(context, PrayerAlarmSoundService::class.java).apply {
+                action = ACTION_STOP
+            }
+            try {
+                context.startService(intent)
+            } catch (e: IllegalStateException) {
+                Log.w(TAG, "Could not send stop action to alarm service; stopping service directly", e)
+            }
+            context.stopService(Intent(context, PrayerAlarmSoundService::class.java))
         }
     }
 }

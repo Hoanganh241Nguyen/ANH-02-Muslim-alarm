@@ -65,10 +65,14 @@ class _PrayerAlarmScreenState extends State<PrayerAlarmScreen>
 
     return Scaffold(
       backgroundColor: const Color(0xFF020F12),
-      body: Dismissible(
-        key: ValueKey('prayer-alarm-${alarm.id}'),
-        direction: DismissDirection.down,
-        onDismissed: (_) => _dismiss(),
+      body: GestureDetector(
+        behavior: HitTestBehavior.translucent,
+        onVerticalDragEnd: (details) {
+          final velocity = details.primaryVelocity ?? 0;
+          if (velocity.abs() > 220) {
+            _dismiss();
+          }
+        },
         child: Stack(
           fit: StackFit.expand,
           children: [
@@ -162,7 +166,7 @@ class _PrayerAlarmScreenState extends State<PrayerAlarmScreen>
                     ),
                     const SizedBox(height: 20),
                     Text(
-                      'Vuốt để tắt',
+                      'Vuốt lên hoặc xuống để tắt',
                       style: TextStyle(
                         color: Colors.white.withValues(alpha: .55),
                         fontSize: 13,

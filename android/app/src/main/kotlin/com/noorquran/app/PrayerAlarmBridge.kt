@@ -42,10 +42,12 @@ class PrayerAlarmBridge(
                 }
                 "dismissAlarm" -> {
                     val id = call.argument<Int>("id") ?: PrayerAlarmReceiver.DEFAULT_ID
+                    (activity as? PrayerAlarmActivity)?.markDismissedByFlutter()
                     PrayerAlarmReceiver.dismiss(activity, id)
                     result.success(true)
                 }
                 "closeAlarmActivity" -> {
+                    (activity as? PrayerAlarmActivity)?.markDismissedByFlutter()
                     activity.finishAndRemoveTask()
                     result.success(true)
                 }

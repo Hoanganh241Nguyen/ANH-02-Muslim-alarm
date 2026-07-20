@@ -31,7 +31,7 @@ class _MainPageState extends State<MainPage> {
     const QiblaPage(),
     const QuranPage(),
     const TasbihPage(),
-    const GamificationPage(),
+    // const GamificationPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -79,7 +79,7 @@ class _MainPageState extends State<MainPage> {
                 _buildNavItem(1, Icons.explore_rounded, 'Qibla'),
                 _buildNavItem(2, Icons.menu_book_rounded, 'Quran'),
                 _buildNavItem(3, Icons.fingerprint_rounded, 'Tasbih'),
-                _buildNavItem(4, Icons.emoji_events_rounded, 'Leaderboard'),
+                // _buildNavItem(4, Icons.emoji_events_rounded, 'Leaderboard'),
               ],
             ),
           ),

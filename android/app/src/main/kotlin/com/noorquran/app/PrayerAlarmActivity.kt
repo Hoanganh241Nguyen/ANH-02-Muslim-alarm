@@ -10,6 +10,8 @@ import java.net.URLEncoder
 
 class PrayerAlarmActivity : FlutterActivity() {
     private var alarmBridge: PrayerAlarmBridge? = null
+    private var currentAlarmId: Int = PrayerAlarmReceiver.DEFAULT_ID
+    private var dismissedByFlutter = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         showOverLockScreen()
@@ -61,6 +63,7 @@ class PrayerAlarmActivity : FlutterActivity() {
 
     private fun openAlarm(intent: android.content.Intent?) {
         val alarm = PrayerAlarmData.fromIntent(intent ?: android.content.Intent())
+        currentAlarmId = alarm.id
         PrayerAlarmStore.markOpened(this, alarm.id)
         PrayerAlarmStore.delete(this, alarm.id)
         PrayerAlarmReceiver.createChannel(this)
@@ -70,6 +73,17 @@ class PrayerAlarmActivity : FlutterActivity() {
                 .notify(alarm.id, PrayerAlarmReceiver.buildAlarmNotification(this, alarm))
         } catch (_: SecurityException) {
         }
+    }
+
+    fun markDismissedByFlutter() {
+        dismissedByFlutter = true
+    }
+
+    override fun onDestroy() {
+        if (isFinishing && !dismissedByFlutter) {
+            PrayerAlarmReceiver.dismiss(this, currentAlarmId)
+        }
+        super.onDestroy()
     }
 
     private fun encode(value: String): String = URLEncoder.encode(value, "UTF-8")

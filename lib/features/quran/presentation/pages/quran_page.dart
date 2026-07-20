@@ -413,75 +413,109 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
 
   Widget _buildSurahItem(Surah surah, QuranProvider provider) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 12),
+      margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.7),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.white.withOpacity(0.5)),
+        color: Colors.white.withOpacity(0.8),
+        borderRadius: BorderRadius.circular(24),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.03),
+            blurRadius: 15,
+            offset: const Offset(0, 8),
+          ),
+        ],
+        border: Border.all(color: Colors.white.withOpacity(0.6)),
       ),
-      child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        leading: Stack(
-          alignment: Alignment.center,
-          children: [
-            const Icon(Icons.star_outline_rounded, color: AppColors.emerald, size: 40),
-            Text(
-              '${surah.number}',
-              style: const TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.bold,
-                color: AppColors.primaryText,
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SurahDetailPage(surah: surah),
               ),
+            );
+          },
+          borderRadius: BorderRadius.circular(24),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              children: [
+                // Surah Number
+                Container(
+                  width: 48,
+                  height: 48,
+                  decoration: BoxDecoration(
+                    color: AppColors.accentEmerald.withOpacity(0.5),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Center(
+                    child: Text(
+                      '${surah.number}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.emerald,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                // Names
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        surah.englishName,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 18,
+                          color: AppColors.primaryText,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        children: [
+                          Text(
+                            surah.revelationType.toUpperCase(),
+                            style: TextStyle(
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.secondaryText.withOpacity(0.6),
+                              letterSpacing: 0.8,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            '• ${surah.numberOfAyahs} VERSES',
+                            style: TextStyle(
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                              color: AppColors.secondaryText.withOpacity(0.6),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                // Arabic
+                Text(
+                  surah.name,
+                  style: const TextStyle(
+                    fontFamily: 'Arabic',
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.emerald,
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-        title: Text(
-          surah.englishName,
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-            color: AppColors.primaryText,
           ),
         ),
-        subtitle: Row(
-          children: [
-            Text(
-              surah.revelationType.toUpperCase(),
-              style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.secondaryText),
-            ),
-            const SizedBox(width: 8),
-            Container(width: 3, height: 3, decoration: const BoxDecoration(color: Colors.grey, shape: BoxShape.circle)),
-            const SizedBox(width: 8),
-            Text(
-              '${surah.numberOfAyahs} AYAHS',
-              style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.secondaryText),
-            ),
-          ],
-        ),
-        trailing: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              surah.name,
-              style: const TextStyle(
-                fontFamily: 'Arabic',
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: AppColors.emerald,
-              ),
-            ),
-            const SizedBox(width: 8),
-            const Icon(Icons.chevron_right_rounded, color: AppColors.secondaryText),
-          ],
-        ),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => SurahDetailPage(surah: surah),
-            ),
-          );
-        },
       ),
     );
   }
@@ -489,37 +523,62 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
   Widget _buildJuzItem(int juzNumber, QuranProvider provider) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.7),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.white.withOpacity(0.5)),
+        color: Colors.white.withOpacity(0.8),
+        borderRadius: BorderRadius.circular(28),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.emerald.withOpacity(0.05),
+            blurRadius: 15,
+            offset: const Offset(0, 5),
+          ),
+        ],
+        border: Border.all(color: Colors.white.withOpacity(0.6)),
       ),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () {
-            // Logic to go to first surah of Juz
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('Juz $juzNumber selected')),
+          onTap: () async {
+            // Find first surah of this juz
+            final surah = provider.surahs.firstWhere(
+              (s) => _getJuzForSurah(s.number) >= juzNumber,
+              orElse: () => provider.surahs.first,
+            );
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SurahDetailPage(surah: surah),
+              ),
             );
           },
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(28),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                width: 50,
-                height: 50,
-                decoration: const BoxDecoration(
-                  color: AppColors.accentEmerald,
+                width: 54,
+                height: 54,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [AppColors.emerald, AppColors.emerald.withOpacity(0.7)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
                   shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.emerald.withOpacity(0.3),
+                      blurRadius: 10,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
                 ),
                 child: Center(
                   child: Text(
                     '$juzNumber',
                     style: const TextStyle(
-                      color: AppColors.emerald,
+                      color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 18,
+                      fontSize: 20,
                     ),
                   ),
                 ),
@@ -528,16 +587,18 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
               const Text(
                 'JUZ',
                 style: TextStyle(
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w900,
                   color: AppColors.primaryText,
-                  letterSpacing: 1,
+                  fontSize: 13,
+                  letterSpacing: 1.5,
                 ),
               ),
               Text(
                 'Part $juzNumber',
-                style: const TextStyle(
-                  fontSize: 12,
-                  color: AppColors.secondaryText,
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.secondaryText.withOpacity(0.6),
                 ),
               ),
             ],
@@ -547,36 +608,57 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
     );
   }
 
+  int _getJuzForSurah(int surahNumber) {
+    // Map of Surah numbers that start a new Juz (simplified)
+    final juzStarts = {
+      1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+      11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20,
+      21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30
+    };
+    return juzStarts[surahNumber] ?? 1;
+  }
+
   Widget _buildBookmarkItem(dynamic ayah, Surah surah, QuranProvider provider) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 12),
+      margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.7),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.white.withOpacity(0.5)),
+        color: Colors.white.withOpacity(0.8),
+        borderRadius: BorderRadius.circular(24),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.03),
+            blurRadius: 15,
+            offset: const Offset(0, 8),
+          ),
+        ],
+        border: Border.all(color: Colors.white.withOpacity(0.6)),
       ),
       child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         leading: Container(
-          width: 40,
-          height: 40,
+          width: 44,
+          height: 44,
           decoration: BoxDecoration(
-            color: AppColors.accentEmerald,
-            borderRadius: BorderRadius.circular(12),
+            color: AppColors.accentEmerald.withOpacity(0.5),
+            borderRadius: BorderRadius.circular(14),
           ),
-          child: const Icon(Icons.bookmark_rounded, color: AppColors.emerald, size: 20),
+          child: const Icon(Icons.bookmark_rounded, color: AppColors.emerald, size: 22),
         ),
         title: Text(
-          '${surah.englishName} : ${ayah.number}',
-          style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.primaryText),
-        ),
-        subtitle: Text(
-          ayah.text,
+          '${surah.englishName} : Verse ${ayah.number}',
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
-          style: const TextStyle(fontFamily: 'Arabic', color: AppColors.secondaryText),
+          style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.primaryText, fontSize: 16),
         ),
-        trailing: const Icon(Icons.chevron_right_rounded, color: AppColors.secondaryText),
+        subtitle: Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Text(
+            ayah.text,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(fontFamily: 'Arabic', color: AppColors.secondaryText, fontSize: 18),
+          ),
+        ),
         onTap: () {
           Navigator.push(
             context,

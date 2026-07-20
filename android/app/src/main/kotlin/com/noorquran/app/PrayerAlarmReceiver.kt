@@ -46,7 +46,7 @@ class PrayerAlarmReceiver : BroadcastReceiver() {
     }
 
     companion object {
-        const val CHANNEL_ID = "prayer_alarm_channel"
+        const val CHANNEL_ID = "prayer_alarm_channel_app_sound_v2"
         const val ACTION_OPEN_ALARM = "com.noorquran.app.action.OPEN_ALARM"
         const val ACTION_DISMISS_ALARM = "com.noorquran.app.action.DISMISS_ALARM"
         const val ACTION_SNOOZE_ALARM = "com.noorquran.app.action.SNOOZE_ALARM"
