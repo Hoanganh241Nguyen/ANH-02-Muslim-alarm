@@ -206,10 +206,14 @@ class _HomePageState extends State<HomePage> {
             ),
             const Spacer(),
             IconButton(
-              tooltip: 'Alarm permissions',
+              tooltip: 'Settings',
               onPressed: () {
-                NotificationService().requestPermissions(
-                  includeAlarmSettings: true,
+                showModalBottomSheet(
+                  context: context,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+                  ),
+                  builder: (context) => _buildSettingsSheet(context),
                 );
               },
               icon: const Icon(
@@ -421,6 +425,53 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildSettingsSheet(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(24),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Cài đặt',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: AppColors.primaryText,
+            ),
+          ),
+          const SizedBox(height: 24),
+          ListTile(
+            leading: const Icon(Icons.notifications_active_outlined, color: AppColors.emerald),
+            title: const Text('Quyền thông báo & Báo thức'),
+            subtitle: const Text('Đảm bảo báo thức hoạt động chính xác'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.pop(context);
+              NotificationService().requestPermissions(includeAlarmSettings: true);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.battery_saver_outlined, color: Colors.orange),
+            title: const Text('Tối ưu pin'),
+            subtitle: const Text('Tắt tối ưu để không bị lỡ giờ cầu nguyện'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () {
+              Navigator.pop(context);
+              _showBatteryOptimizationDialog();
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.info_outline, color: Colors.blue),
+            title: const Text('Phiên bản'),
+            subtitle: const Text('1.0.0'),
+          ),
+          const SizedBox(height: 16),
+        ],
+      ),
     );
   }
 }
