@@ -1329,3 +1329,4 @@ BoxDecoration _cardDecoration({required double radius, double opacity = .74}) {
     ],
   );
 }
+

@@ -4,6 +4,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz;
 import '../constants/app_colors.dart';
+import '../prayer_alarm/prayer_alarm_model.dart';
 
 class NotificationService {
   static final NotificationService _instance = NotificationService._internal();
@@ -45,13 +46,15 @@ class NotificationService {
           channelDescription: 'Immediate alerts',
           importance: Importance.max,
           priority: Priority.max,
-          playSound: false,
+          playSound: true,
+          sound: const RawResourceAndroidNotificationSound('prayer_alarm_tone'),
           color: AppColors.emerald,
         ),
         iOS: const DarwinNotificationDetails(
           presentAlert: true,
           presentSound: true,
           presentBanner: true,
+          sound: 'prayer_alarm_tone.wav',
         ),
       ),
       payload: payload,
@@ -131,7 +134,8 @@ class NotificationService {
         'Fajr Prayer Alarms',
         description: 'Urgent notifications for Fajr prayer',
         importance: Importance.max,
-        playSound: false,
+        playSound: true,
+        sound: RawResourceAndroidNotificationSound('prayer_alarm_tone'),
         enableVibration: true,
         enableLights: true,
       ),
@@ -143,7 +147,8 @@ class NotificationService {
         'Regular Prayer Alarms',
         description: 'Notifications for Dhuhr, Asr, Maghrib, Isha',
         importance: Importance.max,
-        playSound: false,
+        playSound: true,
+        sound: RawResourceAndroidNotificationSound('prayer_alarm_tone'),
         enableVibration: true,
         enableLights: true,
       ),
@@ -218,12 +223,13 @@ class NotificationService {
         'prayerName': prayerName,
         'soundAsset': soundAsset,
         'triggerAtMillis': scheduledDate.millisecondsSinceEpoch,
+        'prayerNameLocalized': PrayerAlarmModel.localizedName(prayerName),
       });
       debugPrint('Scheduled native prayer alarm "$title" at $scheduledDate');
       return;
     }
 
-    final isFajr = prayerName.toLowerCase().contains('fajr');
+    final isFajr = soundAsset == 'adhan_fajr';
     final channelId = isFajr ? 'prayer_fajr_channel' : 'prayer_regular_channel';
 
     try {
@@ -242,7 +248,8 @@ class NotificationService {
             fullScreenIntent: true,
             category: AndroidNotificationCategory.alarm,
             audioAttributesUsage: AudioAttributesUsage.alarm,
-            playSound: false,
+            playSound: true,
+            sound: const RawResourceAndroidNotificationSound('prayer_alarm_tone'),
             visibility: NotificationVisibility.public,
             color: AppColors.emerald,
             ongoing: true,
@@ -279,6 +286,11 @@ class NotificationService {
   }
 
   String _soundAssetForPrayer(String prayerName) {
-    return prayerName.toLowerCase().contains('fajr') ? 'adhan_fajr' : 'adhan';
+    final name = prayerName.toLowerCase();
+    if (name.contains('fajr') || name.contains('bình minh') || name.contains('sáng')) {
+      return 'adhan_fajr';
+    }
+    // Các giờ khác dùng Adhan chung
+    return 'adhan';
   }
 }

@@ -46,6 +46,7 @@ class QuranProvider extends ChangeNotifier {
   List<Surah> get surahs => _filteredSurahs.isEmpty && _searchQuery.isEmpty ? _surahs : _filteredSurahs;
 
   String _searchQuery = "";
+  String get searchQuery => _searchQuery;
   
   void searchSurah(String query) {
     _searchQuery = query;

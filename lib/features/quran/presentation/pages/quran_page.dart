@@ -15,6 +15,7 @@ class QuranPage extends StatefulWidget {
 class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final TextEditingController _searchController = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
   bool _isSearching = false;
 
   @override
@@ -30,6 +31,7 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
   void dispose() {
     _tabController.dispose();
     _searchController.dispose();
+    _scrollController.dispose();
     super.dispose();
   }
 
@@ -43,10 +45,27 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
             _buildHeader(context),
             Expanded(
               child: CustomScrollView(
+                controller: _scrollController,
                 physics: const BouncingScrollPhysics(),
                 slivers: [
-                  SliverToBoxAdapter(child: _buildContinueReading()),
-                  SliverToBoxAdapter(child: _buildQuickAccess()),
+                  SliverToBoxAdapter(
+                    child: AnimatedSize(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeInOut,
+                      child: _isSearching
+                          ? const SizedBox.shrink()
+                          : _buildContinueReading(),
+                    ),
+                  ),
+                  SliverToBoxAdapter(
+                    child: AnimatedSize(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeInOut,
+                      child: _isSearching
+                          ? const SizedBox.shrink()
+                          : _buildQuickAccess(),
+                    ),
+                  ),
                   SliverToBoxAdapter(child: _buildSegmentedTabs()),
                   _buildSurahList(),
                 ],
@@ -95,6 +114,15 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
               _buildHeaderIcon(
                 _isSearching ? Icons.close_rounded : Icons.search_rounded,
                 () {
+                  if (_isSearching) {
+                    // Closing search: scroll to top first then update UI
+                    _scrollController.animateTo(
+                      0,
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.easeOut,
+                    );
+                  }
+
                   setState(() {
                     _isSearching = !_isSearching;
                     if (!_isSearching) {
@@ -451,9 +479,10 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Center(
-                    child: Text(
+                    child: _buildHighlightedText(
                       '${surah.number}',
-                      style: const TextStyle(
+                      provider.searchQuery,
+                      const TextStyle(
                         fontWeight: FontWeight.bold,
                         color: AppColors.emerald,
                         fontSize: 16,
@@ -467,9 +496,10 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      _buildHighlightedText(
                         surah.englishName,
-                        style: const TextStyle(
+                        provider.searchQuery,
+                        const TextStyle(
                           fontWeight: FontWeight.w800,
                           fontSize: 18,
                           color: AppColors.primaryText,
@@ -668,6 +698,49 @@ class _QuranPageState extends State<QuranPage> with SingleTickerProviderStateMix
           );
         },
       ),
+    );
+  }
+
+  Widget _buildHighlightedText(String text, String query, TextStyle baseStyle) {
+    if (query.isEmpty || !text.toLowerCase().contains(query.toLowerCase())) {
+      return Text(text, style: baseStyle);
+    }
+
+    final String lowerText = text.toLowerCase();
+    final String lowerQuery = query.toLowerCase();
+    
+    final List<TextSpan> spans = [];
+    int start = 0;
+    int indexOfMatch;
+
+    while ((indexOfMatch = lowerText.indexOf(lowerQuery, start)) != -1) {
+      if (indexOfMatch > start) {
+        spans.add(TextSpan(
+          text: text.substring(start, indexOfMatch),
+          style: baseStyle,
+        ));
+      }
+      spans.add(TextSpan(
+        text: text.substring(indexOfMatch, indexOfMatch + query.length),
+        style: baseStyle.copyWith(
+          color: AppColors.emerald,
+          fontWeight: FontWeight.w900,
+        ),
+      ));
+      start = indexOfMatch + query.length;
+    }
+
+    if (start < text.length) {
+      spans.add(TextSpan(
+        text: text.substring(start),
+        style: baseStyle,
+      ));
+    }
+
+    return RichText(
+      text: TextSpan(children: spans),
+      maxLines: 1,
+      overflow: TextOverflow.ellipsis,
     );
   }
 }

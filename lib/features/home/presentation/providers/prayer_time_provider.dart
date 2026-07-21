@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:adhan/adhan.dart';
+import '../../../../core/prayer_alarm/prayer_alarm_model.dart';
 import '../../../../core/services/notification_service.dart';
 import '../../domain/entities/prayer_time.dart';
 
@@ -16,9 +17,13 @@ class PrayerTimeProvider extends ChangeNotifier {
   Position? _currentPosition;
 
   List<PrayerTime> get prayerTimes => _prayerTimes;
+
   bool get isLoading => _isLoading;
+
   Duration get timeRemaining => _timeRemaining;
+
   PrayerTime? get nextPrayer => _nextPrayer;
+
   String get currentAddress => _currentAddress;
 
   String get timeRemainingString {
@@ -47,7 +52,8 @@ class PrayerTimeProvider extends ChangeNotifier {
       final prayerTimesData = PrayerTimes(coordinates, date, params);
 
       _prayerTimes = _convertToList(prayerTimesData);
-      _currentAddress = "${pos.latitude.toStringAsFixed(2)}, ${pos.longitude.toStringAsFixed(2)}";
+      _currentAddress =
+          "${pos.latitude.toStringAsFixed(2)}, ${pos.longitude.toStringAsFixed(2)}";
       _getAddressFromLatLng(pos);
 
       _updateCurrentAndNextPrayer();
@@ -63,11 +69,31 @@ class PrayerTimeProvider extends ChangeNotifier {
 
   List<PrayerTime> _convertToList(PrayerTimes data) {
     return [
-      PrayerTime(type: PrayerType.fajr, time: data.fajr, soundStatus: SoundStatus.ring),
-      PrayerTime(type: PrayerType.dhuhr, time: data.dhuhr, soundStatus: SoundStatus.ring),
-      PrayerTime(type: PrayerType.asr, time: data.asr, soundStatus: SoundStatus.ring),
-      PrayerTime(type: PrayerType.maghrib, time: data.maghrib, soundStatus: SoundStatus.ring),
-      PrayerTime(type: PrayerType.isha, time: data.isha, soundStatus: SoundStatus.ring),
+      PrayerTime(
+        type: PrayerType.fajr,
+        time: data.fajr,
+        soundStatus: SoundStatus.ring,
+      ),
+      PrayerTime(
+        type: PrayerType.dhuhr,
+        time: data.dhuhr,
+        soundStatus: SoundStatus.ring,
+      ),
+      PrayerTime(
+        type: PrayerType.asr,
+        time: data.asr,
+        soundStatus: SoundStatus.ring,
+      ),
+      PrayerTime(
+        type: PrayerType.maghrib,
+        time: data.maghrib,
+        soundStatus: SoundStatus.ring,
+      ),
+      PrayerTime(
+        type: PrayerType.isha,
+        time: data.isha,
+        soundStatus: SoundStatus.ring,
+      ),
     ];
   }
 
@@ -106,10 +132,21 @@ class PrayerTimeProvider extends ChangeNotifier {
       );
     }
     final tomorrow = DateTime.now().add(const Duration(days: 1));
-    final coordinates = Coordinates(_currentPosition!.latitude, _currentPosition!.longitude);
+    final coordinates = Coordinates(
+      _currentPosition!.latitude,
+      _currentPosition!.longitude,
+    );
     final params = CalculationMethod.muslim_world_league.getParameters();
-    final prayerTimesData = PrayerTimes(coordinates, DateComponents.from(tomorrow), params);
-    return PrayerTime(type: PrayerType.fajr, time: prayerTimesData.fajr, soundStatus: SoundStatus.ring);
+    final prayerTimesData = PrayerTimes(
+      coordinates,
+      DateComponents.from(tomorrow),
+      params,
+    );
+    return PrayerTime(
+      type: PrayerType.fajr,
+      time: prayerTimesData.fajr,
+      soundStatus: SoundStatus.ring,
+    );
   }
 
   Future<void> _scheduleMultiDayNotifications() async {
@@ -118,21 +155,31 @@ class PrayerTimeProvider extends ChangeNotifier {
     // Do not cancel all every time to avoid clearing pending alarms unnecessarily
     // await notificationService.cancelAllNotifications();
 
-    final coordinates = Coordinates(_currentPosition!.latitude, _currentPosition!.longitude);
+    final coordinates = Coordinates(
+      _currentPosition!.latitude,
+      _currentPosition!.longitude,
+    );
     final params = CalculationMethod.muslim_world_league.getParameters();
 
     // Lập lịch cho 7 ngày tới để đảm bảo ngay cả khi kill app lâu ngày vẫn có báo thức
     for (int i = 0; i < 7; i++) {
       final date = DateTime.now().add(Duration(days: i));
-      final prayerTimesData = PrayerTimes(coordinates, DateComponents.from(date), params);
+      final prayerTimesData = PrayerTimes(
+        coordinates,
+        DateComponents.from(date),
+        params,
+      );
       final dailyPrayers = _convertToList(prayerTimesData);
 
       for (var prayer in dailyPrayers) {
         if (prayer.time.isAfter(DateTime.now())) {
+          final localizedName = PrayerAlarmModel.localizedName(prayer.name);
           await notificationService.scheduleNotification(
-            id: prayer.type.index + (i * 10), // Unique ID cho mỗi ngày
-            title: 'Prayer Time: ${prayer.name}',
-            body: 'It is time for ${prayer.name}. Come to prayer!',
+            id: prayer.type.index + (i * 10),
+            // Unique ID cho mỗi ngày
+            title: 'Đã đến giờ cầu nguyện $localizedName',
+            body:
+                'Đã đến giờ cầu nguyện $localizedName. Hãy dành thời gian cho Allah.',
             scheduledDate: prayer.time,
             payload: prayer.name,
           );
@@ -171,7 +218,7 @@ class PrayerTimeProvider extends ChangeNotifier {
           nextStatus = SoundStatus.ring;
           break;
       }
-      
+
       _prayerTimes[index] = PrayerTime(
         type: _prayerTimes[index].type,
         time: _prayerTimes[index].time,
@@ -179,7 +226,7 @@ class PrayerTimeProvider extends ChangeNotifier {
         soundStatus: nextStatus,
       );
       notifyListeners();
-      
+
       // Update notifications after status change
       _scheduleMultiDayNotifications();
     }
@@ -187,10 +234,14 @@ class PrayerTimeProvider extends ChangeNotifier {
 
   Future<void> _getAddressFromLatLng(Position position) async {
     try {
-      List<Placemark> placemarks = await placemarkFromCoordinates(position.latitude, position.longitude);
+      List<Placemark> placemarks = await placemarkFromCoordinates(
+        position.latitude,
+        position.longitude,
+      );
       if (placemarks.isNotEmpty) {
         Placemark place = placemarks[0];
-        _currentAddress = "${place.subAdministrativeArea ?? place.locality ?? ''}, ${place.country ?? ''}";
+        _currentAddress =
+            "${place.subAdministrativeArea ?? place.locality ?? ''}, ${place.country ?? ''}";
         notifyListeners();
       }
     } catch (_) {}
@@ -202,7 +253,8 @@ class PrayerTimeProvider extends ChangeNotifier {
     LocationPermission permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) return Future.error('Location permissions are denied');
+      if (permission == LocationPermission.denied)
+        return Future.error('Location permissions are denied');
     }
     return await Geolocator.getCurrentPosition();
   }
