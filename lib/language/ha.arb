@@ -1,0 +1,1265 @@
+{
+  "@@locale": "ha",
+  "week": "Mako",
+  "@week": {
+    "description": "Tasbih statistics period label."
+  },
+  "month": "Wata",
+  "@month": {
+    "description": "Tasbih statistics period label."
+  },
+  "lifetime": "Duk Lokaci",
+  "@lifetime": {
+    "description": "Tasbih statistics period label."
+  },
+  "appTitle": "Quran Pro: Al Quran Majeed",
+  "@appTitle": {
+    "description": "App UI text."
+  },
+  "prayerAlarmDefaultQuote": "Ka huta kaɗan daga aikinka ka samu lokaci don Allah.",
+  "@prayerAlarmDefaultQuote": {
+    "description": "App UI text."
+  },
+  "prayerAlarmDefaultName": "Sallah",
+  "@prayerAlarmDefaultName": {
+    "description": "App UI text."
+  },
+  "productUnavailable": "Kayan {id} ba ya samuwa don saya.",
+  "@productUnavailable": {
+    "description": "App UI text.",
+    "placeholders": {
+      "id": {}
+    }
+  },
+  "purchaseSuccessful": "Sayen {productId} ya yi nasara!",
+  "@purchaseSuccessful": {
+    "description": "App UI text.",
+    "placeholders": {
+      "productId": {}
+    }
+  },
+  "purchaseRestored": "An dawo da sayen {productId}!",
+  "@purchaseRestored": {
+    "description": "App UI text.",
+    "placeholders": {
+      "productId": {}
+    }
+  },
+  "daysCount": "Kwana {count}",
+  "@daysCount": {
+    "description": "App UI text.",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "upcomingPrayer": "MAI ZUWA: {prayerName}",
+  "@upcomingPrayer": {
+    "description": "App UI text.",
+    "placeholders": {
+      "prayerName": {}
+    }
+  },
+  "distanceToMecca": "Nisa zuwa Makka: {distance} Km",
+  "@distanceToMecca": {
+    "description": "App UI text.",
+    "placeholders": {
+      "distance": {}
+    }
+  },
+  "snoozeMinutes": "Ka tunatar da ni bayan minti {minutes}",
+  "@snoozeMinutes": {
+    "description": "App UI text.",
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "prayerTimeArrived": "Lokacin sallar {prayerName} ya yi",
+  "@prayerTimeArrived": {
+    "description": "App UI text.",
+    "placeholders": {
+      "prayerName": {}
+    }
+  },
+  "roundValue": "Zagaye: {round}",
+  "@roundValue": {
+    "description": "App UI text.",
+    "placeholders": {
+      "round": {}
+    }
+  },
+  "selectedLanguage": "An zaɓi {language}",
+  "@selectedLanguage": {
+    "description": "App UI text.",
+    "placeholders": {
+      "language": {}
+    }
+  },
+  "juzNumber": "Juzu'i {juz}",
+  "@juzNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "juz": {}
+    }
+  },
+  "pageNumber": "Shafi {page}",
+  "@pageNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "page": {}
+    }
+  },
+  "hizbNumber": "Hizbu {hizb}",
+  "@hizbNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "hizb": {}
+    }
+  },
+  "surahVerse": "{surahName}: Aya {verse}",
+  "@surahVerse": {
+    "description": "App UI text.",
+    "placeholders": {
+      "surahName": {},
+      "verse": {}
+    }
+  },
+  "surahAyahCount": "Aya {count}",
+  "@surahAyahCount": {
+    "description": "App UI text.",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "levelNumber": "MATAKI {level}",
+  "@levelNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "level": {}
+    }
+  },
+  "surahAlBaqarah2238": "(Suratul Baƙara 2:238)",
+  "@surahAlBaqarah2238": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "text1juz": "Juzu'i 1",
+  "@text1juz": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text199usd": "1.99 USD",
+  "@text199usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text10pages": "shafi 10",
+  "@text10pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text100dhikr": "Zikiri 100",
+  "@text100dhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "text299usd": "2.99 USD",
+  "@text299usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text20pages": "shafi 20",
+  "@text20pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text28cclearsky": "28°C - Sararin Sama Bayyananne",
+  "@text28cclearsky": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "text499usd": "4.99 USD",
+  "@text499usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text5pages": "shafi 5",
+  "@text5pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text799usd": "7.99 USD",
+  "@text799usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "about": "Bayani",
+  "@about": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "aboutQuranPro": "Bayani kan Quran Pro",
+  "@aboutQuranPro": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "activity": "Ayyuka",
+  "@activity": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "adIsLoadingPleaseTryAgainSoon": "Ana ɗora talla. Da fatan ka sake gwadawa nan ba da jimawa ba.",
+  "@adIsLoadingPleaseTryAgainSoon": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "addCustomDhikr": "Ƙara zikiri naka",
+  "@addCustomDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "addCustomDhikr2": "Ƙara Zikiri Naka",
+  "@addCustomDhikr2": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "addDhikr": "Ƙara Zikiri",
+  "@addDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "adjustPosition": "GYARA WURI",
+  "@adjustPosition": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "afternoon": "YAMMA",
+  "@afternoon": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "alMasjidAlHaram": "Al-Masjid al-Haram",
+  "@alMasjidAlHaram": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "alhamdulillahiRabbilAlamin": "Alhamdulillahi Rabbil Alamin",
+  "@alhamdulillahiRabbilAlamin": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "alignedToQibla": "AN FUSKANCI ALƘIBLA",
+  "@alignedToQibla": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "allPraiseIsDueToAllah": "Dukkan godiya ta tabbata ga Allah",
+  "@allPraiseIsDueToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allPremiumFeaturesAtADiscountedPrice": "Dukkan fasalolin premium a farashi mai rangwame",
+  "@allPremiumFeaturesAtADiscountedPrice": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "allInOneQuranApp": "Cikakkiyar manhajar Alƙur'ani",
+  "@allInOneQuranApp": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "allahIsSufficientForMeThereIsNo": "Allah ya isar mini; babu abin bautawa sai Shi",
+  "@allahIsSufficientForMeThereIsNo": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahIsTheGreatest": "Allah Shi ne Mafi Girma",
+  "@allahIsTheGreatest": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahuAkbar": "Allahu Akbar",
+  "@allahuAkbar": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahummaSalliAlaMuhammad": "Allahumma salli ala Muhammad",
+  "@allahummaSalliAlaMuhammad": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allowLocationPermissionOrTapRetryToUse": "Ka ba da izinin wuri ko ka danna sake gwadawa don amfani da jadawalin madadi.",
+  "@allowLocationPermissionOrTapRetryToUse": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "allowNotificationsToReceivePrayerTimesAndDaily": "Ka ba da izinin sanarwa don karɓar lokutan sallah da tunatarwar yau da kullum.",
+  "@allowNotificationsToReceivePrayerTimesAndDaily": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "allowTheAppToRunInTheBackground": "Bar manhajar ta yi aiki a baya",
+  "@allowTheAppToRunInTheBackground": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "app": "Manhaja",
+  "@app": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "arabic": "Larabci",
+  "@arabic": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "asr": "La'asar",
+  "@asr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "auzuBillahiMinAshShaytanirRajim": "Auzu billahi min ash-shaytanir rajim",
+  "@auzuBillahiMinAshShaytanirRajim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "avg": "Matsakaici",
+  "@avg": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "ayah": "Aya",
+  "@ayah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/services/audio_handler.dart."
+  },
+  "batteryOptimization": "Inganta Baturi",
+  "@batteryOptimization": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "beautifulWidgets": "Widget Masu Kyau",
+  "@beautifulWidgets": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "bestValue": "MAFI FA'IDA",
+  "@bestValue": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "blackOnyx": "Onyx Baƙi",
+  "@blackOnyx": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "bookmarks": "Alamomi",
+  "@bookmarks": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "brightIvoryInterface": "Kamannin hauren giwa mai haske",
+  "@brightIvoryInterface": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "calculatingDistance": "Ana lissafin nisa...",
+  "@calculatingDistance": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "calibrateYourDirection": "Daidaita fuskantarka",
+  "@calibrateYourDirection": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "cancel": "Soke",
+  "@cancel": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "change": "Canza",
+  "@change": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "changeTasbihMode": "Canza yanayin Tasbihi?",
+  "@changeTasbihMode": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "chooseDhikr": "Zaɓi Zikiri",
+  "@chooseDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "chooseDisplayLanguage": "Zaɓi harshen nunawa",
+  "@chooseDisplayLanguage": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "chooseTheme": "Zaɓi Kamanni",
+  "@chooseTheme": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "chooseYourPreferredLanguage": "Zaɓi harshen da kake so",
+  "@chooseYourPreferredLanguage": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "clickOrSwipeToCount": "Danna ko share don ƙidaya",
+  "@clickOrSwipeToCount": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/counter_text.dart."
+  },
+  "close": "Rufe",
+  "@close": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "closeCustomGoal": "Rufe burin naka",
+  "@closeCustomGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "completeAtLeast33Dhikr": "Kammala aƙalla zikiri 33",
+  "@completeAtLeast33Dhikr": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "connectYourHeartWithTheHolyQuran": "Haɗa zuciyarka da Alƙur'ani Mai Girma.",
+  "@connectYourHeartWithTheHolyQuran": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "continueReading": "Ci Gaba da Karatu",
+  "@continueReading": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "countsPerRound": "Ƙidaya kowane zagaye",
+  "@countsPerRound": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "curateYourCollectionWithMasterCraftedSpiritualGems": "Tsara tarinka da duwatsu masu daraja na ruhi da aka ƙera da gwaninta.",
+  "@curateYourCollectionWithMasterCraftedSpiritualGems": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "current": "YANZU",
+  "@current": {
+    "description": "Extracted visible text from lib/features/home/presentation/widgets/prayer_card.dart."
+  },
+  "current2": "Yanzu",
+  "@current2": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/progress_card.dart."
+  },
+  "currentLocationToMecca": "Daga inda kake zuwa Makka",
+  "@currentLocationToMecca": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "currentProgressWillResetForTheNewMode": "Ci gaban da ake ciki zai fara daga farko don sabon yanayin.",
+  "@currentProgressWillResetForTheNewMode": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "currentStreak": "Jerin Yanzu",
+  "@currentStreak": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "custom": "Naka",
+  "@custom": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "customDhikr": "Zikiri naka",
+  "@customDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "customGoal": "Burin Naka",
+  "@customGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "customPrayerSounds": "Sautin Sallah Naka",
+  "@customPrayerSounds": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "dailyGoal": "Burin Yau da Kullum",
+  "@dailyGoal": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyQuests": "Ayyukan Yau da Kullum",
+  "@dailyQuests": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "dailyQuranReminder": "Tunatarwar Alƙur'ani ta yau da kullum",
+  "@dailyQuranReminder": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyReminders": "Tunatarwa ta Yau da Kullum",
+  "@dailyReminders": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyTasbih": "Tasbihi ta Yau da Kullum",
+  "@dailyTasbih": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "dark": "Duhu",
+  "@dark": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dawn": "ASUBA",
+  "@dawn": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "debug": "Gyaran Kuskure",
+  "@debug": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/prayer_alarm_page.dart."
+  },
+  "dhikr": "Zikiri",
+  "@dhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "dhikrActivity": "Ayyukan zikiri",
+  "@dhikrActivity": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "dhuAlHijjah": "Zul-Hijja",
+  "@dhuAlHijjah": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "dhuAlQadah": "Zul-Ƙi'ida",
+  "@dhuAlQadah": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "dhuhr": "Azahar",
+  "@dhuhr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "direction": "FUSKANTARWA",
+  "@direction": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "disableBatteryOptimization": "Kashe Inganta Baturi",
+  "@disableBatteryOptimization": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "disableOptimization": "KASHE INGANTAWA",
+  "@disableOptimization": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "distance": "NISA",
+  "@distance": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "e": "G",
+  "@e": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "eGHasbunallah": "misali HasbunAllah",
+  "@eGHasbunallah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "east": "Gabas",
+  "@east": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "enableAutoStart": "Kunna Farawa Kai Tsaye",
+  "@enableAutoStart": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "enableNotifications": "Kunna Sanarwa",
+  "@enableNotifications": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "enableReminders": "Kunna Tunatarwa",
+  "@enableReminders": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "english": "Turanci",
+  "@english": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "enterYourName": "Shigar da sunanka",
+  "@enterYourName": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "equipped": "ANA AMFANI",
+  "@equipped": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "everythingYouNeedForABetterQuranExperience": "Duk abin da kake buƙata don ingantaccen amfani da Alƙur'ani.",
+  "@everythingYouNeedForABetterQuranExperience": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "fajr": "Asuba",
+  "@fajr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "feedback": "Ra'ayi",
+  "@feedback": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "first": "Na Farko",
+  "@first": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "forTheMostAccurateResultsKeepYourPhone": "Domin samun sakamako mafi daidai, ka ajiye wayarka a kwance kuma nesa da abubuwa masu maganaɗisu.",
+  "@forTheMostAccurateResultsKeepYourPhone": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "free": "Kyauta",
+  "@free": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/progress_card.dart."
+  },
+  "fullBundle": "Cikakken Kunshi",
+  "@fullBundle": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "getAnAdFreeExperienceForever": "Samu amfani ba tare da talla ba har abada",
+  "@getAnAdFreeExperienceForever": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "getRemindedToReadAndStayConsistent": "A tunatar da kai ka yi karatu ka kuma dawwama.",
+  "@getRemindedToReadAndStayConsistent": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "getStarted": "Fara",
+  "@getStarted": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "gloryAndPraiseBeToAllah": "Tsarki da godiya sun tabbata ga Allah",
+  "@gloryAndPraiseBeToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "gloryBeToAllah": "Tsarki ya tabbata ga Allah",
+  "@gloryBeToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "gloryBeToAllahTheMagnificent": "Tsarki ya tabbata ga Allah, Mai Girma",
+  "@gloryBeToAllahTheMagnificent": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "goToHome": "Koma Gida",
+  "@goToHome": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "goldenEngraved": "Zinariya Sassaƙaƙƙe",
+  "@goldenEngraved": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "greenJade": "Jade Kore",
+  "@greenJade": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "hMm": "H:mm",
+  "@hMm": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "hanoiVietnam": "Hanoi, Vietnam",
+  "@hanoiVietnam": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "haptic": "Girgiza",
+  "@haptic": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "hasanatHub": "Cibiyar Hasanat",
+  "@hasanatHub": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "hasbiyallahuLaIlahaIllaHuwa": "Hasbiyallahu la ilaha illa Huwa",
+  "@hasbiyallahuLaIlahaIllaHuwa": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "hhMm": "HH:mm",
+  "@hhMm": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "hhMmA": "hh:mm a",
+  "@hhMmA": {
+    "description": "Extracted visible text from lib/features/home/presentation/widgets/prayer_card.dart."
+  },
+  "home": "Gida",
+  "@home": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "howYourDataIsHandled": "Yadda ake sarrafa bayananka",
+  "@howYourDataIsHandled": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "iSeekForgivenessFromAllah": "Ina neman gafara daga Allah",
+  "@iSeekForgivenessFromAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "iSeekRefugeInAllahFromTheAccursed": "Ina neman tsari da Allah daga shaiɗan la'ananne",
+  "@iSeekRefugeInAllahFromTheAccursed": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "immediateAlerts": "Sanarwa nan take",
+  "@immediateAlerts": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "inTheNameOfAllah": "Da sunan Allah",
+  "@inTheNameOfAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "indeedWeBelongToAllahAndToHim": "Lallai mu na Allah ne kuma zuwa gare Shi za mu koma",
+  "@indeedWeBelongToAllahAndToHim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "innaLillahiWaInnaIlayhiRajiun": "Inna lillahi wa inna ilayhi rajiun",
+  "@innaLillahiWaInnaIlayhiRajiun": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "isha": "Isha'i",
+  "@isha": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "jumadaAlAwwal": "Jumada Al-Awwal",
+  "@jumadaAlAwwal": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "jumadaAlThani": "Jumada Al-Thani",
+  "@jumadaAlThani": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "juz": "JUZU'I",
+  "@juz": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "juz2": "Juzu'i",
+  "@juz2": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "keepAdhanAlarmsReliable": "Tabbatar ƙararrawar azan tana aiki koyaushe",
+  "@keepAdhanAlarmsReliable": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "keepItUpYouReDoingGreat": "Ci gaba haka! Kana yin kyau.",
+  "@keepItUpYouReDoingGreat": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "keepPrayerCallsReliableEvenWhenTheApp": "Tabbatar kiran sallah yana aiki koda an rufe manhajar.",
+  "@keepPrayerCallsReliableEvenWhenTheApp": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "laHawlaWaLaQuwwataIllaBillah": "La hawla wa la quwwata illa billah",
+  "@laHawlaWaLaQuwwataIllaBillah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "laIlahaIllallah": "La ilaha illallah",
+  "@laIlahaIllallah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "language": "Harshe",
+  "@language": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "lapisLazuli": "Lapis Lazuli",
+  "@lapisLazuli": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "last7Days": "Kwanaki 7 na Ƙarshe",
+  "@last7Days": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "later": "DAGA BAYA",
+  "@later": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "letSBeginYourBeautifulJourneyWithThe": "Bari mu fara tafiyarka mai kyau tare da Alƙur'ani.",
+  "@letSBeginYourBeautifulJourneyWithThe": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "letSPersonalizeYourExperience": "Bari mu keɓance\namfaninka",
+  "@letSPersonalizeYourExperience": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "light": "Haske",
+  "@light": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "lightMode": "Yanayin Haske",
+  "@lightMode": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "listenToOrReadAnyAyahToday": "Saurara ko karanta kowace Aya yau",
+  "@listenToOrReadAnyAyahToday": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "locating": "Ana neman wuri...",
+  "@locating": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "location": "Wuri",
+  "@location": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "locationPermissionsAreDenied": "An hana izinin wuri",
+  "@locationPermissionsAreDenied": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "locationPermissionsArePermanentlyDenied": "An hana izinin wuri gaba ɗaya.",
+  "@locationPermissionsArePermanentlyDenied": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/providers/qibla_provider.dart."
+  },
+  "locationServicesAreDisabled": "An kashe ayyukan wuri.",
+  "@locationServicesAreDisabled": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "longestStreak": "Jeri Mafi Tsawo",
+  "@longestStreak": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/stats_grid.dart."
+  },
+  "maghrib": "Magariba",
+  "@maghrib": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "maybeLater": "Wataƙila daga baya",
+  "@maybeLater": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "meccaSaudiArabia": "Makka, Saudiyya",
+  "@meccaSaudiArabia": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "misharyRashidAlafasy": "Mishary Rashid Alafasy",
+  "@misharyRashidAlafasy": {
+    "description": "Extracted visible text from lib/features/quran/presentation/provider/quran_provider.dart."
+  },
+  "mmmDdYyyy": "MMM dd, yyyy",
+  "@mmmDdYyyy": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "myLordForgiveAndHaveMercy": "Ya Ubangijina, ka gafarta ka kuma yi rahama",
+  "@myLordForgiveAndHaveMercy": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordIAmInNeedOfWhatever": "Ya Ubangijina, ina buƙatar duk alherin da ka saukar mini",
+  "@myLordIAmInNeedOfWhatever": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordIncreaseMeInKnowledge": "Ya Ubangijina, ka ƙara mini ilimi",
+  "@myLordIncreaseMeInKnowledge": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordMakeItEasyAndDoNot": "Ya Ubangijina, ka sauƙaƙa kada ka tsananta",
+  "@myLordMakeItEasyAndDoNot": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "n": "A",
+  "@n": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "nameOptional": "Suna (Zaɓi)",
+  "@nameOptional": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "next": "Na gaba",
+  "@next": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "nextDhikr": "Zikiri na gaba",
+  "@nextDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "nextPrayer": "SALLAH TA GABA",
+  "@nextPrayer": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "night": "DARE",
+  "@night": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "nightEmeraldInterface": "Kamannin zamarrud na dare",
+  "@nightEmeraldInterface": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "noBookmarksYet": "Babu alamomi tukuna",
+  "@noBookmarksYet": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "noon": "TSAKAR RANA",
+  "@noon": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "north": "Arewa",
+  "@north": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "northeast": "Arewa maso Gabas",
+  "@northeast": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "northwest": "Arewa maso Yamma",
+  "@northwest": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "notificationsAlarm": "Sanarwa da Ƙararrawa",
+  "@notificationsAlarm": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "notificationsForPrayerTimes": "Sanarwa don lokutan sallah",
+  "@notificationsForPrayerTimes": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "oAllahSendBlessingsUponMuhammad": "Ya Allah, ka yi salati ga Muhammad",
+  "@oAllahSendBlessingsUponMuhammad": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "oEverLivingOSustainer": "Ya Mai Rai Madawwami, Ya Mai Tsayuwa da Komai",
+  "@oEverLivingOSustainer": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "openAutoStart": "BUƊE FARAWA KAI TSAYE",
+  "@openAutoStart": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "optimizeAdhanPerformance": "Inganta Aikin Azan",
+  "@optimizeAdhanPerformance": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "ourLordGrantUsGoodInThisWorld": "Ya Ubangijinmu, ka ba mu alheri a wannan duniya",
+  "@ourLordGrantUsGoodInThisWorld": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "page": "SHAFI",
+  "@page": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "pearl": "Lu'ulu'u",
+  "@pearl": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "personalizeYourAdhanNotifications": "Keɓance sanarwar Azan ɗinka",
+  "@personalizeYourAdhanNotifications": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "praiseBeToAllahLordOfTheWorlds": "Godiya ta tabbata ga Allah, Ubangijin talikai",
+  "@praiseBeToAllahLordOfTheWorlds": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "prayerAlarms": "Ƙararrawar Sallah",
+  "@prayerAlarms": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "prayerSchedule": "Jadawalin Sallah",
+  "@prayerSchedule": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "prayerTimeNotifications": "Sanarwar lokutan sallah",
+  "@prayerTimeNotifications": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "prayerTimesAreLoading": "Ana ɗora lokutan sallah",
+  "@prayerTimesAreLoading": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "prayerTimesQiblaQuranReadingAndTasbihIn": "Lokutan Sallah, Alƙibla, karatun Alƙur'ani, da Tasbihi a cikin abokin tafiya guda ɗaya na yau da kullum.",
+  "@prayerTimesQiblaQuranReadingAndTasbihIn": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "prayerQuranQibla": "SALLAH • ALƘUR'ANI • ALƘIBLA",
+  "@prayerQuranQibla": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "premiumThemes": "Kamannin Premium",
+  "@premiumThemes": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "preparingYourSpiritualJourney": "Ana shirya tafiyarka ta ruhi...",
+  "@preparingYourSpiritualJourney": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "previousDhikr": "Zikiri da ya gabata",
+  "@previousDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "privacyPolicy": "Manufar Sirri",
+  "@privacyPolicy": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "qibla": "Alƙibla",
+  "@qibla": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "qiblaFinder": "Mai Nemo Alƙibla",
+  "@qiblaFinder": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "quran": "Alƙur'ani",
+  "@quran": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "quranPlayback": "Sauraron Alƙur'ani",
+  "@quranPlayback": {
+    "description": "Extracted visible text from lib/main.dart."
+  },
+  "quranPro": "Quran Pro",
+  "@quranPro": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "quranPro2": "QURAN PRO",
+  "@quranPro2": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "quranProBringsPrayerTimesQiblaQuranReading": "Quran Pro na haɗa Lokutan Sallah, Alƙibla, karatun Alƙur'ani, da Tasbihi cikin abokin tafiya guda ɗaya mai sauƙi na yau da kullum.",
+  "@quranProBringsPrayerTimesQiblaQuranReading": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "quranProPreferences": "Zaɓuɓɓukan Quran Pro",
+  "@quranProPreferences": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "quranProStoresOnboardingAndProgressPreferencesLocally": "Quran Pro na adana zaɓuɓɓukan farawa da ci gaba a cikin wannan na'urar. Ana iya amfani da bayanan bincike don inganta kwanciyar hankali da inganci.",
+  "@quranProStoresOnboardingAndProgressPreferencesLocally": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "quranProStoresYourTasbihProgressLocallyOn": "Quran Pro na adana ci gaban Tasbihi ɗinka a cikin wannan na'urar. Ana iya amfani da bayanan bincike don inganta kwanciyar manhajar da ingancin samfurin.",
+  "@quranProStoresYourTasbihProgressLocallyOn": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "quranRecitation": "Karatun Alƙur'ani",
+  "@quranRecitation": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "rabbanaAtinaFidDunyaHasanah": "Rabbana atina fid-dunya hasanah",
+  "@rabbanaAtinaFidDunyaHasanah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiInniLimaAnzaltaIlayyaMinKhayrinFaqir": "Rabbi inni lima anzalta ilayya min khayrin faqir",
+  "@rabbiInniLimaAnzaltaIlayyaMinKhayrinFaqir": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiYassirWaLaTuassir": "Rabbi yassir wa la tuassir",
+  "@rabbiYassirWaLaTuassir": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiZidniIlma": "Rabbi zidni ilma",
+  "@rabbiZidniIlma": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbighfirWarhamWaAntaKhayrurRahimin": "Rabbighfir warham wa anta khayrur rahimin",
+  "@rabbighfirWarhamWaAntaKhayrurRahimin": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabiAlAwwal": "Rabi Al-Awwal",
+  "@rabiAlAwwal": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "rabiAlThani": "Rabi Al-Thani",
+  "@rabiAlThani": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "rateApp": "Kimanta manhaja",
+  "@rateApp": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "rateQuranPro": "Kimanta Quran Pro",
+  "@rateQuranPro": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "readListen": "Karanta & Saurara",
+  "@readListen": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "readTheQuranWithBeautifulRecitations": "Karanta Alƙur'ani da kyawawan karatuttuka.",
+  "@readTheQuranWithBeautifulRecitations": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "recent": "Na kwanan nan",
+  "@recent": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "recommendedForXiaomiOppoVivoAndHuawei": "An ba da shawarar sa ga Xiaomi, Oppo, Vivo da Huawei",
+  "@recommendedForXiaomiOppoVivoAndHuawei": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "redCarnelian": "Aƙiƙi Ja",
+  "@redCarnelian": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "remindMeAt": "Ka Tunatar da Ni Da",
+  "@remindMeAt": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "removeAds": "Cire Talla",
+  "@removeAds": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "requestingLocationPermission": "Ana neman izinin wuri...",
+  "@requestingLocationPermission": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "reset": "Sake saitawa",
+  "@reset": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "retry": "Sake gwadawa",
+  "@retry": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "returnToCompass": "Koma ga Kamfas",
+  "@returnToCompass": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "s": "K",
+  "@s": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "save": "Ajiye",
+  "@save": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "saveGoal": "Ajiye Buri",
+  "@saveGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "searchSurahNumberArabic": "Nemi sura, lamba, Larabci...",
+  "@searchSurahNumberArabic": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "searchSurah": "Nemi Sura...",
+  "@searchSurah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "selectLanguage": "Zaɓi Harshe",
+  "@selectLanguage": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "selectTheThemeYouLike": "Zaɓi kamannin da kake so",
+  "@selectTheThemeYouLike": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "selectYourBead": "Zaɓi Ƙwayar Tasbihinka",
+  "@selectYourBead": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "shop": "Kanti",
+  "@shop": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "shopCustomization": "Kanti da Keɓancewa",
+  "@shopCustomization": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "sound": "Sauti",
+  "@sound": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "south": "Kudu",
+  "@south": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "southeast": "Kudu maso Gabas",
+  "@southeast": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "southwest": "Kudu maso Yamma",
+  "@southwest": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "specialOccasionsAndMore": "Lokuta na musamman da ƙari",
+  "@specialOccasionsAndMore": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "storeRatingWillBeConnectedWhenTheProduction": "Za a haɗa kimanta kanti idan jerin na hukuma ya shirya.",
+  "@storeRatingWillBeConnectedWhenTheProduction": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "subhanallahiWaBihamdihi": "SubhanAllahi wa bihamdihi",
+  "@subhanallahiWaBihamdihi": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "subhanallahilAzim": "SubhanAllahil Azim",
+  "@subhanallahilAzim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "sunset": "FAƊUWAR RANA",
+  "@sunset": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "supportQuranProOnTheStore": "Goyi bayan Quran Pro a kanti",
+  "@supportQuranProOnTheStore": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "surah": "Sura",
+  "@surah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "tasbih": "Tasbihi",
+  "@tasbih": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "tasbihSettings": "Saitunan Tasbihi",
+  "@tasbihSettings": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "tellUsWhatToImprove": "Gaya mana abin da za mu inganta",
+  "@tellUsWhatToImprove": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "termsOfUse": "Sharuɗɗan Amfani",
+  "@termsOfUse": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "thanksForUsingQuranProStoreRatingWill": "Na gode da amfani da Quran Pro. Za a haɗa kimanta kanti idan jerin kanti na hukuma ya shirya.",
+  "@thanksForUsingQuranProStoreRatingWill": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "thereIsNoDeityExceptAllah": "Babu abin bautawa da gaskiya sai Allah",
+  "@thereIsNoDeityExceptAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "thereIsNoPowerNorStrengthExceptThrough": "Babu ƙarfi ko iko sai da Allah",
+  "@thereIsNoPowerNorStrengthExceptThrough": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "thisHelpsUsCustomizeRemindersAndTrackYour": "Wannan yana taimaka mana mu keɓance tunatarwa da bibiyar ci gabanka.",
+  "@thisHelpsUsCustomizeRemindersAndTrackYour": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "tigerSEye": "Idon Damisa",
+  "@tigerSEye": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "today": "Yau",
+  "@today": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "total": "Jimla",
+  "@total": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "totalHasanat": "JIMLAR HASANAT",
+  "@totalHasanat": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "trackProgress": "Bibiyar Ci Gaba",
+  "@trackProgress": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "trackYourReadingAndAchievements": "Bi diddigin karatunka da nasarorinka.",
+  "@trackYourReadingAndAchievements": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "tryAgain": "Sake Gwadawa",
+  "@tryAgain": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "undo": "Janye",
+  "@undo": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "unlockAllAppThemesAndCustomizations": "Buɗe dukkan kamanni da keɓancewar manhaja",
+  "@unlockAllAppThemesAndCustomizations": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "usageGuidelines": "Ƙa'idojin amfani",
+  "@usageGuidelines": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "useQuranProRespectfullyForPersonalWorshipLearning": "Yi amfani da Quran Pro cikin girmamawa don ibadarka, koyo, da ayyukan Musulunci na yau da kullum.",
+  "@useQuranProRespectfullyForPersonalWorshipLearning": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "viewAll": "Duba Duk",
+  "@viewAll": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "w": "Y",
+  "@w": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "welcome": "Barka da zuwa",
+  "@welcome": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "west": "Yamma",
+  "@west": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "yaHayyuYaQayyum": "Ya Hayyu Ya Qayyum",
+  "@yaHayyuYaQayyum": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "youReAllSet": "Ka Shirya Sosai!",
+  "@youReAllSet": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "yourProgress": "Ci Gabanka",
+  "@yourProgress": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "continueLabel": "Ci gaba",
+  "@continueLabel": {
+    "description": "English UI text."
+  },
+  "amethyst": "Ametist",
+  "@amethyst": {
+    "description": "English UI text."
+  },
+  "indonesian": "Indonesiyanci",
+  "@indonesian": {
+    "description": "English UI text."
+  },
+  "turkish": "Turkanci",
+  "@turkish": {
+    "description": "English UI text."
+  },
+  "vietnamese": "Vietnamanci",
+  "@vietnamese": {
+    "description": "English UI text."
+  },
+  "turquoise": "Firuza",
+  "@turquoise": {
+    "description": "English UI text."
+  },
+  "wood": "Itace",
+  "@wood": {
+    "description": "English UI text."
+  },
+  "left": "left",
+  "@left": {
+    "description": "Text displayed after time remaining (e.g., 5 mins left)."
+  },
+  "estimatedLocation": "Wurin da aka kiyasta"
+}

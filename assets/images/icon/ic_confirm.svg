@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Outer Gold Border Gradient -->
+    <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE77B" />
+      <stop offset="25%" stop-color="#D4AF37" />
+      <stop offset="50%" stop-color="#AA7C11" />
+      <stop offset="75%" stop-color="#E6CA65" />
+      <stop offset="100%" stop-color="#996515" />
+    </linearGradient>
+
+    <!-- Inner Dark Bevel Edge for Border -->
+    <linearGradient id="goldBevel" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5C4008" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#FFF3A8" />
+    </linearGradient>
+
+    <!-- Dark Emerald Green Background Gradient -->
+    <radialGradient id="greenBg" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#0A3A2A" />
+      <stop offset="50%" stop-color="#042218" />
+      <stop offset="100%" stop-color="#01120C" />
+    </radialGradient>
+
+    <!-- Gold Checkmark Gradient -->
+    <linearGradient id="goldCheck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF0A2" />
+      <stop offset="30%" stop-color="#F3C649" />
+      <stop offset="70%" stop-color="#C59217" />
+      <stop offset="100%" stop-color="#8A5A00" />
+    </linearGradient>
+
+    <!-- Inner Shadow Overlay for Green Circle -->
+    <radialGradient id="innerShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="85%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.6" />
+    </radialGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" />
+      <feOffset dx="0" dy="12" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.35" />
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Checkmark 3D Shadow -->
+    <filter id="checkShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Base Circle Shadow & Outer Gold Ring -->
+  <circle cx="256" cy="256" r="230" fill="url(#goldBorder)" filter="url(#dropShadow)" />
+  
+  <!-- Inner Rim Edge of Gold Ring -->
+  <circle cx="256" cy="256" r="214" fill="url(#goldBevel)" />
+  
+  <!-- Dark Emerald Green Inner Circle -->
+  <circle cx="256" cy="256" r="202" fill="url(#greenBg)" />
+  
+  <!-- Vignette / Inner Shadow on Green Circle -->
+  <circle cx="256" cy="256" r="202" fill="url(#innerShadow)" />
+
+  <!-- Gold Checkmark Shape -->
+  <path d="M 205 352 
+           C 199 358, 189 358, 183 352 
+           L 115 284 
+           C 109 278, 109 268, 115 262 
+           L 139 238 
+           C 145 232, 155 232, 161 238 
+           L 194 271 
+           L 351 114 
+           C 357 108, 367 108, 373 114 
+           L 397 138 
+           C 403 144, 403 154, 397 160 
+           Z" 
+        fill="url(#goldCheck)" 
+        filter="url(#checkShadow)" />
+</svg>

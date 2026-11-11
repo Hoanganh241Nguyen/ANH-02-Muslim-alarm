@@ -1,0 +1,1264 @@
+{
+  "@@locale": "ml",
+  "week": "ആഴ്ച",
+  "@week": {
+    "description": "Tasbih statistics period label."
+  },
+  "month": "മാസം",
+  "@month": {
+    "description": "Tasbih statistics period label."
+  },
+  "lifetime": "ആജീവനാന്തം",
+  "@lifetime": {
+    "description": "Tasbih statistics period label."
+  },
+  "appTitle": "Quran Pro: Al Quran Majeed",
+  "@appTitle": {
+    "description": "App UI text."
+  },
+  "prayerAlarmDefaultQuote": "ജോലിയിൽ നിന്ന് അൽപം വിരമിച്ച് അല്ലാഹുവിനായി സമയം കണ്ടെത്തുക.",
+  "@prayerAlarmDefaultQuote": {
+    "description": "App UI text."
+  },
+  "prayerAlarmDefaultName": "നമസ്കാരം",
+  "@prayerAlarmDefaultName": {
+    "description": "App UI text."
+  },
+  "productUnavailable": "{id} എന്ന ഉൽപ്പന്നം വാങ്ങാൻ ലഭ്യമല്ല.",
+  "@productUnavailable": {
+    "description": "App UI text.",
+    "placeholders": {
+      "id": {}
+    }
+  },
+  "purchaseSuccessful": "{productId} വാങ്ങൽ വിജയകരം!",
+  "@purchaseSuccessful": {
+    "description": "App UI text.",
+    "placeholders": {
+      "productId": {}
+    }
+  },
+  "purchaseRestored": "{productId} വാങ്ങൽ പുനഃസ്ഥാപിച്ചു!",
+  "@purchaseRestored": {
+    "description": "App UI text.",
+    "placeholders": {
+      "productId": {}
+    }
+  },
+  "daysCount": "{count} ദിവസം",
+  "@daysCount": {
+    "description": "App UI text.",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "upcomingPrayer": "അടുത്തത്: {prayerName}",
+  "@upcomingPrayer": {
+    "description": "App UI text.",
+    "placeholders": {
+      "prayerName": {}
+    }
+  },
+  "distanceToMecca": "മക്കയിലേക്കുള്ള ദൂരം: {distance} കി.മീ",
+  "@distanceToMecca": {
+    "description": "App UI text.",
+    "placeholders": {
+      "distance": {}
+    }
+  },
+  "snoozeMinutes": "{minutes} മിനിറ്റിന് ശേഷം ഓർമ്മിപ്പിക്കുക",
+  "@snoozeMinutes": {
+    "description": "App UI text.",
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "prayerTimeArrived": "{prayerName} നമസ്കാരത്തിന്റെ സമയമായി",
+  "@prayerTimeArrived": {
+    "description": "App UI text.",
+    "placeholders": {
+      "prayerName": {}
+    }
+  },
+  "roundValue": "റൗണ്ട്: {round}",
+  "@roundValue": {
+    "description": "App UI text.",
+    "placeholders": {
+      "round": {}
+    }
+  },
+  "selectedLanguage": "{language} തിരഞ്ഞെടുത്തു",
+  "@selectedLanguage": {
+    "description": "App UI text.",
+    "placeholders": {
+      "language": {}
+    }
+  },
+  "juzNumber": "ജുസ്അ് {juz}",
+  "@juzNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "juz": {}
+    }
+  },
+  "pageNumber": "പേജ് {page}",
+  "@pageNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "page": {}
+    }
+  },
+  "hizbNumber": "ഹിസ്ബ് {hizb}",
+  "@hizbNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "hizb": {}
+    }
+  },
+  "surahVerse": "{surahName}: ആയത്ത് {verse}",
+  "@surahVerse": {
+    "description": "App UI text.",
+    "placeholders": {
+      "surahName": {},
+      "verse": {}
+    }
+  },
+  "surahAyahCount": "{count} ആയത്തുകൾ",
+  "@surahAyahCount": {
+    "description": "App UI text.",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "levelNumber": "ലെവൽ {level}",
+  "@levelNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "level": {}
+    }
+  },
+  "surahAlBaqarah2238": "(സൂറ അൽ-ബഖറ 2:238)",
+  "@surahAlBaqarah2238": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "text1juz": "1 ജുസ്അ്",
+  "@text1juz": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text199usd": "1.99 USD",
+  "@text199usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text10pages": "10 പേജുകൾ",
+  "@text10pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text100dhikr": "100 ദിക്ർ",
+  "@text100dhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "text299usd": "2.99 USD",
+  "@text299usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text20pages": "20 പേജുകൾ",
+  "@text20pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text28cclearsky": "28°C - തെളിഞ്ഞ ആകാശം",
+  "@text28cclearsky": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "text499usd": "4.99 USD",
+  "@text499usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text5pages": "5 പേജുകൾ",
+  "@text5pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text799usd": "7.99 USD",
+  "@text799usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "about": "കുറിച്ച്",
+  "@about": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "aboutQuranPro": "ഖുർആൻ പ്രോയെക്കുറിച്ച്",
+  "@aboutQuranPro": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "activity": "പ്രവർത്തനം",
+  "@activity": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "adIsLoadingPleaseTryAgainSoon": "പരസ്യം ലോഡ് ചെയ്യുന്നു. അൽപം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക.",
+  "@adIsLoadingPleaseTryAgainSoon": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "addCustomDhikr": "സ്വന്തം ദിക്ർ ചേർക്കുക",
+  "@addCustomDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "addCustomDhikr2": "സ്വന്തം ദിക്ർ ചേർക്കുക",
+  "@addCustomDhikr2": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "addDhikr": "ദിക്ർ ചേർക്കുക",
+  "@addDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "adjustPosition": "സ്ഥാനം ക്രമീകരിക്കുക",
+  "@adjustPosition": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "afternoon": "ഉച്ചകഴിഞ്ഞ്",
+  "@afternoon": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "alMasjidAlHaram": "അൽ-മസ്ജിദുൽ ഹറാം",
+  "@alMasjidAlHaram": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "alhamdulillahiRabbilAlamin": "അൽഹംദുലില്ലാഹി റബ്ബിൽ ആലമീൻ",
+  "@alhamdulillahiRabbilAlamin": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "alignedToQibla": "ഖിബ്‌ലയിലേക്ക് നേരെയായി",
+  "@alignedToQibla": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "allPraiseIsDueToAllah": "എല്ലാ സ്തുതിയും അല്ലാഹുവിന്",
+  "@allPraiseIsDueToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allPremiumFeaturesAtADiscountedPrice": "എല്ലാ പ്രീമിയം സൗകര്യങ്ങളും കിഴിവ് വിലയിൽ",
+  "@allPremiumFeaturesAtADiscountedPrice": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "allInOneQuranApp": "എല്ലാം ഒന്നിൽ ഖുർആൻ ആപ്പ്",
+  "@allInOneQuranApp": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "allahIsSufficientForMeThereIsNo": "എനിക്ക് അല്ലാഹു മതി; അവനല്ലാതെ ആരാധ്യനില്ല",
+  "@allahIsSufficientForMeThereIsNo": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahIsTheGreatest": "അല്ലാഹു ഏറ്റവും വലിയവൻ",
+  "@allahIsTheGreatest": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahuAkbar": "അല്ലാഹു അക്ബർ",
+  "@allahuAkbar": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahummaSalliAlaMuhammad": "അല്ലാഹുമ്മ സ്വല്ലി അലാ മുഹമ്മദ്",
+  "@allahummaSalliAlaMuhammad": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allowLocationPermissionOrTapRetryToUse": "ലൊക്കേഷൻ അനുമതി നൽകുക, അല്ലെങ്കിൽ കരുതൽ സമയക്രമം ഉപയോഗിക്കാൻ വീണ്ടും ശ്രമിക്കുക അമർത്തുക.",
+  "@allowLocationPermissionOrTapRetryToUse": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "allowNotificationsToReceivePrayerTimesAndDaily": "നമസ്കാര സമയങ്ങളും ദൈനംദിന ഓർമ്മപ്പെടുത്തലുകളും ലഭിക്കാൻ അറിയിപ്പുകൾ അനുവദിക്കുക.",
+  "@allowNotificationsToReceivePrayerTimesAndDaily": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "allowTheAppToRunInTheBackground": "ആപ്പ് പശ്ചാത്തലത്തിൽ പ്രവർത്തിക്കാൻ അനുവദിക്കുക",
+  "@allowTheAppToRunInTheBackground": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "app": "ആപ്പ്",
+  "@app": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "arabic": "അറബിക്",
+  "@arabic": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "asr": "അസ്ർ",
+  "@asr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "auzuBillahiMinAshShaytanirRajim": "അഊദു ബില്ലാഹി മിനശ്ശൈത്വാനിർ റജീം",
+  "@auzuBillahiMinAshShaytanirRajim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "avg": "ശരാശരി",
+  "@avg": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "ayah": "ആയത്ത്",
+  "@ayah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/services/audio_handler.dart."
+  },
+  "batteryOptimization": "ബാറ്ററി ഒപ്റ്റിമൈസേഷൻ",
+  "@batteryOptimization": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "beautifulWidgets": "മനോഹരമായ വിജറ്റുകൾ",
+  "@beautifulWidgets": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "bestValue": "ഏറ്റവും മികച്ച മൂല്യം",
+  "@bestValue": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "blackOnyx": "കറുത്ത ഓണിക്സ്",
+  "@blackOnyx": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "bookmarks": "ബുക്ക്മാർക്കുകൾ",
+  "@bookmarks": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "brightIvoryInterface": "തിളക്കമുള്ള ഐവറി ഇന്റർഫേസ്",
+  "@brightIvoryInterface": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "calculatingDistance": "ദൂരം കണക്കാക്കുന്നു...",
+  "@calculatingDistance": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "calibrateYourDirection": "നിങ്ങളുടെ ദിശ ക്രമീകരിക്കുക",
+  "@calibrateYourDirection": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "cancel": "റദ്ദാക്കുക",
+  "@cancel": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "change": "മാറ്റുക",
+  "@change": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "changeTasbihMode": "തസ്ബീഹ് മോഡ് മാറ്റണോ?",
+  "@changeTasbihMode": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "chooseDhikr": "ദിക്ർ തിരഞ്ഞെടുക്കുക",
+  "@chooseDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "chooseDisplayLanguage": "ഡിസ്പ്ലേ ഭാഷ തിരഞ്ഞെടുക്കുക",
+  "@chooseDisplayLanguage": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "chooseTheme": "തീം തിരഞ്ഞെടുക്കുക",
+  "@chooseTheme": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "chooseYourPreferredLanguage": "ഇഷ്ടമുള്ള ഭാഷ തിരഞ്ഞെടുക്കുക",
+  "@chooseYourPreferredLanguage": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "clickOrSwipeToCount": "എണ്ണാൻ ടാപ്പ് ചെയ്യുക അല്ലെങ്കിൽ സ്വൈപ്പ് ചെയ്യുക",
+  "@clickOrSwipeToCount": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/counter_text.dart."
+  },
+  "close": "അടയ്ക്കുക",
+  "@close": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "closeCustomGoal": "സ്വന്തം ലക്ഷ്യം അടയ്ക്കുക",
+  "@closeCustomGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "completeAtLeast33Dhikr": "കുറഞ്ഞത് 33 ദിക്ർ പൂർത്തിയാക്കുക",
+  "@completeAtLeast33Dhikr": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "connectYourHeartWithTheHolyQuran": "നിങ്ങളുടെ ഹൃദയത്തെ വിശുദ്ധ ഖുർആനുമായി ചേർക്കുക.",
+  "@connectYourHeartWithTheHolyQuran": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "continueReading": "വായന തുടരുക",
+  "@continueReading": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "countsPerRound": "ഒരു റൗണ്ടിലെ എണ്ണം",
+  "@countsPerRound": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "curateYourCollectionWithMasterCraftedSpiritualGems": "വിദഗ്ധമായി രൂപകൽപ്പന ചെയ്ത ആത്മീയ രത്നങ്ങളാൽ നിങ്ങളുടെ ശേഖരം ഒരുക്കുക.",
+  "@curateYourCollectionWithMasterCraftedSpiritualGems": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "current": "നിലവിലെ",
+  "@current": {
+    "description": "Extracted visible text from lib/features/home/presentation/widgets/prayer_card.dart."
+  },
+  "current2": "നിലവിലെ",
+  "@current2": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/progress_card.dart."
+  },
+  "currentLocationToMecca": "നിലവിലെ സ്ഥലത്തുനിന്ന് മക്കയിലേക്ക്",
+  "@currentLocationToMecca": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "currentProgressWillResetForTheNewMode": "പുതിയ മോഡിനായി നിലവിലെ പുരോഗതി പുനഃസജ്ജമാക്കും.",
+  "@currentProgressWillResetForTheNewMode": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "currentStreak": "നിലവിലെ സ്ട്രീക്ക്",
+  "@currentStreak": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "custom": "ഇഷ്ടാനുസൃതം",
+  "@custom": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "customDhikr": "സ്വന്തം ദിക്ർ",
+  "@customDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "customGoal": "സ്വന്തം ലക്ഷ്യം",
+  "@customGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "customPrayerSounds": "ഇഷ്ടാനുസൃത ബാങ്ക് ശബ്ദങ്ങൾ",
+  "@customPrayerSounds": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "dailyGoal": "ദൈനംദിന ലക്ഷ്യം",
+  "@dailyGoal": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyQuests": "ദൈനംദിന ദൗത്യങ്ങൾ",
+  "@dailyQuests": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "dailyQuranReminder": "ദൈനംദിന ഖുർആൻ ഓർമ്മപ്പെടുത്തൽ",
+  "@dailyQuranReminder": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyReminders": "ദൈനംദിന ഓർമ്മപ്പെടുത്തലുകൾ",
+  "@dailyReminders": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyTasbih": "ദൈനംദിന തസ്ബീഹ്",
+  "@dailyTasbih": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "dark": "ഡാർക്ക്",
+  "@dark": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dawn": "പ്രഭാതം",
+  "@dawn": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "debug": "ഡീബഗ്",
+  "@debug": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/prayer_alarm_page.dart."
+  },
+  "dhikr": "ദിക്ർ",
+  "@dhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "dhikrActivity": "ദിക്ർ പ്രവർത്തനം",
+  "@dhikrActivity": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "dhuAlHijjah": "ദുൽഹിജ്ജ",
+  "@dhuAlHijjah": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "dhuAlQadah": "ദുൽഖഅദ്",
+  "@dhuAlQadah": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "dhuhr": "ളുഹ്ർ",
+  "@dhuhr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "direction": "ദിശ",
+  "@direction": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "disableBatteryOptimization": "ബാറ്ററി ഒപ്റ്റിമൈസേഷൻ ഓഫാക്കുക",
+  "@disableBatteryOptimization": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "disableOptimization": "ഒപ്റ്റിമൈസേഷൻ ഓഫാക്കുക",
+  "@disableOptimization": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "distance": "ദൂരം",
+  "@distance": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "e": "കി",
+  "@e": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "eGHasbunallah": "ഉദാ. ഹസ്ബുനല്ലാഹ്",
+  "@eGHasbunallah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "east": "കിഴക്ക്",
+  "@east": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "enableAutoStart": "ഓട്ടോ-സ്റ്റാർട്ട് ഓണാക്കുക",
+  "@enableAutoStart": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "enableNotifications": "അറിയിപ്പുകൾ ഓണാക്കുക",
+  "@enableNotifications": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "enableReminders": "ഓർമ്മപ്പെടുത്തലുകൾ ഓണാക്കുക",
+  "@enableReminders": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "english": "ഇംഗ്ലീഷ്",
+  "@english": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "enterYourName": "നിങ്ങളുടെ പേര് നൽകുക",
+  "@enterYourName": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "equipped": "ഉപയോഗത്തിലാണ്",
+  "@equipped": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "everythingYouNeedForABetterQuranExperience": "മികച്ച ഖുർആൻ അനുഭവത്തിന് വേണ്ടതെല്ലാം.",
+  "@everythingYouNeedForABetterQuranExperience": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "fajr": "ഫജ്ർ",
+  "@fajr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "feedback": "അഭിപ്രായം",
+  "@feedback": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "first": "ആദ്യം",
+  "@first": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "forTheMostAccurateResultsKeepYourPhone": "ഏറ്റവും കൃത്യമായ ഫലത്തിന്, ഫോൺ നിരപ്പായി പിടിക്കുക, കാന്തിക വസ്തുക്കളിൽ നിന്ന് അകലം പാലിക്കുക.",
+  "@forTheMostAccurateResultsKeepYourPhone": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "free": "സൗജന്യം",
+  "@free": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/progress_card.dart."
+  },
+  "fullBundle": "പൂർണ്ണ ബണ്ടിൽ",
+  "@fullBundle": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "getAnAdFreeExperienceForever": "എന്നെന്നേക്കും പരസ്യരഹിത അനുഭവം നേടുക",
+  "@getAnAdFreeExperienceForever": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "getRemindedToReadAndStayConsistent": "വായിക്കാൻ ഓർമ്മപ്പെടുത്തൽ നേടി സ്ഥിരത നിലനിർത്തുക.",
+  "@getRemindedToReadAndStayConsistent": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "getStarted": "തുടങ്ങാം",
+  "@getStarted": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "gloryAndPraiseBeToAllah": "അല്ലാഹുവിന് പരിശുദ്ധിയും സ്തുതിയും",
+  "@gloryAndPraiseBeToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "gloryBeToAllah": "അല്ലാഹു എത്ര പരിശുദ്ധൻ",
+  "@gloryBeToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "gloryBeToAllahTheMagnificent": "മഹാനായ അല്ലാഹു എത്ര പരിശുദ്ധൻ",
+  "@gloryBeToAllahTheMagnificent": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "goToHome": "ഹോമിലേക്ക് പോകുക",
+  "@goToHome": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "goldenEngraved": "സ്വർണ്ണ കൊത്തുപണി",
+  "@goldenEngraved": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "greenJade": "പച്ച ജേഡ്",
+  "@greenJade": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "hMm": "H:mm",
+  "@hMm": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "hanoiVietnam": "ഹനോയ്, വിയറ്റ്നാം",
+  "@hanoiVietnam": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "haptic": "വൈബ്രേഷൻ",
+  "@haptic": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "hasanatHub": "ഹസനാത്ത് കേന്ദ്രം",
+  "@hasanatHub": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "hasbiyallahuLaIlahaIllaHuwa": "ഹസ്ബിയല്ലാഹു ലാ ഇലാഹ ഇല്ലാ ഹുവ",
+  "@hasbiyallahuLaIlahaIllaHuwa": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "hhMm": "HH:mm",
+  "@hhMm": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "hhMmA": "hh:mm a",
+  "@hhMmA": {
+    "description": "Extracted visible text from lib/features/home/presentation/widgets/prayer_card.dart."
+  },
+  "home": "ഹോം",
+  "@home": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "howYourDataIsHandled": "നിങ്ങളുടെ വിവരങ്ങൾ എങ്ങനെ കൈകാര്യം ചെയ്യുന്നു",
+  "@howYourDataIsHandled": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "iSeekForgivenessFromAllah": "ഞാൻ അല്ലാഹുവിനോട് പാപമോചനം തേടുന്നു",
+  "@iSeekForgivenessFromAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "iSeekRefugeInAllahFromTheAccursed": "ശപിക്കപ്പെട്ട പിശാചിൽ നിന്ന് ഞാൻ അല്ലാഹുവിൽ അഭയം തേടുന്നു",
+  "@iSeekRefugeInAllahFromTheAccursed": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "immediateAlerts": "ഉടനടി അറിയിപ്പുകൾ",
+  "@immediateAlerts": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "inTheNameOfAllah": "അല്ലാഹുവിന്റെ നാമത്തിൽ",
+  "@inTheNameOfAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "indeedWeBelongToAllahAndToHim": "തീർച്ചയായും നാം അല്ലാഹുവിന്റേതാണ്, അവനിലേക്ക് തന്നെ മടങ്ങുന്നു",
+  "@indeedWeBelongToAllahAndToHim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "innaLillahiWaInnaIlayhiRajiun": "ഇന്നാ ലില്ലാഹി വ ഇന്നാ ഇലൈഹി റാജിഊൻ",
+  "@innaLillahiWaInnaIlayhiRajiun": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "isha": "ഇശാ",
+  "@isha": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "jumadaAlAwwal": "ജമാദുൽ അവ്വൽ",
+  "@jumadaAlAwwal": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "jumadaAlThani": "ജമാദുൽ ആഖിർ",
+  "@jumadaAlThani": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "juz": "ജുസ്അ്",
+  "@juz": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "juz2": "ജുസ്അ്",
+  "@juz2": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "keepAdhanAlarmsReliable": "ബാങ്ക് അലാറങ്ങൾ വിശ്വസനീയമായി നിലനിർത്തുക",
+  "@keepAdhanAlarmsReliable": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "keepItUpYouReDoingGreat": "ഇങ്ങനെ തുടരൂ! നിങ്ങൾ ഗംഭീരമായി ചെയ്യുന്നു.",
+  "@keepItUpYouReDoingGreat": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "keepPrayerCallsReliableEvenWhenTheApp": "ആപ്പ് അടച്ചാലും ബാങ്ക് വിളി വിശ്വസനീയമായി ലഭിക്കട്ടെ.",
+  "@keepPrayerCallsReliableEvenWhenTheApp": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "laHawlaWaLaQuwwataIllaBillah": "ലാ ഹൗല വലാ ഖുവ്വത ഇല്ലാ ബില്ലാഹ്",
+  "@laHawlaWaLaQuwwataIllaBillah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "laIlahaIllallah": "ലാ ഇലാഹ ഇല്ലല്ലാഹ്",
+  "@laIlahaIllallah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "language": "ഭാഷ",
+  "@language": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "lapisLazuli": "ലാപിസ് ലാസുലി",
+  "@lapisLazuli": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "last7Days": "കഴിഞ്ഞ 7 ദിവസം",
+  "@last7Days": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "later": "പിന്നീട്",
+  "@later": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "letSBeginYourBeautifulJourneyWithThe": "ഖുർആനുമായുള്ള നിങ്ങളുടെ മനോഹര യാത്ര തുടങ്ങാം.",
+  "@letSBeginYourBeautifulJourneyWithThe": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "letSPersonalizeYourExperience": "നിങ്ങളുടെ അനുഭവം\nഇഷ്ടാനുസൃതമാക്കാം",
+  "@letSPersonalizeYourExperience": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "light": "ലൈറ്റ്",
+  "@light": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "lightMode": "ലൈറ്റ് മോഡ്",
+  "@lightMode": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "listenToOrReadAnyAyahToday": "ഇന്ന് ഏതെങ്കിലും ആയത്ത് കേൾക്കുകയോ വായിക്കുകയോ ചെയ്യുക",
+  "@listenToOrReadAnyAyahToday": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "locating": "സ്ഥാനം കണ്ടെത്തുന്നു...",
+  "@locating": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "location": "ലൊക്കേഷൻ",
+  "@location": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "locationPermissionsAreDenied": "ലൊക്കേഷൻ അനുമതി നിഷേധിച്ചു",
+  "@locationPermissionsAreDenied": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "locationPermissionsArePermanentlyDenied": "ലൊക്കേഷൻ അനുമതി ശാശ്വതമായി നിഷേധിച്ചിരിക്കുന്നു.",
+  "@locationPermissionsArePermanentlyDenied": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/providers/qibla_provider.dart."
+  },
+  "locationServicesAreDisabled": "ലൊക്കേഷൻ സേവനങ്ങൾ ഓഫാണ്.",
+  "@locationServicesAreDisabled": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "longestStreak": "ഏറ്റവും നീണ്ട സ്ട്രീക്ക്",
+  "@longestStreak": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/stats_grid.dart."
+  },
+  "maghrib": "മഗ്‌രിബ്",
+  "@maghrib": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "maybeLater": "പിന്നീടാകാം",
+  "@maybeLater": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "meccaSaudiArabia": "മക്ക, സൗദി അറേബ്യ",
+  "@meccaSaudiArabia": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "misharyRashidAlafasy": "Mishary Rashid Alafasy",
+  "@misharyRashidAlafasy": {
+    "description": "Extracted visible text from lib/features/quran/presentation/provider/quran_provider.dart."
+  },
+  "mmmDdYyyy": "MMM dd, yyyy",
+  "@mmmDdYyyy": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "myLordForgiveAndHaveMercy": "എന്റെ റബ്ബേ, പൊറുക്കുകയും കരുണ ചെയ്യുകയും ചെയ്യേണമേ",
+  "@myLordForgiveAndHaveMercy": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordIAmInNeedOfWhatever": "എന്റെ റബ്ബേ, നീ ഇറക്കുന്ന ഏതൊരു നന്മയ്ക്കും ഞാൻ ആവശ്യക്കാരനാണ്",
+  "@myLordIAmInNeedOfWhatever": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordIncreaseMeInKnowledge": "എന്റെ റബ്ബേ, എനിക്ക് അറിവ് വർദ്ധിപ്പിച്ചു തരേണമേ",
+  "@myLordIncreaseMeInKnowledge": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordMakeItEasyAndDoNot": "എന്റെ റബ്ബേ, എളുപ്പമാക്കേണമേ, പ്രയാസമാക്കരുതേ",
+  "@myLordMakeItEasyAndDoNot": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "n": "വ",
+  "@n": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "nameOptional": "പേര് (നിർബന്ധമല്ല)",
+  "@nameOptional": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "next": "അടുത്തത്",
+  "@next": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "nextDhikr": "അടുത്ത ദിക്ർ",
+  "@nextDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "nextPrayer": "അടുത്ത നമസ്കാരം",
+  "@nextPrayer": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "night": "രാത്രി",
+  "@night": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "nightEmeraldInterface": "രാത്രി മരതക ഇന്റർഫേസ്",
+  "@nightEmeraldInterface": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "noBookmarksYet": "ബുക്ക്മാർക്കുകൾ ഒന്നുമില്ല",
+  "@noBookmarksYet": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "noon": "ഉച്ച",
+  "@noon": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "north": "വടക്ക്",
+  "@north": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "northeast": "വടക്കുകിഴക്ക്",
+  "@northeast": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "northwest": "വടക്കുപടിഞ്ഞാറ്",
+  "@northwest": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "notificationsAlarm": "അറിയിപ്പുകളും അലാറവും",
+  "@notificationsAlarm": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "notificationsForPrayerTimes": "നമസ്കാര സമയങ്ങൾക്കുള്ള അറിയിപ്പുകൾ",
+  "@notificationsForPrayerTimes": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "oAllahSendBlessingsUponMuhammad": "അല്ലാഹുവേ, മുഹമ്മദ് നബിക്ക് സ്വലാത്ത് ചൊരിയേണമേ",
+  "@oAllahSendBlessingsUponMuhammad": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "oEverLivingOSustainer": "എന്നെന്നും ജീവിക്കുന്നവനേ, സർവ്വത്തെയും നിലനിർത്തുന്നവനേ",
+  "@oEverLivingOSustainer": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "openAutoStart": "ഓട്ടോ-സ്റ്റാർട്ട് തുറക്കുക",
+  "@openAutoStart": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "optimizeAdhanPerformance": "ബാങ്ക് പ്രവർത്തനം മെച്ചപ്പെടുത്തുക",
+  "@optimizeAdhanPerformance": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "ourLordGrantUsGoodInThisWorld": "ഞങ്ങളുടെ റബ്ബേ, ഈ ലോകത്ത് ഞങ്ങൾക്ക് നന്മ നൽകേണമേ",
+  "@ourLordGrantUsGoodInThisWorld": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "page": "പേജ്",
+  "@page": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "pearl": "മുത്ത്",
+  "@pearl": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "personalizeYourAdhanNotifications": "നിങ്ങളുടെ ബാങ്ക് അറിയിപ്പുകൾ ഇഷ്ടാനുസൃതമാക്കുക",
+  "@personalizeYourAdhanNotifications": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "praiseBeToAllahLordOfTheWorlds": "സർവ്വലോക രക്ഷിതാവായ അല്ലാഹുവിന് സ്തുതി",
+  "@praiseBeToAllahLordOfTheWorlds": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "prayerAlarms": "നമസ്കാര അലാറങ്ങൾ",
+  "@prayerAlarms": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "prayerSchedule": "നമസ്കാര സമയക്രമം",
+  "@prayerSchedule": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "prayerTimeNotifications": "നമസ്കാര സമയ അറിയിപ്പുകൾ",
+  "@prayerTimeNotifications": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "prayerTimesAreLoading": "നമസ്കാര സമയങ്ങൾ ലോഡ് ചെയ്യുന്നു",
+  "@prayerTimesAreLoading": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "prayerTimesQiblaQuranReadingAndTasbihIn": "നമസ്കാര സമയങ്ങൾ, ഖിബ്‌ല, ഖുർആൻ വായന, തസ്ബീഹ് — എല്ലാം ഒരൊറ്റ ദൈനംദിന കൂട്ടാളിയിൽ.",
+  "@prayerTimesQiblaQuranReadingAndTasbihIn": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "prayerQuranQibla": "നമസ്കാരം • ഖുർആൻ • ഖിബ്‌ല",
+  "@prayerQuranQibla": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "premiumThemes": "പ്രീമിയം തീമുകൾ",
+  "@premiumThemes": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "preparingYourSpiritualJourney": "നിങ്ങളുടെ ആത്മീയ യാത്ര ഒരുക്കുന്നു...",
+  "@preparingYourSpiritualJourney": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "previousDhikr": "മുൻ ദിക്ർ",
+  "@previousDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "privacyPolicy": "സ്വകാര്യതാ നയം",
+  "@privacyPolicy": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "qibla": "ഖിബ്‌ല",
+  "@qibla": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "qiblaFinder": "ഖിബ്‌ല കണ്ടെത്തൽ",
+  "@qiblaFinder": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "quran": "ഖുർആൻ",
+  "@quran": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "quranPlayback": "ഖുർആൻ പ്ലേബാക്ക്",
+  "@quranPlayback": {
+    "description": "Extracted visible text from lib/main.dart."
+  },
+  "quranPro": "Quran Pro",
+  "@quranPro": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "quranPro2": "QURAN PRO",
+  "@quranPro2": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "quranProBringsPrayerTimesQiblaQuranReading": "നമസ്കാര സമയങ്ങൾ, ഖിബ്‌ല, ഖുർആൻ വായന, തസ്ബീഹ് എന്നിവ ലളിതമായ ഒരു ദൈനംദിന കൂട്ടാളിയിലേക്ക് ഖുർആൻ പ്രോ കൊണ്ടുവരുന്നു.",
+  "@quranProBringsPrayerTimesQiblaQuranReading": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "quranProPreferences": "ഖുർആൻ പ്രോ മുൻഗണനകൾ",
+  "@quranProPreferences": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "quranProStoresOnboardingAndProgressPreferencesLocally": "ഖുർആൻ പ്രോ ഓൺബോർഡിംഗ്, പുരോഗതി മുൻഗണനകൾ ഈ ഉപകരണത്തിൽ തന്നെ സൂക്ഷിക്കുന്നു. സ്ഥിരതയും ഗുണനിലവാരവും മെച്ചപ്പെടുത്താൻ അനലിറ്റിക്സ് ഉപയോഗിച്ചേക്കാം.",
+  "@quranProStoresOnboardingAndProgressPreferencesLocally": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "quranProStoresYourTasbihProgressLocallyOn": "ഖുർആൻ പ്രോ നിങ്ങളുടെ തസ്ബീഹ് പുരോഗതി ഈ ഉപകരണത്തിൽ തന്നെ സൂക്ഷിക്കുന്നു. ആപ്പിന്റെ സ്ഥിരതയും ഉൽപ്പന്ന ഗുണനിലവാരവും മെച്ചപ്പെടുത്താൻ അനലിറ്റിക്സ് ഉപയോഗിച്ചേക്കാം.",
+  "@quranProStoresYourTasbihProgressLocallyOn": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "quranRecitation": "ഖുർആൻ പാരായണം",
+  "@quranRecitation": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "rabbanaAtinaFidDunyaHasanah": "റബ്ബനാ ആതിനാ ഫിദ്ദുൻയാ ഹസനഃ",
+  "@rabbanaAtinaFidDunyaHasanah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiInniLimaAnzaltaIlayyaMinKhayrinFaqir": "റബ്ബി ഇന്നീ ലിമാ അൻസൽത ഇലയ്യ മിൻ ഖൈരിൻ ഫഖീർ",
+  "@rabbiInniLimaAnzaltaIlayyaMinKhayrinFaqir": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiYassirWaLaTuassir": "റബ്ബി യസ്സിർ വലാ തുഅസ്സിർ",
+  "@rabbiYassirWaLaTuassir": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiZidniIlma": "റബ്ബി സിദ്നീ ഇൽമാ",
+  "@rabbiZidniIlma": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbighfirWarhamWaAntaKhayrurRahimin": "റബ്ബിഗ്ഫിർ വർഹം വ അൻത ഖൈറുർ റാഹിമീൻ",
+  "@rabbighfirWarhamWaAntaKhayrurRahimin": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabiAlAwwal": "റബീഉൽ അവ്വൽ",
+  "@rabiAlAwwal": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "rabiAlThani": "റബീഉൽ ആഖിർ",
+  "@rabiAlThani": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "rateApp": "ആപ്പ് റേറ്റ് ചെയ്യുക",
+  "@rateApp": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "rateQuranPro": "ഖുർആൻ പ്രോ റേറ്റ് ചെയ്യുക",
+  "@rateQuranPro": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "readListen": "വായിക്കൂ, കേൾക്കൂ",
+  "@readListen": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "readTheQuranWithBeautifulRecitations": "മനോഹരമായ പാരായണങ്ങളോടെ ഖുർആൻ വായിക്കുക.",
+  "@readTheQuranWithBeautifulRecitations": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "recent": "അടുത്തിടെ",
+  "@recent": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "recommendedForXiaomiOppoVivoAndHuawei": "Xiaomi, Oppo, Vivo, Huawei ഫോണുകൾക്ക് ശുപാർശ ചെയ്യുന്നു",
+  "@recommendedForXiaomiOppoVivoAndHuawei": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "redCarnelian": "ചുവന്ന കാർണീലിയൻ",
+  "@redCarnelian": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "remindMeAt": "ഓർമ്മിപ്പിക്കേണ്ട സമയം",
+  "@remindMeAt": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "removeAds": "പരസ്യങ്ങൾ നീക്കുക",
+  "@removeAds": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "requestingLocationPermission": "ലൊക്കേഷൻ അനുമതി ആവശ്യപ്പെടുന്നു...",
+  "@requestingLocationPermission": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "reset": "പുനഃസജ്ജമാക്കുക",
+  "@reset": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "retry": "വീണ്ടും ശ്രമിക്കുക",
+  "@retry": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "returnToCompass": "കോമ്പസിലേക്ക് മടങ്ങുക",
+  "@returnToCompass": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "s": "തെ",
+  "@s": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "save": "സേവ് ചെയ്യുക",
+  "@save": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "saveGoal": "ലക്ഷ്യം സേവ് ചെയ്യുക",
+  "@saveGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "searchSurahNumberArabic": "സൂറ, നമ്പർ, അറബി തിരയുക...",
+  "@searchSurahNumberArabic": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "searchSurah": "സൂറ തിരയുക...",
+  "@searchSurah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "selectLanguage": "ഭാഷ തിരഞ്ഞെടുക്കുക",
+  "@selectLanguage": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "selectTheThemeYouLike": "ഇഷ്ടമുള്ള തീം തിരഞ്ഞെടുക്കുക",
+  "@selectTheThemeYouLike": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "selectYourBead": "നിങ്ങളുടെ മണി തിരഞ്ഞെടുക്കുക",
+  "@selectYourBead": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "shop": "ഷോപ്പ്",
+  "@shop": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "shopCustomization": "ഷോപ്പും ഇഷ്ടാനുസൃതമാക്കലും",
+  "@shopCustomization": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "sound": "ശബ്ദം",
+  "@sound": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "south": "തെക്ക്",
+  "@south": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "southeast": "തെക്കുകിഴക്ക്",
+  "@southeast": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "southwest": "തെക്കുപടിഞ്ഞാറ്",
+  "@southwest": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "specialOccasionsAndMore": "പ്രത്യേക അവസരങ്ങളും മറ്റും",
+  "@specialOccasionsAndMore": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "storeRatingWillBeConnectedWhenTheProduction": "പ്രൊഡക്ഷൻ ലിസ്റ്റിംഗ് തയ്യാറാകുമ്പോൾ സ്റ്റോർ റേറ്റിംഗ് ബന്ധിപ്പിക്കും.",
+  "@storeRatingWillBeConnectedWhenTheProduction": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "subhanallahiWaBihamdihi": "സുബ്ഹാനല്ലാഹി വ ബിഹംദിഹി",
+  "@subhanallahiWaBihamdihi": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "subhanallahilAzim": "സുബ്ഹാനല്ലാഹിൽ അളീം",
+  "@subhanallahilAzim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "sunset": "സൂര്യാസ്തമയം",
+  "@sunset": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "supportQuranProOnTheStore": "സ്റ്റോറിൽ ഖുർആൻ പ്രോയെ പിന്തുണയ്ക്കുക",
+  "@supportQuranProOnTheStore": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "surah": "സൂറ",
+  "@surah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "tasbih": "തസ്ബീഹ്",
+  "@tasbih": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "tasbihSettings": "തസ്ബീഹ് ക്രമീകരണങ്ങൾ",
+  "@tasbihSettings": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "tellUsWhatToImprove": "എന്ത് മെച്ചപ്പെടുത്തണമെന്ന് പറയൂ",
+  "@tellUsWhatToImprove": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "termsOfUse": "ഉപയോഗ നിബന്ധനകൾ",
+  "@termsOfUse": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "thanksForUsingQuranProStoreRatingWill": "ഖുർആൻ പ്രോ ഉപയോഗിച്ചതിന് നന്ദി. പ്രൊഡക്ഷൻ സ്റ്റോർ ലിസ്റ്റിംഗ് തയ്യാറാകുമ്പോൾ സ്റ്റോർ റേറ്റിംഗ് ബന്ധിപ്പിക്കും.",
+  "@thanksForUsingQuranProStoreRatingWill": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "thereIsNoDeityExceptAllah": "അല്ലാഹുവല്ലാതെ ആരാധ്യനില്ല",
+  "@thereIsNoDeityExceptAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "thereIsNoPowerNorStrengthExceptThrough": "അല്ലാഹുവിനെക്കൊണ്ടല്ലാതെ ഒരു ശക്തിയും കഴിവുമില്ല",
+  "@thereIsNoPowerNorStrengthExceptThrough": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "thisHelpsUsCustomizeRemindersAndTrackYour": "ഓർമ്മപ്പെടുത്തലുകൾ ക്രമീകരിക്കാനും നിങ്ങളുടെ പുരോഗതി രേഖപ്പെടുത്താനും ഇത് സഹായിക്കുന്നു.",
+  "@thisHelpsUsCustomizeRemindersAndTrackYour": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "tigerSEye": "കടുവക്കണ്ണ്",
+  "@tigerSEye": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "today": "ഇന്ന്",
+  "@today": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "total": "ആകെ",
+  "@total": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "totalHasanat": "ആകെ ഹസനാത്ത്",
+  "@totalHasanat": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "trackProgress": "പുരോഗതി രേഖപ്പെടുത്തുക",
+  "@trackProgress": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "trackYourReadingAndAchievements": "നിങ്ങളുടെ വായനയും നേട്ടങ്ങളും രേഖപ്പെടുത്തുക.",
+  "@trackYourReadingAndAchievements": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "tryAgain": "വീണ്ടും ശ്രമിക്കുക",
+  "@tryAgain": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "undo": "പഴയപടിയാക്കുക",
+  "@undo": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "unlockAllAppThemesAndCustomizations": "എല്ലാ ആപ്പ് തീമുകളും ഇഷ്ടാനുസൃതമാക്കലുകളും അൺലോക്ക് ചെയ്യുക",
+  "@unlockAllAppThemesAndCustomizations": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "usageGuidelines": "ഉപയോഗ മാർഗ്ഗനിർദ്ദേശങ്ങൾ",
+  "@usageGuidelines": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "useQuranProRespectfullyForPersonalWorshipLearning": "വ്യക്തിപരമായ ആരാധന, പഠനം, ദൈനംദിന ഇസ്ലാമിക ചിട്ടകൾ എന്നിവയ്ക്കായി ഖുർആൻ പ്രോ ആദരവോടെ ഉപയോഗിക്കുക.",
+  "@useQuranProRespectfullyForPersonalWorshipLearning": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "viewAll": "എല്ലാം കാണുക",
+  "@viewAll": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "w": "പ",
+  "@w": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "welcome": "സ്വാഗതം",
+  "@welcome": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "west": "പടിഞ്ഞാറ്",
+  "@west": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "yaHayyuYaQayyum": "യാ ഹയ്യു യാ ഖയ്യൂം",
+  "@yaHayyuYaQayyum": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "youReAllSet": "എല്ലാം തയ്യാറായി!",
+  "@youReAllSet": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "yourProgress": "നിങ്ങളുടെ പുരോഗതി",
+  "@yourProgress": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "continueLabel": "തുടരുക",
+  "@continueLabel": {
+    "description": "English UI text."
+  },
+  "amethyst": "അമേത്തിസ്റ്റ്",
+  "@amethyst": {
+    "description": "English UI text."
+  },
+  "indonesian": "ഇന്തോനേഷ്യൻ",
+  "@indonesian": {
+    "description": "English UI text."
+  },
+  "turkish": "ടർക്കിഷ്",
+  "@turkish": {
+    "description": "English UI text."
+  },
+  "vietnamese": "വിയറ്റ്നാമീസ്",
+  "@vietnamese": {
+    "description": "English UI text."
+  },
+  "turquoise": "ടർക്കോയ്സ്",
+  "@turquoise": {
+    "description": "English UI text."
+  },
+  "wood": "മരം",
+  "@wood": {
+    "description": "English UI text."
+  },
+  "left": "left",
+  "@left": {
+    "description": "Text displayed after time remaining (e.g., 5 mins left)."
+  }
+}

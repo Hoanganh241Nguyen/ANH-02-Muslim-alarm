@@ -1,0 +1,1273 @@
+{
+  "@@locale": "ar",
+  "week": "الأسبوع",
+  "@week": {
+    "description": "Tasbih statistics period label."
+  },
+  "month": "الشهر",
+  "@month": {
+    "description": "Tasbih statistics period label."
+  },
+  "lifetime": "مدى الحياة",
+  "@lifetime": {
+    "description": "Tasbih statistics period label."
+  },
+  "appTitle": "Quran Pro: القرآن المجيد",
+  "@appTitle": {
+    "description": "App UI text."
+  },
+  "prayerAlarmDefaultQuote": "توقف قليلًا عن عملك وخصص وقتًا لله.",
+  "@prayerAlarmDefaultQuote": {
+    "description": "App UI text."
+  },
+  "prayerAlarmDefaultName": "الصلاة",
+  "@prayerAlarmDefaultName": {
+    "description": "App UI text."
+  },
+  "productUnavailable": "المنتج {id} غير متاح للشراء.",
+  "@productUnavailable": {
+    "description": "App UI text.",
+    "placeholders": {
+      "id": {}
+    }
+  },
+  "purchaseSuccessful": "تم شراء {productId} بنجاح!",
+  "@purchaseSuccessful": {
+    "description": "App UI text.",
+    "placeholders": {
+      "productId": {}
+    }
+  },
+  "purchaseRestored": "تمت استعادة شراء {productId}!",
+  "@purchaseRestored": {
+    "description": "App UI text.",
+    "placeholders": {
+      "productId": {}
+    }
+  },
+  "daysCount": "{count} يوم",
+  "@daysCount": {
+    "description": "App UI text.",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "upcomingPrayer": "القادم: {prayerName}",
+  "@upcomingPrayer": {
+    "description": "App UI text.",
+    "placeholders": {
+      "prayerName": {}
+    }
+  },
+  "distanceToMecca": "المسافة إلى مكة: {distance} كم",
+  "@distanceToMecca": {
+    "description": "App UI text.",
+    "placeholders": {
+      "distance": {}
+    }
+  },
+  "snoozeMinutes": "ذكّرني بعد {minutes} دقيقة",
+  "@snoozeMinutes": {
+    "description": "App UI text.",
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "prayerTimeArrived": "حان وقت صلاة {prayerName}",
+  "@prayerTimeArrived": {
+    "description": "App UI text.",
+    "placeholders": {
+      "prayerName": {}
+    }
+  },
+  "roundValue": "الجولة: {round}",
+  "@roundValue": {
+    "description": "App UI text.",
+    "placeholders": {
+      "round": {}
+    }
+  },
+  "selectedLanguage": "تم اختيار {language}",
+  "@selectedLanguage": {
+    "description": "App UI text.",
+    "placeholders": {
+      "language": {}
+    }
+  },
+  "juzNumber": "الجزء {juz}",
+  "@juzNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "juz": {}
+    }
+  },
+  "pageNumber": "الصفحة {page}",
+  "@pageNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "page": {}
+    }
+  },
+  "hizbNumber": "الحزب {hizb}",
+  "@hizbNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "hizb": {}
+    }
+  },
+  "surahVerse": "{surahName}: الآية {verse}",
+  "@surahVerse": {
+    "description": "App UI text.",
+    "placeholders": {
+      "surahName": {},
+      "verse": {}
+    }
+  },
+  "surahAyahCount": "{count} آية",
+  "@surahAyahCount": {
+    "description": "App UI text.",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "levelNumber": "المستوى {level}",
+  "@levelNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "level": {}
+    }
+  },
+  "surahAlBaqarah2238": "(سورة البقرة 2:238)",
+  "@surahAlBaqarah2238": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "text1juz": "1 جزء",
+  "@text1juz": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text199usd": "1.99 USD",
+  "@text199usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text10pages": "10 صفحات",
+  "@text10pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text100dhikr": "100 ذكر",
+  "@text100dhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "text299usd": "2.99 USD",
+  "@text299usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text20pages": "20 صفحة",
+  "@text20pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text28cclearsky": "28°C - سماء صافية",
+  "@text28cclearsky": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "text499usd": "4.99 USD",
+  "@text499usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text5pages": "5 صفحات",
+  "@text5pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text799usd": "7.99 USD",
+  "@text799usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "about": "حول",
+  "@about": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "aboutQuranPro": "حول Quran Pro",
+  "@aboutQuranPro": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "activity": "النشاط",
+  "@activity": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "adIsLoadingPleaseTryAgainSoon": "يتم تحميل الإعلان. حاول مرة أخرى قريبًا.",
+  "@adIsLoadingPleaseTryAgainSoon": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "addCustomDhikr": "إضافة ذكر مخصص",
+  "@addCustomDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "addCustomDhikr2": "إضافة ذكر مخصص",
+  "@addCustomDhikr2": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "addDhikr": "إضافة ذكر",
+  "@addDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "adjustPosition": "اضبط الموضع",
+  "@adjustPosition": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "afternoon": "بعد الظهر",
+  "@afternoon": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "alMasjidAlHaram": "المسجد الحرام",
+  "@alMasjidAlHaram": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "alhamdulillahiRabbilAlamin": "الحمد لله رب العالمين",
+  "@alhamdulillahiRabbilAlamin": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "alignedToQibla": "متجه نحو القبلة",
+  "@alignedToQibla": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "allPraiseIsDueToAllah": "الحمد كله لله",
+  "@allPraiseIsDueToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allPremiumFeaturesAtADiscountedPrice": "كل الميزات المميزة بسعر مخفض",
+  "@allPremiumFeaturesAtADiscountedPrice": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "allInOneQuranApp": "تطبيق قرآن شامل",
+  "@allInOneQuranApp": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "allahIsSufficientForMeThereIsNo": "حسبي الله، لا إله إلا هو",
+  "@allahIsSufficientForMeThereIsNo": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahIsTheGreatest": "الله أكبر من كل شيء",
+  "@allahIsTheGreatest": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahuAkbar": "الله أكبر",
+  "@allahuAkbar": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahummaSalliAlaMuhammad": "اللهم صل على محمد",
+  "@allahummaSalliAlaMuhammad": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allowLocationPermissionOrTapRetryToUse": "اسمح بالموقع أو اضغط إعادة المحاولة لاستخدام الجدول الاحتياطي.",
+  "@allowLocationPermissionOrTapRetryToUse": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "allowNotificationsToReceivePrayerTimesAndDaily": "اسمح بالإشعارات لاستقبال أوقات الصلاة والتذكيرات اليومية.",
+  "@allowNotificationsToReceivePrayerTimesAndDaily": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "allowTheAppToRunInTheBackground": "اسمح للتطبيق بالعمل في الخلفية",
+  "@allowTheAppToRunInTheBackground": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "app": "التطبيق",
+  "@app": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "arabic": "العربية",
+  "@arabic": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "asr": "العصر",
+  "@asr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "auzuBillahiMinAshShaytanirRajim": "أعوذ بالله من الشيطان الرجيم",
+  "@auzuBillahiMinAshShaytanirRajim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "avg": "المتوسط",
+  "@avg": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "ayah": "آية",
+  "@ayah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/services/audio_handler.dart."
+  },
+  "batteryOptimization": "تحسين البطارية",
+  "@batteryOptimization": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "beautifulWidgets": "ودجات جميلة",
+  "@beautifulWidgets": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "bestValue": "أفضل قيمة",
+  "@bestValue": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "blackOnyx": "أونيكس أسود",
+  "@blackOnyx": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "bookmarks": "الإشارات المرجعية",
+  "@bookmarks": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "brightIvoryInterface": "واجهة عاجية مشرقة",
+  "@brightIvoryInterface": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "calculatingDistance": "جارٍ حساب المسافة...",
+  "@calculatingDistance": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "calibrateYourDirection": "معايرة الاتجاه",
+  "@calibrateYourDirection": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "cancel": "إلغاء",
+  "@cancel": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "change": "تغيير",
+  "@change": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "changeTasbihMode": "تغيير وضع التسبيح؟",
+  "@changeTasbihMode": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "chooseDhikr": "اختر الذكر",
+  "@chooseDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "chooseDisplayLanguage": "اختر لغة العرض",
+  "@chooseDisplayLanguage": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "chooseTheme": "اختر المظهر",
+  "@chooseTheme": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "chooseYourPreferredLanguage": "اختر لغتك المفضلة",
+  "@chooseYourPreferredLanguage": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "clickOrSwipeToCount": "اضغط أو اسحب للعد",
+  "@clickOrSwipeToCount": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/counter_text.dart."
+  },
+  "close": "إغلاق",
+  "@close": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "closeCustomGoal": "إغلاق الهدف المخصص",
+  "@closeCustomGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "completeAtLeast33Dhikr": "أكمل 33 ذكرًا على الأقل",
+  "@completeAtLeast33Dhikr": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "connectYourHeartWithTheHolyQuran": "صل قلبك بالقرآن الكريم.",
+  "@connectYourHeartWithTheHolyQuran": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "continueReading": "متابعة القراءة",
+  "@continueReading": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "countsPerRound": "العدد في كل جولة",
+  "@countsPerRound": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "curateYourCollectionWithMasterCraftedSpiritualGems": "نسِّق مجموعتك بأحجار روحانية مصنوعة بإتقان.",
+  "@curateYourCollectionWithMasterCraftedSpiritualGems": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "current": "الحالي",
+  "@current": {
+    "description": "Extracted visible text from lib/features/home/presentation/widgets/prayer_card.dart."
+  },
+  "current2": "الحالي",
+  "@current2": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/progress_card.dart."
+  },
+  "currentLocationToMecca": "الموقع الحالي إلى مكة",
+  "@currentLocationToMecca": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "currentProgressWillResetForTheNewMode": "سيتم إعادة ضبط التقدم الحالي للوضع الجديد.",
+  "@currentProgressWillResetForTheNewMode": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "currentStreak": "السلسلة الحالية",
+  "@currentStreak": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "custom": "مخصص",
+  "@custom": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "customDhikr": "ذكر مخصص",
+  "@customDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "customGoal": "هدف مخصص",
+  "@customGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "customPrayerSounds": "أصوات أذان مخصصة",
+  "@customPrayerSounds": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "dailyGoal": "الهدف اليومي",
+  "@dailyGoal": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyQuests": "مهام يومية",
+  "@dailyQuests": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "dailyQuranReminder": "تذكير يومي بالقرآن",
+  "@dailyQuranReminder": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyReminders": "تذكيرات يومية",
+  "@dailyReminders": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyTasbih": "تسبيح يومي",
+  "@dailyTasbih": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "dark": "داكن",
+  "@dark": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dawn": "الفجر",
+  "@dawn": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "debug": "تصحيح الأخطاء",
+  "@debug": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/prayer_alarm_page.dart."
+  },
+  "dhikr": "ذكر",
+  "@dhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "dhikrActivity": "نشاط الذكر",
+  "@dhikrActivity": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "dhuAlHijjah": "ذو الحجة",
+  "@dhuAlHijjah": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "dhuAlQadah": "ذو القعدة",
+  "@dhuAlQadah": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "dhuhr": "الظهر",
+  "@dhuhr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "direction": "الاتجاه",
+  "@direction": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "disableBatteryOptimization": "إيقاف تحسين البطارية",
+  "@disableBatteryOptimization": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "disableOptimization": "إيقاف التحسين",
+  "@disableOptimization": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "distance": "المسافة",
+  "@distance": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "e": "ق",
+  "@e": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "eGHasbunallah": "مثال: حسبنا الله",
+  "@eGHasbunallah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "east": "الشرق",
+  "@east": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "enableAutoStart": "تفعيل التشغيل التلقائي",
+  "@enableAutoStart": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "enableNotifications": "تفعيل الإشعارات",
+  "@enableNotifications": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "enableReminders": "تفعيل التذكيرات",
+  "@enableReminders": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "english": "الإنجليزية",
+  "@english": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "enterYourName": "أدخل اسمك",
+  "@enterYourName": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "equipped": "مستخدم",
+  "@equipped": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "everythingYouNeedForABetterQuranExperience": "كل ما تحتاجه لتجربة قرآن أفضل.",
+  "@everythingYouNeedForABetterQuranExperience": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "fajr": "الفجر",
+  "@fajr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "feedback": "ملاحظات",
+  "@feedback": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "first": "الأول",
+  "@first": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "forTheMostAccurateResultsKeepYourPhone": "للحصول على أدق النتائج، ضع هاتفك بشكل مسطح وبعيدًا عن الأجسام المغناطيسية.",
+  "@forTheMostAccurateResultsKeepYourPhone": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "free": "مجاني",
+  "@free": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/progress_card.dart."
+  },
+  "fullBundle": "الحزمة الكاملة",
+  "@fullBundle": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "getAnAdFreeExperienceForever": "احصل على تجربة بلا إعلانات إلى الأبد",
+  "@getAnAdFreeExperienceForever": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "getRemindedToReadAndStayConsistent": "احصل على تذكيرات للقراءة والاستمرار.",
+  "@getRemindedToReadAndStayConsistent": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "getStarted": "ابدأ",
+  "@getStarted": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "gloryAndPraiseBeToAllah": "تنزيه لله وحمد له",
+  "@gloryAndPraiseBeToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "gloryBeToAllah": "تنزيه لله عن كل نقص",
+  "@gloryBeToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "gloryBeToAllahTheMagnificent": "تنزيه لله العظيم عن كل نقص",
+  "@gloryBeToAllahTheMagnificent": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "goToHome": "الذهاب إلى الرئيسية",
+  "@goToHome": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "goldenEngraved": "منقوش ذهبي",
+  "@goldenEngraved": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "greenJade": "يشم أخضر",
+  "@greenJade": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "hMm": "H:mm",
+  "@hMm": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "hanoiVietnam": "هانوي، فيتنام",
+  "@hanoiVietnam": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "haptic": "اهتزاز",
+  "@haptic": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "hasanatHub": "مركز الحسنات",
+  "@hasanatHub": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "hasbiyallahuLaIlahaIllaHuwa": "حسبي الله لا إله إلا هو",
+  "@hasbiyallahuLaIlahaIllaHuwa": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "hhMm": "HH:mm",
+  "@hhMm": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "hhMmA": "hh:mm a",
+  "@hhMmA": {
+    "description": "Extracted visible text from lib/features/home/presentation/widgets/prayer_card.dart."
+  },
+  "home": "الرئيسية",
+  "@home": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "howYourDataIsHandled": "كيف تتم معالجة بياناتك",
+  "@howYourDataIsHandled": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "iSeekForgivenessFromAllah": "أطلب المغفرة من الله",
+  "@iSeekForgivenessFromAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "iSeekRefugeInAllahFromTheAccursed": "أحتمي بالله من الشيطان الرجيم",
+  "@iSeekRefugeInAllahFromTheAccursed": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "immediateAlerts": "تنبيهات فورية",
+  "@immediateAlerts": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "inTheNameOfAllah": "باسم الله",
+  "@inTheNameOfAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "indeedWeBelongToAllahAndToHim": "إنا لله وإليه مرجعنا",
+  "@indeedWeBelongToAllahAndToHim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "innaLillahiWaInnaIlayhiRajiun": "إنا لله وإنا إليه راجعون",
+  "@innaLillahiWaInnaIlayhiRajiun": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "isha": "العشاء",
+  "@isha": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "jumadaAlAwwal": "جمادى الأولى",
+  "@jumadaAlAwwal": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "jumadaAlThani": "جمادى الآخرة",
+  "@jumadaAlThani": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "juz": "الجزء",
+  "@juz": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "juz2": "جزء",
+  "@juz2": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "keepAdhanAlarmsReliable": "حافظ على موثوقية منبهات الأذان",
+  "@keepAdhanAlarmsReliable": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "keepItUpYouReDoingGreat": "واصل! أداؤك رائع.",
+  "@keepItUpYouReDoingGreat": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "keepPrayerCallsReliableEvenWhenTheApp": "حافظ على وصول تنبيهات الأذان حتى عند إغلاق التطبيق.",
+  "@keepPrayerCallsReliableEvenWhenTheApp": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "laHawlaWaLaQuwwataIllaBillah": "لا حول ولا قوة إلا بالله",
+  "@laHawlaWaLaQuwwataIllaBillah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "laIlahaIllallah": "لا إله إلا الله",
+  "@laIlahaIllallah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "language": "اللغة",
+  "@language": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "lapisLazuli": "لازورد",
+  "@lapisLazuli": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "last7Days": "آخر 7 أيام",
+  "@last7Days": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "later": "لاحقًا",
+  "@later": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "letSBeginYourBeautifulJourneyWithThe": "لنبدأ رحلتك الجميلة مع القرآن.",
+  "@letSBeginYourBeautifulJourneyWithThe": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "letSPersonalizeYourExperience": "لنخصص\nتجربتك",
+  "@letSPersonalizeYourExperience": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "light": "فاتح",
+  "@light": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "lightMode": "الوضع الفاتح",
+  "@lightMode": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "listenToOrReadAnyAyahToday": "استمع إلى أي آية أو اقرأها اليوم",
+  "@listenToOrReadAnyAyahToday": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "locating": "جارٍ تحديد الموقع...",
+  "@locating": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "location": "الموقع",
+  "@location": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "locationPermissionsAreDenied": "تم رفض أذونات الموقع",
+  "@locationPermissionsAreDenied": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "locationPermissionsArePermanentlyDenied": "تم رفض أذونات الموقع نهائيًا.",
+  "@locationPermissionsArePermanentlyDenied": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/providers/qibla_provider.dart."
+  },
+  "locationServicesAreDisabled": "خدمات الموقع معطلة.",
+  "@locationServicesAreDisabled": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "longestStreak": "أطول سلسلة",
+  "@longestStreak": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/stats_grid.dart."
+  },
+  "maghrib": "المغرب",
+  "@maghrib": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "maybeLater": "ربما لاحقًا",
+  "@maybeLater": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "meccaSaudiArabia": "مكة المكرمة، السعودية",
+  "@meccaSaudiArabia": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "misharyRashidAlafasy": "Mishary Rashid Alafasy",
+  "@misharyRashidAlafasy": {
+    "description": "Extracted visible text from lib/features/quran/presentation/provider/quran_provider.dart."
+  },
+  "mmmDdYyyy": "MMM dd, yyyy",
+  "@mmmDdYyyy": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "myLordForgiveAndHaveMercy": "رب اغفر وارحم",
+  "@myLordForgiveAndHaveMercy": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordIAmInNeedOfWhatever": "رب إني محتاج إلى ما تنزله عليَّ من خير",
+  "@myLordIAmInNeedOfWhatever": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordIncreaseMeInKnowledge": "رب زدني علمًا",
+  "@myLordIncreaseMeInKnowledge": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordMakeItEasyAndDoNot": "رب يسر ولا تعسر",
+  "@myLordMakeItEasyAndDoNot": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "n": "ش",
+  "@n": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "nameOptional": "الاسم (اختياري)",
+  "@nameOptional": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "next": "التالي",
+  "@next": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "nextDhikr": "الذكر التالي",
+  "@nextDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "nextPrayer": "الصلاة القادمة",
+  "@nextPrayer": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "night": "الليل",
+  "@night": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "nightEmeraldInterface": "واجهة زمردية ليلية",
+  "@nightEmeraldInterface": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "noBookmarksYet": "لا توجد إشارات بعد",
+  "@noBookmarksYet": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "noon": "الظهيرة",
+  "@noon": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "north": "شمال",
+  "@north": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "northeast": "شمال شرق",
+  "@northeast": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "northwest": "شمال غرب",
+  "@northwest": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "notificationsAlarm": "الإشعارات والمنبه",
+  "@notificationsAlarm": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "notificationsForPrayerTimes": "إشعارات مواقيت الصلاة",
+  "@notificationsForPrayerTimes": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "oAllahSendBlessingsUponMuhammad": "اللهم صل على محمد",
+  "@oAllahSendBlessingsUponMuhammad": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "oEverLivingOSustainer": "يا حي يا قيوم",
+  "@oEverLivingOSustainer": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "openAutoStart": "فتح التشغيل التلقائي",
+  "@openAutoStart": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "optimizeAdhanPerformance": "تحسين أداء الأذان",
+  "@optimizeAdhanPerformance": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "ourLordGrantUsGoodInThisWorld": "ربنا آتنا في الدنيا حسنة",
+  "@ourLordGrantUsGoodInThisWorld": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "page": "الصفحة",
+  "@page": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "pearl": "لؤلؤ",
+  "@pearl": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "personalizeYourAdhanNotifications": "خصص إشعارات الأذان",
+  "@personalizeYourAdhanNotifications": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "praiseBeToAllahLordOfTheWorlds": "الحمد لله رب العالمين",
+  "@praiseBeToAllahLordOfTheWorlds": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "prayerAlarms": "منبهات الصلاة",
+  "@prayerAlarms": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "prayerSchedule": "جدول الصلاة",
+  "@prayerSchedule": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "prayerTimeNotifications": "إشعارات أوقات الصلاة",
+  "@prayerTimeNotifications": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "prayerTimesAreLoading": "جارٍ تحميل أوقات الصلاة",
+  "@prayerTimesAreLoading": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "prayerTimesQiblaQuranReadingAndTasbihIn": "مواقيت الصلاة والقبلة وقراءة القرآن والتسبيح في رفيق يومي واحد.",
+  "@prayerTimesQiblaQuranReadingAndTasbihIn": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "prayerQuranQibla": "الصلاة • القرآن • القبلة",
+  "@prayerQuranQibla": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "premiumThemes": "سمات مميزة",
+  "@premiumThemes": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "preparingYourSpiritualJourney": "نجهز رحلتك الروحانية...",
+  "@preparingYourSpiritualJourney": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "previousDhikr": "الذكر السابق",
+  "@previousDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "privacyPolicy": "سياسة الخصوصية",
+  "@privacyPolicy": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "qibla": "القبلة",
+  "@qibla": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "qiblaFinder": "محدد القبلة",
+  "@qiblaFinder": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "qiblaMap": "خريطة القبلة",
+  "@qiblaMap": {
+    "description": "Qibla map button tooltip."
+  },
+  "quran": "القرآن",
+  "@quran": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "quranPlayback": "تشغيل القرآن",
+  "@quranPlayback": {
+    "description": "Extracted visible text from lib/main.dart."
+  },
+  "quranPro": "Quran Pro",
+  "@quranPro": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "quranPro2": "QURAN PRO",
+  "@quranPro2": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "quranProBringsPrayerTimesQiblaQuranReading": "يجمع Quran Pro مواقيت الصلاة والقبلة وقراءة القرآن والتسبيح في رفيق يومي بسيط.",
+  "@quranProBringsPrayerTimesQiblaQuranReading": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "quranProPreferences": "تفضيلات Quran Pro",
+  "@quranProPreferences": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "quranProStoresOnboardingAndProgressPreferencesLocally": "يحفظ Quran Pro تفضيلات التهيئة والتقدم محليًا على هذا الجهاز. قد تُستخدم التحليلات لتحسين الاستقرار والجودة.",
+  "@quranProStoresOnboardingAndProgressPreferencesLocally": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "quranProStoresYourTasbihProgressLocallyOn": "يحفظ Quran Pro تقدمك في التسبيح محليًا على هذا الجهاز. قد تُستخدم التحليلات لتحسين استقرار التطبيق وجودة المنتج.",
+  "@quranProStoresYourTasbihProgressLocallyOn": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "quranRecitation": "تلاوة القرآن",
+  "@quranRecitation": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "rabbanaAtinaFidDunyaHasanah": "ربنا آتنا في الدنيا حسنة",
+  "@rabbanaAtinaFidDunyaHasanah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiInniLimaAnzaltaIlayyaMinKhayrinFaqir": "رب إني لما أنزلت إليَّ من خير فقير",
+  "@rabbiInniLimaAnzaltaIlayyaMinKhayrinFaqir": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiYassirWaLaTuassir": "رب يسر ولا تعسر",
+  "@rabbiYassirWaLaTuassir": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiZidniIlma": "رب زدني علمًا",
+  "@rabbiZidniIlma": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbighfirWarhamWaAntaKhayrurRahimin": "رب اغفر وارحم وأنت خير الراحمين",
+  "@rabbighfirWarhamWaAntaKhayrurRahimin": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabiAlAwwal": "ربيع الأول",
+  "@rabiAlAwwal": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "rabiAlThani": "ربيع الآخر",
+  "@rabiAlThani": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "rateApp": "قيّم التطبيق",
+  "@rateApp": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "rateQuranPro": "قيِّم Quran Pro",
+  "@rateQuranPro": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "readListen": "اقرأ واستمع",
+  "@readListen": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "readTheQuranWithBeautifulRecitations": "اقرأ القرآن مع تلاوات عذبة.",
+  "@readTheQuranWithBeautifulRecitations": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "recent": "الأخيرة",
+  "@recent": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "recommendedForXiaomiOppoVivoAndHuawei": "موصى به لأجهزة Xiaomi وOppo وVivo وHuawei",
+  "@recommendedForXiaomiOppoVivoAndHuawei": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "redCarnelian": "عقيق أحمر",
+  "@redCarnelian": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "remindMeAt": "ذكرني في",
+  "@remindMeAt": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "removeAds": "إزالة الإعلانات",
+  "@removeAds": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "requestingLocationPermission": "جارٍ طلب إذن الموقع...",
+  "@requestingLocationPermission": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "reset": "إعادة ضبط",
+  "@reset": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "retry": "إعادة المحاولة",
+  "@retry": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "returnToCompass": "العودة إلى البوصلة",
+  "@returnToCompass": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "s": "ج",
+  "@s": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "save": "حفظ",
+  "@save": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "saveGoal": "حفظ الهدف",
+  "@saveGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "searchSurahNumberArabic": "ابحث عن سورة أو رقم أو نص عربي...",
+  "@searchSurahNumberArabic": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "searchSurah": "ابحث عن سورة...",
+  "@searchSurah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "selectLanguage": "اختر اللغة",
+  "@selectLanguage": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "selectTheThemeYouLike": "اختر المظهر الذي يعجبك",
+  "@selectTheThemeYouLike": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "selectYourBead": "اختر خرزتك",
+  "@selectYourBead": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "shop": "المتجر",
+  "@shop": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "shopCustomization": "المتجر والتخصيص",
+  "@shopCustomization": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "sound": "الصوت",
+  "@sound": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "south": "جنوب",
+  "@south": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "southeast": "جنوب شرق",
+  "@southeast": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "southwest": "جنوب غرب",
+  "@southwest": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "specialOccasionsAndMore": "مناسبات خاصة والمزيد",
+  "@specialOccasionsAndMore": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "storeRatingWillBeConnectedWhenTheProduction": "سيتم تفعيل تقييم المتجر عند جاهزية النسخة الإنتاجية.",
+  "@storeRatingWillBeConnectedWhenTheProduction": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "subhanallahiWaBihamdihi": "سبحان الله وبحمده",
+  "@subhanallahiWaBihamdihi": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "subhanallahilAzim": "سبحان الله العظيم",
+  "@subhanallahilAzim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "sunset": "الغروب",
+  "@sunset": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "supportQuranProOnTheStore": "ادعم Quran Pro في المتجر",
+  "@supportQuranProOnTheStore": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "surah": "سورة",
+  "@surah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "tasbih": "تسبيح",
+  "@tasbih": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "tasbihSettings": "إعدادات التسبيح",
+  "@tasbihSettings": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "tellUsWhatToImprove": "أخبرنا بما يجب تحسينه",
+  "@tellUsWhatToImprove": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "termsOfUse": "شروط الاستخدام",
+  "@termsOfUse": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "thanksForUsingQuranProStoreRatingWill": "شكرًا لاستخدامك Quran Pro. سيتم تفعيل تقييم المتجر عند جاهزية صفحة التطبيق في المتجر.",
+  "@thanksForUsingQuranProStoreRatingWill": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "thereIsNoDeityExceptAllah": "لا إله إلا الله",
+  "@thereIsNoDeityExceptAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "thereIsNoPowerNorStrengthExceptThrough": "لا حول ولا قوة إلا بالله",
+  "@thereIsNoPowerNorStrengthExceptThrough": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "thisHelpsUsCustomizeRemindersAndTrackYour": "يساعدنا ذلك على تخصيص التذكيرات وتتبع تقدمك.",
+  "@thisHelpsUsCustomizeRemindersAndTrackYour": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "tigerSEye": "عين النمر",
+  "@tigerSEye": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "today": "اليوم",
+  "@today": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "total": "الإجمالي",
+  "@total": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "totalHasanat": "إجمالي الحسنات",
+  "@totalHasanat": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "trackProgress": "تتبع التقدم",
+  "@trackProgress": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "trackYourReadingAndAchievements": "تابع قراءتك وإنجازاتك.",
+  "@trackYourReadingAndAchievements": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "tryAgain": "حاول مرة أخرى",
+  "@tryAgain": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "undo": "تراجع",
+  "@undo": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "unlockAllAppThemesAndCustomizations": "افتح جميع مظاهر التطبيق وتخصيصاته",
+  "@unlockAllAppThemesAndCustomizations": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "usageGuidelines": "إرشادات الاستخدام",
+  "@usageGuidelines": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "useQuranProRespectfullyForPersonalWorshipLearning": "استخدم Quran Pro باحترام للعبادة الشخصية والتعلم والأعمال الإسلامية اليومية.",
+  "@useQuranProRespectfullyForPersonalWorshipLearning": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "viewAll": "عرض الكل",
+  "@viewAll": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "w": "غ",
+  "@w": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "welcome": "مرحبًا",
+  "@welcome": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "west": "غرب",
+  "@west": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "yaHayyuYaQayyum": "يا حي يا قيوم",
+  "@yaHayyuYaQayyum": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "youReAllSet": "أنت جاهز!",
+  "@youReAllSet": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "yourProgress": "تقدمك",
+  "@yourProgress": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "continueLabel": "متابعة",
+  "@continueLabel": {
+    "description": "English UI text."
+  },
+  "amethyst": "جمشت",
+  "@amethyst": {
+    "description": "English UI text."
+  },
+  "indonesian": "الإندونيسية",
+  "@indonesian": {
+    "description": "English UI text."
+  },
+  "turkish": "التركية",
+  "@turkish": {
+    "description": "English UI text."
+  },
+  "vietnamese": "الفيتنامية",
+  "@vietnamese": {
+    "description": "English UI text."
+  },
+  "turquoise": "فيروز",
+  "@turquoise": {
+    "description": "English UI text."
+  },
+  "wood": "خشب",
+  "@wood": {
+    "description": "English UI text."
+  },
+  "left": "left",
+  "@left": {
+    "description": "Text displayed after time remaining (e.g., 5 mins left)."
+  },
+  "settings": "الإعدادات",
+  "@settings": {
+    "description": "Settings screen title."
+  },
+  "estimatedLocation": "موقع تقديري"
+}

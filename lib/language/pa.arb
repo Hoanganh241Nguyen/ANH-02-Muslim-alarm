@@ -1,0 +1,1264 @@
+{
+  "@@locale": "pa",
+  "week": "ਹਫ਼ਤਾ",
+  "@week": {
+    "description": "Tasbih statistics period label."
+  },
+  "month": "ਮਹੀਨਾ",
+  "@month": {
+    "description": "Tasbih statistics period label."
+  },
+  "lifetime": "ਹੁਣ ਤੱਕ",
+  "@lifetime": {
+    "description": "Tasbih statistics period label."
+  },
+  "appTitle": "Quran Pro: Al Quran Majeed",
+  "@appTitle": {
+    "description": "App UI text."
+  },
+  "prayerAlarmDefaultQuote": "ਆਪਣੇ ਕੰਮ ਤੋਂ ਥੋੜ੍ਹਾ ਰੁਕੋ ਤੇ ਅੱਲਾਹ ਲਈ ਵਕਤ ਕੱਢੋ।",
+  "@prayerAlarmDefaultQuote": {
+    "description": "App UI text."
+  },
+  "prayerAlarmDefaultName": "ਨਮਾਜ਼",
+  "@prayerAlarmDefaultName": {
+    "description": "App UI text."
+  },
+  "productUnavailable": "ਪ੍ਰੋਡਕਟ {id} ਖ਼ਰੀਦ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+  "@productUnavailable": {
+    "description": "App UI text.",
+    "placeholders": {
+      "id": {}
+    }
+  },
+  "purchaseSuccessful": "{productId} ਦੀ ਖ਼ਰੀਦ ਕਾਮਯਾਬ ਰਹੀ!",
+  "@purchaseSuccessful": {
+    "description": "App UI text.",
+    "placeholders": {
+      "productId": {}
+    }
+  },
+  "purchaseRestored": "{productId} ਦੀ ਖ਼ਰੀਦ ਬਹਾਲ ਹੋ ਗਈ!",
+  "@purchaseRestored": {
+    "description": "App UI text.",
+    "placeholders": {
+      "productId": {}
+    }
+  },
+  "daysCount": "{count} ਦਿਨ",
+  "@daysCount": {
+    "description": "App UI text.",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "upcomingPrayer": "ਅਗਲੀ ਨਮਾਜ਼: {prayerName}",
+  "@upcomingPrayer": {
+    "description": "App UI text.",
+    "placeholders": {
+      "prayerName": {}
+    }
+  },
+  "distanceToMecca": "ਮੱਕਾ ਤੋਂ ਦੂਰੀ: {distance} ਕਿ.ਮੀ.",
+  "@distanceToMecca": {
+    "description": "App UI text.",
+    "placeholders": {
+      "distance": {}
+    }
+  },
+  "snoozeMinutes": "{minutes} ਮਿੰਟ ਬਾਅਦ ਯਾਦ ਕਰਾਓ",
+  "@snoozeMinutes": {
+    "description": "App UI text.",
+    "placeholders": {
+      "minutes": {}
+    }
+  },
+  "prayerTimeArrived": "{prayerName} ਦੀ ਨਮਾਜ਼ ਦਾ ਵਕਤ ਹੋ ਗਿਆ ਹੈ",
+  "@prayerTimeArrived": {
+    "description": "App UI text.",
+    "placeholders": {
+      "prayerName": {}
+    }
+  },
+  "roundValue": "ਰਾਊਂਡ: {round}",
+  "@roundValue": {
+    "description": "App UI text.",
+    "placeholders": {
+      "round": {}
+    }
+  },
+  "selectedLanguage": "{language} ਚੁਣੀ ਗਈ",
+  "@selectedLanguage": {
+    "description": "App UI text.",
+    "placeholders": {
+      "language": {}
+    }
+  },
+  "juzNumber": "ਜੁਜ਼ {juz}",
+  "@juzNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "juz": {}
+    }
+  },
+  "pageNumber": "ਸਫ਼ਾ {page}",
+  "@pageNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "page": {}
+    }
+  },
+  "hizbNumber": "ਹਿਜ਼ਬ {hizb}",
+  "@hizbNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "hizb": {}
+    }
+  },
+  "surahVerse": "{surahName}: ਆਇਤ {verse}",
+  "@surahVerse": {
+    "description": "App UI text.",
+    "placeholders": {
+      "surahName": {},
+      "verse": {}
+    }
+  },
+  "surahAyahCount": "{count} ਆਇਤਾਂ",
+  "@surahAyahCount": {
+    "description": "App UI text.",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "levelNumber": "ਲੈਵਲ {level}",
+  "@levelNumber": {
+    "description": "App UI text.",
+    "placeholders": {
+      "level": {}
+    }
+  },
+  "surahAlBaqarah2238": "(ਸੂਰਾ ਅਲ-ਬਕਰਾ 2:238)",
+  "@surahAlBaqarah2238": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "text1juz": "1 ਜੁਜ਼",
+  "@text1juz": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text199usd": "1.99 USD",
+  "@text199usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text10pages": "10 ਸਫ਼ੇ",
+  "@text10pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text100dhikr": "100 ਜ਼ਿਕਰ",
+  "@text100dhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "text299usd": "2.99 USD",
+  "@text299usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text20pages": "20 ਸਫ਼ੇ",
+  "@text20pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text28cclearsky": "28°C - ਸਾਫ਼ ਅਸਮਾਨ",
+  "@text28cclearsky": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "text499usd": "4.99 USD",
+  "@text499usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "text5pages": "5 ਸਫ਼ੇ",
+  "@text5pages": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "text799usd": "7.99 USD",
+  "@text799usd": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "about": "ਜਾਣ-ਪਛਾਣ",
+  "@about": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "aboutQuranPro": "Quran Pro ਬਾਰੇ",
+  "@aboutQuranPro": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "activity": "ਸਰਗਰਮੀ",
+  "@activity": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "adIsLoadingPleaseTryAgainSoon": "ਇਸ਼ਤਿਹਾਰ ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ। ਥੋੜ੍ਹੀ ਦੇਰ ਬਾਅਦ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+  "@adIsLoadingPleaseTryAgainSoon": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "addCustomDhikr": "ਆਪਣਾ ਜ਼ਿਕਰ ਜੋੜੋ",
+  "@addCustomDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "addCustomDhikr2": "ਆਪਣਾ ਜ਼ਿਕਰ ਜੋੜੋ",
+  "@addCustomDhikr2": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "addDhikr": "ਜ਼ਿਕਰ ਜੋੜੋ",
+  "@addDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "adjustPosition": "ਪੁਜ਼ੀਸ਼ਨ ਠੀਕ ਕਰੋ",
+  "@adjustPosition": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "afternoon": "ਦੁਪਹਿਰ ਬਾਅਦ",
+  "@afternoon": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "alMasjidAlHaram": "ਅਲ-ਮਸਜਿਦ ਅਲ-ਹਰਾਮ",
+  "@alMasjidAlHaram": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "alhamdulillahiRabbilAlamin": "ਅਲਹਮਦੁਲਿੱਲਾਹਿ ਰੱਬਿਲ ਆਲਮੀਨ",
+  "@alhamdulillahiRabbilAlamin": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "alignedToQibla": "ਕਿਬਲਾ ਵੱਲ ਸਿੱਧਾ",
+  "@alignedToQibla": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "allPraiseIsDueToAllah": "ਸਾਰੀ ਤਾਰੀਫ਼ ਅੱਲਾਹ ਲਈ ਹੈ",
+  "@allPraiseIsDueToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allPremiumFeaturesAtADiscountedPrice": "ਸਾਰੇ ਪ੍ਰੀਮੀਅਮ ਫ਼ੀਚਰ ਰਿਆਇਤੀ ਕੀਮਤ ’ਤੇ",
+  "@allPremiumFeaturesAtADiscountedPrice": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "allInOneQuranApp": "ਆਲ-ਇਨ-ਵਨ ਕੁਰਆਨ ਐਪ",
+  "@allInOneQuranApp": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "allahIsSufficientForMeThereIsNo": "ਅੱਲਾਹ ਮੇਰੇ ਲਈ ਕਾਫ਼ੀ ਹੈ; ਉਸ ਤੋਂ ਬਿਨਾਂ ਕੋਈ ਮਾਬੂਦ ਨਹੀਂ",
+  "@allahIsSufficientForMeThereIsNo": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahIsTheGreatest": "ਅੱਲਾਹ ਸਭ ਤੋਂ ਵੱਡਾ ਹੈ",
+  "@allahIsTheGreatest": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahuAkbar": "ਅੱਲਾਹੁ ਅਕਬਰ",
+  "@allahuAkbar": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allahummaSalliAlaMuhammad": "ਅੱਲਾਹੁੰਮਾ ਸੱਲਿ ਅਲਾ ਮੁਹੰਮਦ",
+  "@allahummaSalliAlaMuhammad": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "allowLocationPermissionOrTapRetryToUse": "ਲੋਕੇਸ਼ਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ ਜਾਂ ਬਦਲਵਾਂ ਸ਼ਡਿਊਲ ਵਰਤਣ ਲਈ ਮੁੜ ਕੋਸ਼ਿਸ਼ ’ਤੇ ਟੈਪ ਕਰੋ।",
+  "@allowLocationPermissionOrTapRetryToUse": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "allowNotificationsToReceivePrayerTimesAndDaily": "ਨਮਾਜ਼ ਦੇ ਵਕਤ ਤੇ ਰੋਜ਼ਾਨਾ ਯਾਦ-ਦਹਾਨੀਆਂ ਲੈਣ ਲਈ ਨੋਟੀਫ਼ਿਕੇਸ਼ਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ।",
+  "@allowNotificationsToReceivePrayerTimesAndDaily": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "allowTheAppToRunInTheBackground": "ਐਪ ਨੂੰ ਬੈਕਗਰਾਊਂਡ ਵਿੱਚ ਚੱਲਣ ਦਿਓ",
+  "@allowTheAppToRunInTheBackground": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "app": "ਐਪ",
+  "@app": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "arabic": "ਅਰਬੀ",
+  "@arabic": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "asr": "ਅਸਰ",
+  "@asr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "auzuBillahiMinAshShaytanirRajim": "ਅਊਜ਼ੁ ਬਿੱਲਾਹਿ ਮਿਨਸ਼-ਸ਼ੈਤਾਨਿਰ ਰਜੀਮ",
+  "@auzuBillahiMinAshShaytanirRajim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "avg": "ਔਸਤ",
+  "@avg": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "ayah": "ਆਇਤ",
+  "@ayah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/services/audio_handler.dart."
+  },
+  "batteryOptimization": "ਬੈਟਰੀ ਓਪਟੀਮਾਈਜ਼ੇਸ਼ਨ",
+  "@batteryOptimization": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "beautifulWidgets": "ਖ਼ੂਬਸੂਰਤ ਵਿਜੇਟ",
+  "@beautifulWidgets": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "bestValue": "ਸਭ ਤੋਂ ਵਧੀਆ ਸੌਦਾ",
+  "@bestValue": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "blackOnyx": "ਕਾਲਾ ਓਨਿਕਸ",
+  "@blackOnyx": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "bookmarks": "ਬੁੱਕਮਾਰਕ",
+  "@bookmarks": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "brightIvoryInterface": "ਚਮਕੀਲਾ ਆਈਵਰੀ ਇੰਟਰਫ਼ੇਸ",
+  "@brightIvoryInterface": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "calculatingDistance": "ਦੂਰੀ ਦਾ ਹਿਸਾਬ ਲਾਇਆ ਜਾ ਰਿਹਾ ਹੈ...",
+  "@calculatingDistance": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "calibrateYourDirection": "ਆਪਣੀ ਦਿਸ਼ਾ ਕੈਲੀਬ੍ਰੇਟ ਕਰੋ",
+  "@calibrateYourDirection": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "cancel": "ਰੱਦ ਕਰੋ",
+  "@cancel": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "change": "ਬਦਲੋ",
+  "@change": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "changeTasbihMode": "ਤਸਬੀਹ ਮੋਡ ਬਦਲਣਾ ਹੈ?",
+  "@changeTasbihMode": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "chooseDhikr": "ਜ਼ਿਕਰ ਚੁਣੋ",
+  "@chooseDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "chooseDisplayLanguage": "ਡਿਸਪਲੇ ਭਾਸ਼ਾ ਚੁਣੋ",
+  "@chooseDisplayLanguage": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "chooseTheme": "ਥੀਮ ਚੁਣੋ",
+  "@chooseTheme": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "chooseYourPreferredLanguage": "ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ ਚੁਣੋ",
+  "@chooseYourPreferredLanguage": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "clickOrSwipeToCount": "ਗਿਣਨ ਲਈ ਟੈਪ ਜਾਂ ਸਵਾਈਪ ਕਰੋ",
+  "@clickOrSwipeToCount": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/counter_text.dart."
+  },
+  "close": "ਬੰਦ ਕਰੋ",
+  "@close": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "closeCustomGoal": "ਕਸਟਮ ਟੀਚਾ ਬੰਦ ਕਰੋ",
+  "@closeCustomGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "completeAtLeast33Dhikr": "ਘੱਟੋ-ਘੱਟ 33 ਜ਼ਿਕਰ ਪੂਰੇ ਕਰੋ",
+  "@completeAtLeast33Dhikr": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "connectYourHeartWithTheHolyQuran": "ਆਪਣੇ ਦਿਲ ਨੂੰ ਪਾਕ ਕੁਰਆਨ ਨਾਲ ਜੋੜੋ।",
+  "@connectYourHeartWithTheHolyQuran": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "continueReading": "ਪੜ੍ਹਨਾ ਜਾਰੀ ਰੱਖੋ",
+  "@continueReading": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "countsPerRound": "ਹਰ ਰਾਊਂਡ ਵਿੱਚ ਗਿਣਤੀ",
+  "@countsPerRound": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "curateYourCollectionWithMasterCraftedSpiritualGems": "ਬਾਕਮਾਲ ਕਾਰੀਗਰੀ ਵਾਲੇ ਰੂਹਾਨੀ ਨਗੀਨਿਆਂ ਨਾਲ ਆਪਣਾ ਸੰਗ੍ਰਹਿ ਸਜਾਓ।",
+  "@curateYourCollectionWithMasterCraftedSpiritualGems": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "current": "ਮੌਜੂਦਾ",
+  "@current": {
+    "description": "Extracted visible text from lib/features/home/presentation/widgets/prayer_card.dart."
+  },
+  "current2": "ਮੌਜੂਦਾ",
+  "@current2": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/progress_card.dart."
+  },
+  "currentLocationToMecca": "ਮੌਜੂਦਾ ਥਾਂ ਤੋਂ ਮੱਕਾ ਤੱਕ",
+  "@currentLocationToMecca": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "currentProgressWillResetForTheNewMode": "ਨਵੇਂ ਮੋਡ ਲਈ ਮੌਜੂਦਾ ਤਰੱਕੀ ਰੀਸੈੱਟ ਹੋ ਜਾਵੇਗੀ।",
+  "@currentProgressWillResetForTheNewMode": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "currentStreak": "ਮੌਜੂਦਾ ਸਿਲਸਿਲਾ",
+  "@currentStreak": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "custom": "ਕਸਟਮ",
+  "@custom": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "customDhikr": "ਆਪਣਾ ਜ਼ਿਕਰ",
+  "@customDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "customGoal": "ਕਸਟਮ ਟੀਚਾ",
+  "@customGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "customPrayerSounds": "ਨਮਾਜ਼ ਦੀਆਂ ਕਸਟਮ ਆਵਾਜ਼ਾਂ",
+  "@customPrayerSounds": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "dailyGoal": "ਰੋਜ਼ਾਨਾ ਟੀਚਾ",
+  "@dailyGoal": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyQuests": "ਰੋਜ਼ਾਨਾ ਮਿਸ਼ਨ",
+  "@dailyQuests": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "dailyQuranReminder": "ਰੋਜ਼ਾਨਾ ਕੁਰਆਨ ਯਾਦ-ਦਹਾਨੀ",
+  "@dailyQuranReminder": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyReminders": "ਰੋਜ਼ਾਨਾ ਯਾਦ-ਦਹਾਨੀਆਂ",
+  "@dailyReminders": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dailyTasbih": "ਰੋਜ਼ਾਨਾ ਤਸਬੀਹ",
+  "@dailyTasbih": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "dark": "ਡਾਰਕ",
+  "@dark": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "dawn": "ਸਹਰ",
+  "@dawn": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "debug": "ਡੀਬੱਗ",
+  "@debug": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/prayer_alarm_page.dart."
+  },
+  "dhikr": "ਜ਼ਿਕਰ",
+  "@dhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "dhikrActivity": "ਜ਼ਿਕਰ ਸਰਗਰਮੀ",
+  "@dhikrActivity": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "dhuAlHijjah": "ਜ਼ਿਲਹੱਜ",
+  "@dhuAlHijjah": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "dhuAlQadah": "ਜ਼ਿਲਕਾਦ",
+  "@dhuAlQadah": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "dhuhr": "ਜ਼ੁਹਰ",
+  "@dhuhr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "direction": "ਦਿਸ਼ਾ",
+  "@direction": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "disableBatteryOptimization": "ਬੈਟਰੀ ਓਪਟੀਮਾਈਜ਼ੇਸ਼ਨ ਬੰਦ ਕਰੋ",
+  "@disableBatteryOptimization": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "disableOptimization": "ਓਪਟੀਮਾਈਜ਼ੇਸ਼ਨ ਬੰਦ ਕਰੋ",
+  "@disableOptimization": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "distance": "ਦੂਰੀ",
+  "@distance": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "e": "ਪੂ",
+  "@e": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "eGHasbunallah": "ਜਿਵੇਂ ਹਸਬੁਨੱਲਾਹ",
+  "@eGHasbunallah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_page_state.dart."
+  },
+  "east": "ਪੂਰਬ",
+  "@east": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "enableAutoStart": "ਆਟੋ-ਸਟਾਰਟ ਚਾਲੂ ਕਰੋ",
+  "@enableAutoStart": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "enableNotifications": "ਨੋਟੀਫ਼ਿਕੇਸ਼ਨ ਚਾਲੂ ਕਰੋ",
+  "@enableNotifications": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "enableReminders": "ਯਾਦ-ਦਹਾਨੀਆਂ ਚਾਲੂ ਕਰੋ",
+  "@enableReminders": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "english": "ਅੰਗਰੇਜ਼ੀ",
+  "@english": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "enterYourName": "ਆਪਣਾ ਨਾਂ ਲਿਖੋ",
+  "@enterYourName": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "equipped": "ਵਰਤੋਂ ਵਿੱਚ",
+  "@equipped": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "everythingYouNeedForABetterQuranExperience": "ਬਿਹਤਰ ਕੁਰਆਨ ਤਜਰਬੇ ਲਈ ਹਰ ਜ਼ਰੂਰੀ ਚੀਜ਼।",
+  "@everythingYouNeedForABetterQuranExperience": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "fajr": "ਫ਼ਜਰ",
+  "@fajr": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "feedback": "ਫ਼ੀਡਬੈਕ",
+  "@feedback": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "first": "ਪਹਿਲਾ",
+  "@first": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "forTheMostAccurateResultsKeepYourPhone": "ਸਭ ਤੋਂ ਸਹੀ ਨਤੀਜਿਆਂ ਲਈ ਫ਼ੋਨ ਨੂੰ ਪੱਧਰਾ ਤੇ ਚੁੰਬਕੀ ਚੀਜ਼ਾਂ ਤੋਂ ਦੂਰ ਰੱਖੋ।",
+  "@forTheMostAccurateResultsKeepYourPhone": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "free": "ਮੁਫ਼ਤ",
+  "@free": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/progress_card.dart."
+  },
+  "fullBundle": "ਪੂਰਾ ਬੰਡਲ",
+  "@fullBundle": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "getAnAdFreeExperienceForever": "ਹਮੇਸ਼ਾ ਲਈ ਇਸ਼ਤਿਹਾਰ-ਮੁਕਤ ਤਜਰਬਾ ਪਾਓ",
+  "@getAnAdFreeExperienceForever": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "getRemindedToReadAndStayConsistent": "ਪੜ੍ਹਨ ਦੀ ਯਾਦ ਪਾਓ ਤੇ ਪਾਬੰਦੀ ਬਣਾਈ ਰੱਖੋ।",
+  "@getRemindedToReadAndStayConsistent": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "getStarted": "ਸ਼ੁਰੂ ਕਰੋ",
+  "@getStarted": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "gloryAndPraiseBeToAllah": "ਅੱਲਾਹ ਪਾਕ ਹੈ ਤੇ ਸਾਰੀ ਤਾਰੀਫ਼ ਉਸੇ ਲਈ ਹੈ",
+  "@gloryAndPraiseBeToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "gloryBeToAllah": "ਅੱਲਾਹ ਪਾਕ ਹੈ",
+  "@gloryBeToAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "gloryBeToAllahTheMagnificent": "ਅੱਲਾਹ ਪਾਕ ਹੈ, ਜੋ ਅਜ਼ਮਤ ਵਾਲਾ ਹੈ",
+  "@gloryBeToAllahTheMagnificent": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "goToHome": "ਹੋਮ ’ਤੇ ਜਾਓ",
+  "@goToHome": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "goldenEngraved": "ਸੁਨਹਿਰੀ ਨੱਕਾਸ਼ੀ",
+  "@goldenEngraved": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "greenJade": "ਹਰਾ ਜੇਡ",
+  "@greenJade": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "hMm": "H:mm",
+  "@hMm": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "hanoiVietnam": "ਹਨੋਈ, ਵੀਅਤਨਾਮ",
+  "@hanoiVietnam": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "haptic": "ਵਾਈਬ੍ਰੇਸ਼ਨ",
+  "@haptic": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "hasanatHub": "ਹਸਨਾਤ ਕੇਂਦਰ",
+  "@hasanatHub": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "hasbiyallahuLaIlahaIllaHuwa": "ਹਸਬਿਯੱਲਾਹੁ ਲਾ ਇਲਾਹਾ ਇੱਲਾ ਹੁਵਾ",
+  "@hasbiyallahuLaIlahaIllaHuwa": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "hhMm": "HH:mm",
+  "@hhMm": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "hhMmA": "hh:mm a",
+  "@hhMmA": {
+    "description": "Extracted visible text from lib/features/home/presentation/widgets/prayer_card.dart."
+  },
+  "home": "ਹੋਮ",
+  "@home": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "howYourDataIsHandled": "ਤੁਹਾਡਾ ਡਾਟਾ ਕਿਵੇਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ",
+  "@howYourDataIsHandled": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "iSeekForgivenessFromAllah": "ਮੈਂ ਅੱਲਾਹ ਤੋਂ ਮਗ਼ਫ਼ਿਰਤ ਮੰਗਦਾ ਹਾਂ",
+  "@iSeekForgivenessFromAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "iSeekRefugeInAllahFromTheAccursed": "ਮੈਂ ਮਰਦੂਦ ਸ਼ੈਤਾਨ ਤੋਂ ਅੱਲਾਹ ਦੀ ਪਨਾਹ ਮੰਗਦਾ ਹਾਂ",
+  "@iSeekRefugeInAllahFromTheAccursed": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "immediateAlerts": "ਫ਼ੌਰੀ ਅਲਰਟ",
+  "@immediateAlerts": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "inTheNameOfAllah": "ਅੱਲਾਹ ਦੇ ਨਾਂ ਨਾਲ",
+  "@inTheNameOfAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "indeedWeBelongToAllahAndToHim": "ਬੇਸ਼ੱਕ ਅਸੀਂ ਅੱਲਾਹ ਦੇ ਹਾਂ ਤੇ ਉਸੇ ਵੱਲ ਪਰਤਣਾ ਹੈ",
+  "@indeedWeBelongToAllahAndToHim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "innaLillahiWaInnaIlayhiRajiun": "ਇੰਨਾ ਲਿੱਲਾਹਿ ਵ ਇੰਨਾ ਇਲੈਹਿ ਰਾਜਿਊਨ",
+  "@innaLillahiWaInnaIlayhiRajiun": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "isha": "ਇਸ਼ਾ",
+  "@isha": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "jumadaAlAwwal": "ਜਮਾਦੀ-ਉਲ-ਅੱਵਲ",
+  "@jumadaAlAwwal": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "jumadaAlThani": "ਜਮਾਦੀ-ਉਸ-ਸਾਨੀ",
+  "@jumadaAlThani": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "juz": "ਜੁਜ਼",
+  "@juz": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "juz2": "ਜੁਜ਼",
+  "@juz2": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "keepAdhanAlarmsReliable": "ਅਜ਼ਾਨ ਅਲਾਰਮ ਭਰੋਸੇਯੋਗ ਰੱਖੋ",
+  "@keepAdhanAlarmsReliable": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "keepItUpYouReDoingGreat": "ਇਸੇ ਤਰ੍ਹਾਂ ਜਾਰੀ ਰੱਖੋ! ਤੁਸੀਂ ਬਹੁਤ ਵਧੀਆ ਕਰ ਰਹੇ ਹੋ।",
+  "@keepItUpYouReDoingGreat": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "keepPrayerCallsReliableEvenWhenTheApp": "ਐਪ ਬੰਦ ਹੋਣ ’ਤੇ ਵੀ ਅਜ਼ਾਨ ਭਰੋਸੇਯੋਗ ਰੱਖੋ।",
+  "@keepPrayerCallsReliableEvenWhenTheApp": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "laHawlaWaLaQuwwataIllaBillah": "ਲਾ ਹੌਲਾ ਵਲਾ ਕੁੱਵਤਾ ਇੱਲਾ ਬਿੱਲਾਹ",
+  "@laHawlaWaLaQuwwataIllaBillah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "laIlahaIllallah": "ਲਾ ਇਲਾਹਾ ਇੱਲੱਲਾਹ",
+  "@laIlahaIllallah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "language": "ਭਾਸ਼ਾ",
+  "@language": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "lapisLazuli": "ਲਾਜਵਰਦ",
+  "@lapisLazuli": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "last7Days": "ਪਿਛਲੇ 7 ਦਿਨ",
+  "@last7Days": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "later": "ਬਾਅਦ ਵਿੱਚ",
+  "@later": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "letSBeginYourBeautifulJourneyWithThe": "ਆਓ ਕੁਰਆਨ ਨਾਲ ਤੁਹਾਡਾ ਖ਼ੂਬਸੂਰਤ ਸਫ਼ਰ ਸ਼ੁਰੂ ਕਰੀਏ।",
+  "@letSBeginYourBeautifulJourneyWithThe": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "letSPersonalizeYourExperience": "ਆਓ ਤੁਹਾਡਾ ਤਜਰਬਾ\nਤੁਹਾਡੇ ਮੁਤਾਬਕ ਬਣਾਈਏ",
+  "@letSPersonalizeYourExperience": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "light": "ਲਾਈਟ",
+  "@light": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "lightMode": "ਲਾਈਟ ਮੋਡ",
+  "@lightMode": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "listenToOrReadAnyAyahToday": "ਅੱਜ ਕੋਈ ਵੀ ਆਇਤ ਸੁਣੋ ਜਾਂ ਪੜ੍ਹੋ",
+  "@listenToOrReadAnyAyahToday": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "locating": "ਥਾਂ ਲੱਭੀ ਜਾ ਰਹੀ ਹੈ...",
+  "@locating": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "location": "ਲੋਕੇਸ਼ਨ",
+  "@location": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "locationPermissionsAreDenied": "ਲੋਕੇਸ਼ਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਦਿੱਤੀ ਗਈ",
+  "@locationPermissionsAreDenied": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "locationPermissionsArePermanentlyDenied": "ਲੋਕੇਸ਼ਨ ਦੀ ਇਜਾਜ਼ਤ ਹਮੇਸ਼ਾ ਲਈ ਬੰਦ ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ।",
+  "@locationPermissionsArePermanentlyDenied": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/providers/qibla_provider.dart."
+  },
+  "locationServicesAreDisabled": "ਲੋਕੇਸ਼ਨ ਸੇਵਾਵਾਂ ਬੰਦ ਹਨ।",
+  "@locationServicesAreDisabled": {
+    "description": "Extracted visible text from lib/features/home/presentation/providers/prayer_time_provider.dart."
+  },
+  "longestStreak": "ਸਭ ਤੋਂ ਲੰਮਾ ਸਿਲਸਿਲਾ",
+  "@longestStreak": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/stats_grid.dart."
+  },
+  "maghrib": "ਮਗ਼ਰਿਬ",
+  "@maghrib": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "maybeLater": "ਫਿਰ ਕਦੇ",
+  "@maybeLater": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "meccaSaudiArabia": "ਮੱਕਾ, ਸਾਊਦੀ ਅਰਬ",
+  "@meccaSaudiArabia": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "misharyRashidAlafasy": "Mishary Rashid Alafasy",
+  "@misharyRashidAlafasy": {
+    "description": "Extracted visible text from lib/features/quran/presentation/provider/quran_provider.dart."
+  },
+  "mmmDdYyyy": "MMM dd, yyyy",
+  "@mmmDdYyyy": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "myLordForgiveAndHaveMercy": "ਐ ਮੇਰੇ ਰੱਬ, ਮਾਫ਼ ਫ਼ਰਮਾ ਤੇ ਰਹਿਮ ਫ਼ਰਮਾ",
+  "@myLordForgiveAndHaveMercy": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordIAmInNeedOfWhatever": "ਐ ਮੇਰੇ ਰੱਬ, ਤੂੰ ਜੋ ਭਲਾਈ ਨਾਜ਼ਿਲ ਕਰੇ ਮੈਂ ਉਸ ਦਾ ਮੁਹਤਾਜ ਹਾਂ",
+  "@myLordIAmInNeedOfWhatever": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordIncreaseMeInKnowledge": "ਐ ਮੇਰੇ ਰੱਬ, ਮੇਰੇ ਇਲਮ ਵਿੱਚ ਵਾਧਾ ਫ਼ਰਮਾ",
+  "@myLordIncreaseMeInKnowledge": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "myLordMakeItEasyAndDoNot": "ਐ ਮੇਰੇ ਰੱਬ, ਆਸਾਨ ਫ਼ਰਮਾ ਤੇ ਮੁਸ਼ਕਲ ਨਾ ਬਣਾ",
+  "@myLordMakeItEasyAndDoNot": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "n": "ਉ",
+  "@n": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "nameOptional": "ਨਾਂ (ਚੋਣਵਾਂ)",
+  "@nameOptional": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "next": "ਅੱਗੇ",
+  "@next": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "nextDhikr": "ਅਗਲਾ ਜ਼ਿਕਰ",
+  "@nextDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "nextPrayer": "ਅਗਲੀ ਨਮਾਜ਼",
+  "@nextPrayer": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "night": "ਰਾਤ",
+  "@night": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "nightEmeraldInterface": "ਗੂੜ੍ਹਾ ਐਮਰਾਲਡ ਇੰਟਰਫ਼ੇਸ",
+  "@nightEmeraldInterface": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "noBookmarksYet": "ਹਾਲੇ ਕੋਈ ਬੁੱਕਮਾਰਕ ਨਹੀਂ",
+  "@noBookmarksYet": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "noon": "ਦੁਪਹਿਰ",
+  "@noon": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "north": "ਉੱਤਰ",
+  "@north": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "northeast": "ਉੱਤਰ-ਪੂਰਬ",
+  "@northeast": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "northwest": "ਉੱਤਰ-ਪੱਛਮ",
+  "@northwest": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "notificationsAlarm": "ਨੋਟੀਫ਼ਿਕੇਸ਼ਨ ਤੇ ਅਲਾਰਮ",
+  "@notificationsAlarm": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "notificationsForPrayerTimes": "ਨਮਾਜ਼ ਦੇ ਵਕਤਾਂ ਦੇ ਨੋਟੀਫ਼ਿਕੇਸ਼ਨ",
+  "@notificationsForPrayerTimes": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "oAllahSendBlessingsUponMuhammad": "ਐ ਅੱਲਾਹ, ਮੁਹੰਮਦ ’ਤੇ ਦਰੂਦ ਭੇਜ",
+  "@oAllahSendBlessingsUponMuhammad": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "oEverLivingOSustainer": "ਐ ਸਦਾ ਜ਼ਿੰਦਾ ਰਹਿਣ ਵਾਲੇ, ਐ ਕਾਇਮ ਰੱਖਣ ਵਾਲੇ",
+  "@oEverLivingOSustainer": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "openAutoStart": "ਆਟੋ-ਸਟਾਰਟ ਖੋਲ੍ਹੋ",
+  "@openAutoStart": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "optimizeAdhanPerformance": "ਅਜ਼ਾਨ ਦੀ ਕਾਰਗੁਜ਼ਾਰੀ ਬਿਹਤਰ ਕਰੋ",
+  "@optimizeAdhanPerformance": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "ourLordGrantUsGoodInThisWorld": "ਐ ਸਾਡੇ ਰੱਬ, ਸਾਨੂੰ ਦੁਨੀਆ ਵਿੱਚ ਭਲਾਈ ਅਤਾ ਫ਼ਰਮਾ",
+  "@ourLordGrantUsGoodInThisWorld": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "page": "ਸਫ਼ਾ",
+  "@page": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "pearl": "ਮੋਤੀ",
+  "@pearl": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "personalizeYourAdhanNotifications": "ਅਜ਼ਾਨ ਦੇ ਨੋਟੀਫ਼ਿਕੇਸ਼ਨ ਆਪਣੇ ਮੁਤਾਬਕ ਬਣਾਓ",
+  "@personalizeYourAdhanNotifications": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "praiseBeToAllahLordOfTheWorlds": "ਸਾਰੀ ਤਾਰੀਫ਼ ਅੱਲਾਹ ਲਈ ਹੈ, ਜੋ ਸਾਰੇ ਜਹਾਨਾਂ ਦਾ ਰੱਬ ਹੈ",
+  "@praiseBeToAllahLordOfTheWorlds": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "prayerAlarms": "ਨਮਾਜ਼ ਦੇ ਅਲਾਰਮ",
+  "@prayerAlarms": {
+    "description": "Extracted visible text from lib/core/services/notification_service.dart."
+  },
+  "prayerSchedule": "ਨਮਾਜ਼ ਦਾ ਸ਼ਡਿਊਲ",
+  "@prayerSchedule": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "prayerTimeNotifications": "ਨਮਾਜ਼ ਦੇ ਵਕਤ ਦੇ ਨੋਟੀਫ਼ਿਕੇਸ਼ਨ",
+  "@prayerTimeNotifications": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "prayerTimesAreLoading": "ਨਮਾਜ਼ ਦੇ ਵਕਤ ਲੋਡ ਹੋ ਰਹੇ ਹਨ",
+  "@prayerTimesAreLoading": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "prayerTimesQiblaQuranReadingAndTasbihIn": "ਨਮਾਜ਼ ਦੇ ਵਕਤ, ਕਿਬਲਾ, ਕੁਰਆਨ ਦੀ ਤਿਲਾਵਤ ਤੇ ਤਸਬੀਹ — ਸਭ ਇੱਕੋ ਰੋਜ਼ਾਨਾ ਸਾਥੀ ਵਿੱਚ।",
+  "@prayerTimesQiblaQuranReadingAndTasbihIn": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "prayerQuranQibla": "ਨਮਾਜ਼ • ਕੁਰਆਨ • ਕਿਬਲਾ",
+  "@prayerQuranQibla": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "premiumThemes": "ਪ੍ਰੀਮੀਅਮ ਥੀਮ",
+  "@premiumThemes": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "preparingYourSpiritualJourney": "ਤੁਹਾਡਾ ਰੂਹਾਨੀ ਸਫ਼ਰ ਤਿਆਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+  "@preparingYourSpiritualJourney": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "previousDhikr": "ਪਿਛਲਾ ਜ਼ਿਕਰ",
+  "@previousDhikr": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/dhikr_selector.dart."
+  },
+  "privacyPolicy": "ਪ੍ਰਾਈਵੇਸੀ ਪਾਲਿਸੀ",
+  "@privacyPolicy": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "qibla": "ਕਿਬਲਾ",
+  "@qibla": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "qiblaFinder": "ਕਿਬਲਾ ਫ਼ਾਈਂਡਰ",
+  "@qiblaFinder": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "quran": "ਕੁਰਆਨ",
+  "@quran": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "quranPlayback": "ਕੁਰਆਨ ਪਲੇਬੈਕ",
+  "@quranPlayback": {
+    "description": "Extracted visible text from lib/main.dart."
+  },
+  "quranPro": "Quran Pro",
+  "@quranPro": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "quranPro2": "QURAN PRO",
+  "@quranPro2": {
+    "description": "Extracted visible text from lib/features/splash/presentation/pages/splash_page.dart."
+  },
+  "quranProBringsPrayerTimesQiblaQuranReading": "Quran Pro ਨਮਾਜ਼ ਦੇ ਵਕਤ, ਕਿਬਲਾ, ਕੁਰਆਨ ਦੀ ਤਿਲਾਵਤ ਤੇ ਤਸਬੀਹ ਨੂੰ ਇੱਕ ਸੌਖੇ ਰੋਜ਼ਾਨਾ ਸਾਥੀ ਵਿੱਚ ਲਿਆਉਂਦਾ ਹੈ।",
+  "@quranProBringsPrayerTimesQiblaQuranReading": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "quranProPreferences": "Quran Pro ਦੀਆਂ ਸੈਟਿੰਗਾਂ",
+  "@quranProPreferences": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "quranProStoresOnboardingAndProgressPreferencesLocally": "Quran Pro ਓਨਬੋਰਡਿੰਗ ਤੇ ਤਰੱਕੀ ਨਾਲ ਜੁੜੀਆਂ ਸੈਟਿੰਗਾਂ ਇਸੇ ਡਿਵਾਈਸ ’ਤੇ ਸੰਭਾਲਦਾ ਹੈ। ਸਥਿਰਤਾ ਤੇ ਕੁਆਲਿਟੀ ਬਿਹਤਰ ਕਰਨ ਲਈ ਐਨਾਲਿਟਿਕਸ ਵਰਤੇ ਜਾ ਸਕਦੇ ਹਨ।",
+  "@quranProStoresOnboardingAndProgressPreferencesLocally": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "quranProStoresYourTasbihProgressLocallyOn": "Quran Pro ਤੁਹਾਡੀ ਤਸਬੀਹ ਦੀ ਤਰੱਕੀ ਇਸੇ ਡਿਵਾਈਸ ’ਤੇ ਸੰਭਾਲਦਾ ਹੈ। ਐਪ ਦੀ ਸਥਿਰਤਾ ਤੇ ਕੁਆਲਿਟੀ ਬਿਹਤਰ ਕਰਨ ਲਈ ਐਨਾਲਿਟਿਕਸ ਵਰਤੇ ਜਾ ਸਕਦੇ ਹਨ।",
+  "@quranProStoresYourTasbihProgressLocallyOn": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "quranRecitation": "ਕੁਰਆਨ ਦੀ ਤਿਲਾਵਤ",
+  "@quranRecitation": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "rabbanaAtinaFidDunyaHasanah": "ਰੱਬਨਾ ਆਤਿਨਾ ਫ਼ਿਦ-ਦੁਨਿਆ ਹਸਨਾ",
+  "@rabbanaAtinaFidDunyaHasanah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiInniLimaAnzaltaIlayyaMinKhayrinFaqir": "ਰੱਬਿ ਇੰਨੀ ਲਿਮਾ ਅੰਜ਼ਲਤਾ ਇਲੱਯਾ ਮਿਨ ਖ਼ੈਰਿਨ ਫ਼ਕੀਰ",
+  "@rabbiInniLimaAnzaltaIlayyaMinKhayrinFaqir": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiYassirWaLaTuassir": "ਰੱਬਿ ਯੱਸਿਰ ਵਲਾ ਤੁਅੱਸਿਰ",
+  "@rabbiYassirWaLaTuassir": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbiZidniIlma": "ਰੱਬਿ ਜ਼ਿਦਨੀ ਇਲਮਾ",
+  "@rabbiZidniIlma": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabbighfirWarhamWaAntaKhayrurRahimin": "ਰੱਬਿਗ਼ਫ਼ਿਰ ਵਰਹਮ ਵ ਅੰਤਾ ਖ਼ੈਰੁਰ ਰਾਹਿਮੀਨ",
+  "@rabbighfirWarhamWaAntaKhayrurRahimin": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "rabiAlAwwal": "ਰਬੀਉਲ ਅੱਵਲ",
+  "@rabiAlAwwal": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "rabiAlThani": "ਰਬੀਉਸ ਸਾਨੀ",
+  "@rabiAlThani": {
+    "description": "Extracted visible text from lib/core/prayer_alarm/prayer_alarm_screen.dart."
+  },
+  "rateApp": "ਐਪ ਨੂੰ ਰੇਟਿੰਗ ਦਿਓ",
+  "@rateApp": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "rateQuranPro": "Quran Pro ਨੂੰ ਰੇਟਿੰਗ ਦਿਓ",
+  "@rateQuranPro": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "readListen": "ਪੜ੍ਹੋ ਤੇ ਸੁਣੋ",
+  "@readListen": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "readTheQuranWithBeautifulRecitations": "ਖ਼ੂਬਸੂਰਤ ਤਿਲਾਵਤ ਨਾਲ ਕੁਰਆਨ ਪੜ੍ਹੋ।",
+  "@readTheQuranWithBeautifulRecitations": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "recent": "ਹਾਲੀਆ",
+  "@recent": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "recommendedForXiaomiOppoVivoAndHuawei": "Xiaomi, Oppo, Vivo ਤੇ Huawei ਲਈ ਸਿਫ਼ਾਰਸ਼ੀ",
+  "@recommendedForXiaomiOppoVivoAndHuawei": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "redCarnelian": "ਲਾਲ ਅਕੀਕ",
+  "@redCarnelian": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "remindMeAt": "ਇਸ ਵਕਤ ਯਾਦ ਕਰਾਓ",
+  "@remindMeAt": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "removeAds": "ਇਸ਼ਤਿਹਾਰ ਹਟਾਓ",
+  "@removeAds": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "requestingLocationPermission": "ਲੋਕੇਸ਼ਨ ਦੀ ਇਜਾਜ਼ਤ ਮੰਗੀ ਜਾ ਰਹੀ ਹੈ...",
+  "@requestingLocationPermission": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "reset": "ਰੀਸੈੱਟ",
+  "@reset": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "retry": "ਮੁੜ ਕੋਸ਼ਿਸ਼",
+  "@retry": {
+    "description": "Extracted visible text from lib/features/home/presentation/pages/home_page.dart."
+  },
+  "returnToCompass": "ਕੰਪਾਸ ’ਤੇ ਵਾਪਸ ਜਾਓ",
+  "@returnToCompass": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "s": "ਦ",
+  "@s": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "save": "ਸੰਭਾਲੋ",
+  "@save": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "saveGoal": "ਟੀਚਾ ਸੰਭਾਲੋ",
+  "@saveGoal": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/custom_goal_popup_card.dart."
+  },
+  "searchSurahNumberArabic": "ਸੂਰਾ, ਨੰਬਰ, ਅਰਬੀ ਲੱਭੋ...",
+  "@searchSurahNumberArabic": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "searchSurah": "ਸੂਰਾ ਲੱਭੋ...",
+  "@searchSurah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "selectLanguage": "ਭਾਸ਼ਾ ਚੁਣੋ",
+  "@selectLanguage": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "selectTheThemeYouLike": "ਆਪਣੀ ਪਸੰਦ ਦੀ ਥੀਮ ਚੁਣੋ",
+  "@selectTheThemeYouLike": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "selectYourBead": "ਆਪਣਾ ਦਾਣਾ ਚੁਣੋ",
+  "@selectYourBead": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_beads_dialog.dart."
+  },
+  "shop": "ਦੁਕਾਨ",
+  "@shop": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "shopCustomization": "ਦੁਕਾਨ ਤੇ ਕਸਟਮਾਈਜ਼ੇਸ਼ਨ",
+  "@shopCustomization": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "sound": "ਆਵਾਜ਼",
+  "@sound": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "south": "ਦੱਖਣ",
+  "@south": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "southeast": "ਦੱਖਣ-ਪੂਰਬ",
+  "@southeast": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "southwest": "ਦੱਖਣ-ਪੱਛਮ",
+  "@southwest": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "specialOccasionsAndMore": "ਖ਼ਾਸ ਮੌਕੇ ਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ",
+  "@specialOccasionsAndMore": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "storeRatingWillBeConnectedWhenTheProduction": "ਪ੍ਰੋਡਕਸ਼ਨ ਲਿਸਟਿੰਗ ਤਿਆਰ ਹੋਣ ’ਤੇ ਸਟੋਰ ਰੇਟਿੰਗ ਜੋੜ ਦਿੱਤੀ ਜਾਵੇਗੀ।",
+  "@storeRatingWillBeConnectedWhenTheProduction": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "subhanallahiWaBihamdihi": "ਸੁਬਹਾਨੱਲਾਹਿ ਵ ਬਿਹਮਦਿਹੀ",
+  "@subhanallahiWaBihamdihi": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "subhanallahilAzim": "ਸੁਬਹਾਨੱਲਾਹਿਲ ਅਜ਼ੀਮ",
+  "@subhanallahilAzim": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "sunset": "ਗ਼ੁਰੂਬ",
+  "@sunset": {
+    "description": "Extracted visible text from lib/features/home/domain/entities/prayer_time.dart."
+  },
+  "supportQuranProOnTheStore": "ਸਟੋਰ ’ਤੇ Quran Pro ਦਾ ਸਾਥ ਦਿਓ",
+  "@supportQuranProOnTheStore": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "surah": "ਸੂਰਾ",
+  "@surah": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "tasbih": "ਤਸਬੀਹ",
+  "@tasbih": {
+    "description": "Extracted visible text from lib/features/main/presentation/pages/main_page.dart."
+  },
+  "tasbihSettings": "ਤਸਬੀਹ ਸੈਟਿੰਗਾਂ",
+  "@tasbihSettings": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "tellUsWhatToImprove": "ਦੱਸੋ ਕੀ ਬਿਹਤਰ ਕਰੀਏ",
+  "@tellUsWhatToImprove": {
+    "description": "Extracted visible text from lib/core/widgets/app_settings_button.dart."
+  },
+  "termsOfUse": "ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+  "@termsOfUse": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "thanksForUsingQuranProStoreRatingWill": "Quran Pro ਵਰਤਣ ਲਈ ਸ਼ੁਕਰੀਆ। ਪ੍ਰੋਡਕਸ਼ਨ ਸਟੋਰ ਲਿਸਟਿੰਗ ਤਿਆਰ ਹੋਣ ’ਤੇ ਸਟੋਰ ਰੇਟਿੰਗ ਜੋੜ ਦਿੱਤੀ ਜਾਵੇਗੀ।",
+  "@thanksForUsingQuranProStoreRatingWill": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "thereIsNoDeityExceptAllah": "ਅੱਲਾਹ ਤੋਂ ਬਿਨਾਂ ਕੋਈ ਮਾਬੂਦ ਨਹੀਂ",
+  "@thereIsNoDeityExceptAllah": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "thereIsNoPowerNorStrengthExceptThrough": "ਅੱਲਾਹ ਤੋਂ ਬਿਨਾਂ ਨਾ ਕੋਈ ਜ਼ੋਰ ਹੈ ਨਾ ਤਾਕਤ",
+  "@thereIsNoPowerNorStrengthExceptThrough": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "thisHelpsUsCustomizeRemindersAndTrackYour": "ਇਸ ਨਾਲ ਅਸੀਂ ਯਾਦ-ਦਹਾਨੀਆਂ ਤੁਹਾਡੇ ਮੁਤਾਬਕ ਬਣਾਉਂਦੇ ਹਾਂ ਤੇ ਤੁਹਾਡੀ ਤਰੱਕੀ ਵੇਖਦੇ ਹਾਂ।",
+  "@thisHelpsUsCustomizeRemindersAndTrackYour": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "tigerSEye": "ਬਾਘ ਦੀ ਅੱਖ",
+  "@tigerSEye": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "today": "ਅੱਜ",
+  "@today": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "total": "ਕੁੱਲ",
+  "@total": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/history_preview.dart."
+  },
+  "totalHasanat": "ਕੁੱਲ ਹਸਨਾਤ",
+  "@totalHasanat": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "trackProgress": "ਤਰੱਕੀ ਵੇਖੋ",
+  "@trackProgress": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "trackYourReadingAndAchievements": "ਆਪਣੀ ਤਿਲਾਵਤ ਤੇ ਪ੍ਰਾਪਤੀਆਂ ਵੇਖੋ।",
+  "@trackYourReadingAndAchievements": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "tryAgain": "ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+  "@tryAgain": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "undo": "ਵਾਪਸ ਲਓ",
+  "@undo": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/quick_actions.dart."
+  },
+  "unlockAllAppThemesAndCustomizations": "ਐਪ ਦੀਆਂ ਸਾਰੀਆਂ ਥੀਮਾਂ ਤੇ ਕਸਟਮਾਈਜ਼ੇਸ਼ਨ ਅਨਲੌਕ ਕਰੋ",
+  "@unlockAllAppThemesAndCustomizations": {
+    "description": "Extracted visible text from lib/features/shop/presentation/pages/shop_page.dart."
+  },
+  "usageGuidelines": "ਵਰਤੋਂ ਦੀਆਂ ਹਦਾਇਤਾਂ",
+  "@usageGuidelines": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "useQuranProRespectfullyForPersonalWorshipLearning": "Quran Pro ਨੂੰ ਅਦਬ ਨਾਲ ਨਿੱਜੀ ਇਬਾਦਤ, ਸਿੱਖਣ ਤੇ ਰੋਜ਼ਾਨਾ ਇਸਲਾਮੀ ਅਮਲ ਲਈ ਵਰਤੋ।",
+  "@useQuranProRespectfullyForPersonalWorshipLearning": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/pages/tasbih_page_parts/tasbih_settings_page.dart."
+  },
+  "viewAll": "ਸਭ ਵੇਖੋ",
+  "@viewAll": {
+    "description": "Extracted visible text from lib/features/gamification/presentation/pages/gamification_page.dart."
+  },
+  "w": "ਪ",
+  "@w": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "welcome": "ਜੀ ਆਇਆਂ ਨੂੰ",
+  "@welcome": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "west": "ਪੱਛਮ",
+  "@west": {
+    "description": "Extracted visible text from lib/features/qibla/presentation/pages/qibla_page.dart."
+  },
+  "yaHayyuYaQayyum": "ਯਾ ਹੱਯੁ ਯਾ ਕੱਯੂਮ",
+  "@yaHayyuYaQayyum": {
+    "description": "Extracted visible text from lib/features/tasbih/presentation/providers/tasbih_provider.dart."
+  },
+  "youReAllSet": "ਸਭ ਤਿਆਰ ਹੈ!",
+  "@youReAllSet": {
+    "description": "Extracted visible text from lib/features/onboarding/presentation/pages/onboarding_page.dart."
+  },
+  "yourProgress": "ਤੁਹਾਡੀ ਤਰੱਕੀ",
+  "@yourProgress": {
+    "description": "Extracted visible text from lib/features/quran/presentation/pages/quran_page.dart."
+  },
+  "continueLabel": "ਜਾਰੀ ਰੱਖੋ",
+  "@continueLabel": {
+    "description": "English UI text."
+  },
+  "amethyst": "ਐਮਥਿਸਟ",
+  "@amethyst": {
+    "description": "English UI text."
+  },
+  "indonesian": "ਇੰਡੋਨੇਸ਼ੀਆਈ",
+  "@indonesian": {
+    "description": "English UI text."
+  },
+  "turkish": "ਤੁਰਕੀ",
+  "@turkish": {
+    "description": "English UI text."
+  },
+  "vietnamese": "ਵੀਅਤਨਾਮੀ",
+  "@vietnamese": {
+    "description": "English UI text."
+  },
+  "turquoise": "ਫ਼ਿਰੋਜ਼ਾ",
+  "@turquoise": {
+    "description": "English UI text."
+  },
+  "wood": "ਲੱਕੜ",
+  "@wood": {
+    "description": "English UI text."
+  },
+  "left": "left",
+  "@left": {
+    "description": "Text displayed after time remaining (e.g., 5 mins left)."
+  }
+}

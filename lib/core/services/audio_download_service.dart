@@ -4,7 +4,8 @@ import 'package:path_provider/path_provider.dart';
 import 'package:flutter/foundation.dart';
 
 class AudioDownloadService {
-  static final AudioDownloadService _instance = AudioDownloadService._internal();
+  static final AudioDownloadService _instance =
+      AudioDownloadService._internal();
   factory AudioDownloadService() => _instance;
   AudioDownloadService._internal();
 
@@ -22,8 +23,8 @@ class AudioDownloadService {
 
   Future<void> downloadAdhanFiles() async {
     final files = {
-      'adhan.mp3': 'https://www.islamcan.com/common/adhan/adhan1.mp3',
-      'adhan_fajr.mp3': 'https://www.islamcan.com/common/adhan/adhan2.mp3',
+      'praying_adhan_from_masjid_al_haram.mp3':
+          'https://f004.backblazeb2.com/file/m27-al-quran/notification/praying_adhan_from_masjid_al_haram.mp3',
     };
 
     for (var entry in files.entries) {

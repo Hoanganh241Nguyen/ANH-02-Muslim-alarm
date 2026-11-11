@@ -33,6 +33,11 @@ class PrayerAlarmMethodChannel {
     await _channel.invokeMethod<bool>('snoozeNativeAlarm', alarm.toJson());
   }
 
+  Future<void> startSound(PrayerAlarmModel alarm) async {
+    if (defaultTargetPlatform != TargetPlatform.android) return;
+    await _channel.invokeMethod<bool>('startAlarmSound', alarm.toJson());
+  }
+
   Future<void> dismiss(int id) async {
     if (defaultTargetPlatform != TargetPlatform.android) return;
     await _channel.invokeMethod<bool>('dismissAlarm', {'id': id});

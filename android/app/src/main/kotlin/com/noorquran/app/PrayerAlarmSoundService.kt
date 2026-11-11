@@ -3,6 +3,7 @@ package com.noorquran.app
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ServiceInfo
 import android.media.AudioAttributes
 import android.media.AudioFocusRequest
 import android.media.AudioManager
@@ -39,13 +40,36 @@ class PrayerAlarmSoundService : Service() {
 
         val alarm = PrayerAlarmData.fromIntent(intent)
         PrayerAlarmReceiver.createChannel(this)
-        startForeground(alarm.id, PrayerAlarmReceiver.buildAlarmNotification(this, alarm))
+        if (!startAlarmForeground(alarm)) {
+            stopSelf(startId)
+            return START_NOT_STICKY
+        }
         startAudio(alarm)
         startVibration()
         handler.removeCallbacks(timeoutRunnable)
         handler.postDelayed(timeoutRunnable, MAX_ALARM_DURATION_MS)
         return START_NOT_STICKY
     }
+
+    /**
+     * Android 10+ cần khai báo rõ loại foreground service; Android 12+ có thể từ chối
+     * khởi động FGS khi app ở nền (ForegroundServiceStartNotAllowedException), còn
+     * Android 14+ ném SecurityException nếu thiếu quyền theo loại. Bắt lỗi để không crash
+     * trên các phiên bản này mà vẫn giữ notification full-screen làm phương án dự phòng.
+     */
+    private fun startAlarmForeground(alarm: PrayerAlarmData): Boolean =
+        try {
+            val notification = PrayerAlarmReceiver.buildAlarmNotification(this, alarm)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                startForeground(alarm.id, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK)
+            } else {
+                startForeground(alarm.id, notification)
+            }
+            true
+        } catch (e: Exception) {
+            Log.e(TAG, "Could not start alarm sound as a foreground service", e)
+            false
+        }
 
     override fun onDestroy() {
         handler.removeCallbacks(timeoutRunnable)
@@ -172,7 +196,7 @@ class PrayerAlarmSoundService : Service() {
     }
 
     private fun fallbackSoundUri(): Uri =
-        Uri.parse("android.resource://$packageName/${R.raw.prayer_alarm_tone}")
+        Uri.parse("android.resource://$packageName/${R.raw.noti_default}")
 
     private fun resolveDownloadedSoundFile(soundAsset: String): File? {
         val name = normalizeSoundName(soundAsset)
@@ -197,6 +221,10 @@ class PrayerAlarmSoundService : Service() {
             "flutter_assets/assets/audio/$name.mp3",
             "flutter_assets/assets/audio/$name.wav",
             "flutter_assets/assets/audio/$name.ogg",
+            "flutter_assets/assets/sounds/$name",
+            "flutter_assets/assets/sounds/$name.mp3",
+            "flutter_assets/assets/sounds/$name.wav",
+            "flutter_assets/assets/sounds/$name.ogg",
         ).firstNotNullOfOrNull { path ->
             try {
                 assets.openFd(path)
@@ -211,8 +239,8 @@ class PrayerAlarmSoundService : Service() {
 
     private fun remoteSoundUrl(soundAsset: String): String? =
         when (normalizeSoundName(soundAsset)) {
-            "adhan_fajr" -> "https://www.islamcan.com/common/adhan/adhan2.mp3"
-            "adhan" -> "https://www.islamcan.com/common/adhan/adhan1.mp3"
+            "praying_adhan_from_masjid_al_haram" ->
+                "https://f004.backblazeb2.com/file/m27-al-quran/notification/praying_adhan_from_masjid_al_haram.mp3"
             else -> null
         }
 
@@ -229,7 +257,12 @@ class PrayerAlarmSoundService : Service() {
 
         fun start(context: Context, alarm: PrayerAlarmData) {
             val intent = Intent(context, PrayerAlarmSoundService::class.java).also { alarm.putInto(it) }
-            ContextCompat.startForegroundService(context, intent)
+            try {
+                ContextCompat.startForegroundService(context, intent)
+            } catch (e: Exception) {
+                // Android 12+: hệ thống có thể chặn khởi động FGS từ nền.
+                Log.e(TAG, "Could not start prayer alarm sound service", e)
+            }
         }
 
         fun stop(context: Context) {

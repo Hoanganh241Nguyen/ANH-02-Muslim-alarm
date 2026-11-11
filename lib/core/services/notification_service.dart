@@ -1,9 +1,12 @@
+import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz;
 import '../constants/app_colors.dart';
+import 'analytics_service.dart';
 import '../prayer_alarm/prayer_alarm_model.dart';
 
 class NotificationService {
@@ -18,6 +21,8 @@ class NotificationService {
   static const MethodChannel _nativeAlarmChannel = MethodChannel(
     'com.h01.muslim_alarm/alarm',
   );
+  static const String _m27DefaultNotificationSound = 'noti_default';
+  static const String _m27DefaultPrayerSound = 'noti_adhan_al_afassi.mp3';
   bool _isInitialized = false;
   Function(String?)? _onNotificationTap;
 
@@ -47,14 +52,16 @@ class NotificationService {
           importance: Importance.max,
           priority: Priority.max,
           playSound: true,
-          sound: const RawResourceAndroidNotificationSound('prayer_alarm_tone'),
+          sound: const RawResourceAndroidNotificationSound(
+            _m27DefaultNotificationSound,
+          ),
           color: AppColors.emerald,
         ),
         iOS: const DarwinNotificationDetails(
           presentAlert: true,
           presentSound: true,
           presentBanner: true,
-          sound: 'prayer_alarm_tone.wav',
+          sound: 'noti_default.mp3',
         ),
       ),
       payload: payload,
@@ -127,28 +134,16 @@ class NotificationService {
   Future<void> _createNotificationChannels(
     AndroidFlutterLocalNotificationsPlugin androidPlugin,
   ) async {
-    // Channel cho giờ Fajr
     await androidPlugin.createNotificationChannel(
       const AndroidNotificationChannel(
-        'prayer_fajr_channel',
-        'Fajr Prayer Alarms',
-        description: 'Urgent notifications for Fajr prayer',
+        'm27_prayer_channel',
+        'Prayer Alarms',
+        description: 'Notifications for prayer times',
         importance: Importance.max,
         playSound: true,
-        sound: RawResourceAndroidNotificationSound('prayer_alarm_tone'),
-        enableVibration: true,
-        enableLights: true,
-      ),
-    );
-
-    await androidPlugin.createNotificationChannel(
-      const AndroidNotificationChannel(
-        'prayer_regular_channel',
-        'Regular Prayer Alarms',
-        description: 'Notifications for Dhuhr, Asr, Maghrib, Isha',
-        importance: Importance.max,
-        playSound: true,
-        sound: RawResourceAndroidNotificationSound('prayer_alarm_tone'),
+        sound: RawResourceAndroidNotificationSound(
+          _m27DefaultNotificationSound,
+        ),
         enableVibration: true,
         enableLights: true,
       ),
@@ -156,6 +151,10 @@ class NotificationService {
   }
 
   Future<void> requestPermissions({bool includeAlarmSettings = false}) async {
+    AnalyticsService().trackEvent(
+      'notification_permission_request',
+      params: {'include_alarm_settings': includeAlarmSettings},
+    );
     final androidPlugin = _notificationsPlugin
         .resolvePlatformSpecificImplementation<
           AndroidFlutterLocalNotificationsPlugin
@@ -212,7 +211,24 @@ class NotificationService {
     if (scheduledDate.isBefore(DateTime.now())) return;
 
     final prayerName = payload ?? title;
-    final soundAsset = _soundAssetForPrayer(prayerName);
+    final soundAsset = _soundAssetForPrayer();
+    final alarmPayload = _alarmPayload(
+      id: id,
+      prayerName: prayerName,
+      scheduledDate: scheduledDate,
+      soundAsset: soundAsset,
+    );
+    AnalyticsService().trackEvent(
+      'prayer_alarm_schedule',
+      params: {
+        'id': id,
+        'prayer': prayerName,
+        'sound_asset': soundAsset,
+        'seconds_until_fire': scheduledDate
+            .difference(DateTime.now())
+            .inSeconds,
+      },
+    );
 
     if (defaultTargetPlatform == TargetPlatform.android) {
       await _nativeAlarmChannel.invokeMethod<bool>('scheduleNativeAlarm', {
@@ -229,9 +245,6 @@ class NotificationService {
       return;
     }
 
-    final isFajr = soundAsset == 'adhan_fajr';
-    final channelId = isFajr ? 'prayer_fajr_channel' : 'prayer_regular_channel';
-
     try {
       await _notificationsPlugin.zonedSchedule(
         id,
@@ -240,8 +253,8 @@ class NotificationService {
         tz.TZDateTime.from(scheduledDate, tz.local),
         NotificationDetails(
           android: AndroidNotificationDetails(
-            channelId,
-            isFajr ? 'Fajr Prayer Alarms' : 'Regular Prayer Alarms',
+            'm27_prayer_channel',
+            'Prayer Alarms',
             channelDescription: 'Full-screen alerts for prayer times',
             importance: Importance.max,
             priority: Priority.max,
@@ -249,7 +262,9 @@ class NotificationService {
             category: AndroidNotificationCategory.alarm,
             audioAttributesUsage: AudioAttributesUsage.alarm,
             playSound: true,
-            sound: const RawResourceAndroidNotificationSound('prayer_alarm_tone'),
+            sound: const RawResourceAndroidNotificationSound(
+              _m27DefaultNotificationSound,
+            ),
             visibility: NotificationVisibility.public,
             color: AppColors.emerald,
             ongoing: true,
@@ -260,14 +275,14 @@ class NotificationService {
             presentAlert: true,
             presentSound: true,
             presentBanner: true,
-            sound: '$soundAsset.wav',
+            sound: _m27DefaultPrayerSound,
             interruptionLevel: InterruptionLevel.critical,
           ),
         ),
         androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
         uiLocalNotificationDateInterpretation:
             UILocalNotificationDateInterpretation.absoluteTime,
-        payload: payload ?? title,
+        payload: alarmPayload,
       );
       debugPrint('Scheduled prayer notification "$title" at $scheduledDate');
     } catch (e, stackTrace) {
@@ -282,15 +297,36 @@ class NotificationService {
 
   Future<String?> getNativeLaunchPayload() async {
     if (defaultTargetPlatform != TargetPlatform.android) return null;
-    return _nativeAlarmChannel.invokeMethod<String>('getInitialAlarmPayload');
+    try {
+      return await _nativeAlarmChannel.invokeMethod<String>(
+        'getInitialAlarmPayload',
+      );
+    } on MissingPluginException {
+      // Engine chưa gắn PrayerAlarmBridge (vd. mở từ activity/engine khác).
+      return null;
+    } on PlatformException {
+      return null;
+    }
   }
 
-  String _soundAssetForPrayer(String prayerName) {
-    final name = prayerName.toLowerCase();
-    if (name.contains('fajr') || name.contains('bình minh') || name.contains('sáng')) {
-      return 'adhan_fajr';
-    }
-    // Các giờ khác dùng Adhan chung
-    return 'adhan';
+  String _soundAssetForPrayer() {
+    return _m27DefaultPrayerSound;
+  }
+
+  String _alarmPayload({
+    required int id,
+    required String prayerName,
+    required DateTime scheduledDate,
+    required String soundAsset,
+  }) {
+    return jsonEncode({
+      'id': id,
+      'prayerName': prayerName,
+      'prayerNameLocalized': PrayerAlarmModel.localizedName(prayerName),
+      'prayerTime': scheduledDate.toIso8601String(),
+      'soundAsset': soundAsset,
+      'quote': 'Take a pause from your work and make time for Allah.',
+      'snoozeMinutes': 10,
+    });
   }
 }

@@ -5,7 +5,7 @@ class PrayerAlarmModel {
     required this.prayerNameLocalized,
     required this.scheduledTime,
     required this.quote,
-    this.soundAsset = 'adhan',
+    this.soundAsset = 'noti_adhan_al_afassi.mp3',
     this.snoozeMinutes = 10,
     this.enabled = true,
   });
@@ -60,15 +60,15 @@ class PrayerAlarmModel {
       id: (json['id'] as num?)?.toInt() ?? 9900,
       prayerName: prayerName,
       prayerNameLocalized:
-          json['prayerNameLocalized'] as String? ?? localizedName(prayerName),
+          json['prayerNameLocalized'] as String? ?? prayerName,
       scheduledTime: DateTime.fromMillisecondsSinceEpoch(
         (json['scheduledTime'] as num?)?.toInt() ??
             DateTime.now().millisecondsSinceEpoch,
       ),
       quote:
           json['quote'] as String? ??
-          'Hãy tạm dừng công việc và dành thời gian cho Allah.',
-      soundAsset: json['soundAsset'] as String? ?? 'adhan',
+          'Take a pause from your work and make time for Allah.',
+      soundAsset: json['soundAsset'] as String? ?? 'noti_adhan_al_afassi.mp3',
       snoozeMinutes: (json['snoozeMinutes'] as num?)?.toInt() ?? 10,
       enabled: json['enabled'] as bool? ?? true,
     );
@@ -77,17 +77,17 @@ class PrayerAlarmModel {
   static String localizedName(String prayerName) {
     switch (prayerName.toLowerCase()) {
       case 'fajr':
-        return 'Bình minh';
+        return 'Fajr';
       case 'dhuhr':
-        return 'Giữa trưa';
+        return 'Dhuhr';
       case 'asr':
-        return 'Chiều';
+        return 'Asr';
       case 'maghrib':
-        return 'Hoàng hôn';
+        return 'Maghrib';
       case 'isha':
-        return 'Buổi tối';
+        return 'Isha';
       default:
-        return 'Giờ cầu nguyện';
+        return prayerName;
     }
   }
 }

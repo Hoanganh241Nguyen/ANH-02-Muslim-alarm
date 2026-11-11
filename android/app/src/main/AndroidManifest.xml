@@ -12,7 +12,7 @@
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <application
-        android:label="h01_muslim_alarm"
+        android:label="Quran Pro: Al Quran Majeed"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -45,7 +45,7 @@
             android:exported="true"
             android:launchMode="singleTask"
             android:showWhenLocked="true"
-            android:taskAffinity="com.noorquran.app.alarm"
+            android:taskAffinity="com.hastudio.quran.pro.alarm"
             android:theme="@style/AlarmTheme"
             android:turnScreenOn="true">
             <meta-data
@@ -57,6 +57,12 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7111629496407310~5215730825" />
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.NATIVE_AD_DEBUGGER_ENABLED"
+            android:value="false" />
 
         <service android:name="com.ryanheise.audioservice.AudioService"
             android:foregroundServiceType="mediaPlayback"

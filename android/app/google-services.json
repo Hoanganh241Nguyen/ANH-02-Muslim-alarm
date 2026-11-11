@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "938432914891",
+    "project_id": "h01-muslim-ala",
+    "storage_bucket": "h01-muslim-ala.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938432914891:android:f0cad9fbdb20c30fee024e",
+        "android_client_info": {
+          "package_name": "com.hastudio.quran.pro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzCNODgQt5jsr4OizQ7cGDPextOj3nqJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

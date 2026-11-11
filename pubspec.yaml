@@ -1,14 +1,16 @@
 name: h01_muslim_alarm
-description: "H01 Muslim Alarm - Prayer Times, Qibla, Quran & Gamification"
+description: "Quran Pro: Al Quran Majeed - Prayer Times, Qibla, Quran & Gamification"
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.2+3
 
 environment:
   sdk: '>=3.10.8 <4.0.0'
 
 dependencies:
   flutter:
+    sdk: flutter
+  flutter_localizations:
     sdk: flutter
   cupertino_icons: ^1.0.8
 
@@ -34,11 +36,22 @@ dependencies:
   # Audio & Quran (SCR-06A)
   just_audio: ^0.9.36
   audio_service: ^0.18.15
+  google_mobile_ads: ^8.0.0
+  in_app_purchase: ^3.2.0
+
+  # Haptic / Vibration
+  vibration: ^2.0.0
 
   # UI & Animations
   google_fonts: ^6.1.0
   flutter_spinkit: ^5.2.0
-  intl: ^0.18.1
+  intl: ^0.20.2
+  flutter_svg: ^2.0.10+1
+  firebase_core: ^4.12.1
+  firebase_analytics: ^12.4.5
+  firebase_crashlytics: ^5.2.6
+  firebase_remote_config: ^6.0.0
+  url_launcher: ^6.3.2
 
 dev_dependencies:
   flutter_test:
@@ -51,14 +64,43 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "ic_launcher"
   ios: true
-  image_path: "lib/assets/json/app_icon.png"
+  image_path: "assets/images/app_icon.png"
   min_sdk_android: 21 # android min sdk value
 
 flutter:
+  generate: true
   uses-material-design: true
   assets:
-    - assets/images/
-    - assets/audio/
-    - assets/fonts/
-    - lib/assets/json/
-    - lib/assets/json/icon/
+    - assets/images/app_icon.webp
+    - assets/images/bg_darkmode.webp
+    - assets/images/default_bean.webp
+    - assets/images/img_background.webp
+    - assets/images/img_background_noti.webp
+    - assets/images/img_home_widget.webp
+    - assets/images/img_quran_widget.webp
+    - assets/images/img_splash_background.webp
+    - assets/images/icon/ic_battery.svg
+    - assets/images/icon/ic_battery_dialog.webp
+    - assets/images/icon/kaaba.webp
+    # Only the nav icons the app draws; the large PNG versions are not used.
+    - assets/images/icon/nav/ic_home.svg
+    - assets/images/icon/nav/ic_qibla.svg
+    - assets/images/icon/nav/ic_quran.svg
+    - assets/images/icon/nav/ic_tasbih.svg
+    - assets/images/icon/nav/ic_setting.svg
+    - assets/images/icon/nav/ic_premium.webp
+    - assets/images/icon/beads/bead_lv1.webp
+    - assets/images/icon/beads/bead_lv2.webp
+    - assets/images/icon/beads/bead_lv3.webp
+    - assets/images/icon/beads/bead_lv4.webp
+    - assets/images/icon/beads/bead_lv5.webp
+    - assets/images/icon/beads/bead_lv6.webp
+    - assets/images/icon/beads/bead_lv7.webp
+    - assets/images/icon/beads/bead_lv8.webp
+    - assets/images/icon/beads/bead_lv9.webp
+    - assets/images/icon/beads/bead_lv10.webp
+    - assets/images/icon/prayer/
+    - assets/sounds/splash.m4a
+    - assets/sounds/tasbih.mp3
+    - assets/json/ayah_full.json
+    - assets/json/surah.json

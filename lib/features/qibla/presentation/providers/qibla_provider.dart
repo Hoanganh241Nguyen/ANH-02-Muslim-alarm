@@ -65,6 +65,7 @@ class QiblaProvider extends ChangeNotifier {
       return;
     }
 
+    _errorMessage = '';
     _isPermissionGranted = true;
     notifyListeners();
   }
@@ -86,20 +87,31 @@ class QiblaProvider extends ChangeNotifier {
       notifyListeners();
     });
 
+    // Qibla direction only needs city-level accuracy; high accuracy makes
+    // Google prompt for "Location Accuracy" again on every request.
     _positionSubscription = Geolocator.getPositionStream(
       locationSettings: const LocationSettings(
-        accuracy: LocationAccuracy.high,
-        distanceFilter: 10,
+        accuracy: LocationAccuracy.low,
+        distanceFilter: 100,
       ),
-    ).listen((Position position) {
-      _currentPosition = position;
-      _calculateQiblaData(position);
-    });
+    ).listen(
+      (Position position) {
+        _currentPosition = position;
+        _calculateQiblaData(position);
+      },
+      onError: (Object e) {
+        _errorMessage = 'Failed to get location: $e';
+        notifyListeners();
+      },
+    );
   }
 
   Future<void> _updateLocation() async {
     try {
-      _currentPosition = await Geolocator.getCurrentPosition();
+      _currentPosition = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.low,
+        timeLimit: const Duration(seconds: 15),
+      );
       if (_currentPosition != null) {
         _calculateQiblaData(_currentPosition!);
       }

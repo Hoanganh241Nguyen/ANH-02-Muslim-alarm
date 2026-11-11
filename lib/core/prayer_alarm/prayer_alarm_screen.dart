@@ -1,6 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import '../constants/app_icons.dart';
 import 'package:intl/intl.dart';
 
+import '../constants/app_colors.dart';
+import '../services/analytics_service.dart';
+import '../../language/generated/app_localizations.dart';
 import 'prayer_alarm_controller.dart';
 import 'prayer_alarm_model.dart';
 
@@ -30,6 +36,22 @@ class _PrayerAlarmScreenState extends State<PrayerAlarmScreen>
     _pulse = Tween<double>(begin: .95, end: 1.08).animate(
       CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
     );
+    AnalyticsService().trackScreenView(
+      'prayer_alarm',
+      source: 'native_alarm',
+      params: {
+        'prayer': widget.alarm.prayerName,
+        'sound_asset': widget.alarm.soundAsset,
+      },
+    );
+    unawaited(
+      _controller.startSound().catchError((
+        Object error,
+        StackTrace stackTrace,
+      ) {
+        debugPrint('Could not start prayer alarm sound: $error');
+      }),
+    );
   }
 
   @override
@@ -49,135 +71,149 @@ class _PrayerAlarmScreenState extends State<PrayerAlarmScreen>
   }
 
   Future<void> _dismiss() async {
+    AnalyticsService().trackButtonTap(
+      'prayer_alarm',
+      'dismiss',
+      params: {'prayer': _controller.alarm.prayerName},
+    );
     await _controller.dismiss();
     if (mounted) Navigator.of(context).maybePop();
   }
 
+  Future<void> _dismissBySwipe() async {
+    AnalyticsService().trackButtonTap(
+      'prayer_alarm',
+      'dismiss_swipe',
+      params: {'prayer': _controller.alarm.prayerName},
+    );
+    await _dismiss();
+  }
+
   Future<void> _snooze() async {
+    AnalyticsService().trackButtonTap(
+      'prayer_alarm',
+      'snooze',
+      params: {'prayer': _controller.alarm.prayerName},
+    );
     await _controller.snooze();
     if (mounted) Navigator.of(context).maybePop();
   }
 
   @override
   Widget build(BuildContext context) {
-    final alarm = widget.alarm;
     final now = DateTime.now();
 
     return Scaffold(
-      backgroundColor: const Color(0xFF020F12),
-      body: GestureDetector(
-        behavior: HitTestBehavior.translucent,
-        onVerticalDragEnd: (details) {
-          final velocity = details.primaryVelocity ?? 0;
-          if (velocity.abs() > 220) {
-            _dismiss();
-          }
+      backgroundColor: AppColors.midnight,
+      body: AnimatedBuilder(
+        animation: _controller,
+        builder: (context, _) {
+          final alarm = _controller.alarm;
+          return GestureDetector(
+            behavior: HitTestBehavior.translucent,
+            onVerticalDragEnd: (details) {
+              final velocity = details.primaryVelocity ?? 0;
+              if (velocity.abs() > 220) {
+                _dismissBySwipe();
+              }
+            },
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                Image.asset(
+                  'assets/images/img_background_noti.webp',
+                  fit: BoxFit.cover,
+                ),
+                const DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        AppColors.darkOverlay,
+                        AppColors.shadowBlack,
+                        AppColors.deepOverlay,
+                      ],
+                    ),
+                  ),
+                ),
+                SafeArea(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(34, 18, 34, 10),
+                    child: Column(
+                      children: [
+                        _StatusRow(now: now),
+                        const SizedBox(height: 34),
+                        ScaleTransition(
+                          scale: _pulse,
+                          child: const _PrayerIcon(),
+                        ),
+                        const SizedBox(height: 22),
+                        Text(
+                          AppLocalizations.of(
+                            context,
+                          ).prayerTimeArrived(alarm.prayerNameLocalized),
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        const Spacer(flex: 5),
+                        _QuoteCard(quote: alarm.quote),
+                        const SizedBox(height: 16),
+                        Text(
+                          DateFormat('HH:mm').format(now),
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 43,
+                            height: .95,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        const SizedBox(height: 6),
+                        Text(
+                          '${_gregorianDateText(now)}\n(${_hijriDateText(now)})',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white.withValues(alpha: .7),
+                            fontSize: 11,
+                            height: 1.35,
+                          ),
+                        ),
+                        const SizedBox(height: 18),
+                        _ActionButton(
+                          label: AppLocalizations.of(context).adjustPosition,
+                          icon: AppIcons.selfImprovement,
+                          filled: true,
+                          onPressed: _dismiss,
+                        ),
+                        const SizedBox(height: 12),
+                        _ActionButton(
+                          label: AppLocalizations.of(
+                            context,
+                          ).snoozeMinutes(alarm.snoozeMinutes),
+                          icon: AppIcons.notificationsNone,
+                          onPressed: _snooze,
+                        ),
+                        const SizedBox(height: 20),
+                        Text(
+                          AppLocalizations.of(context).clickOrSwipeToCount,
+                          style: TextStyle(
+                            color: Colors.white.withValues(alpha: .55),
+                            fontSize: 13,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
         },
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            Image.asset(
-              'assets/images/img_background_noti.png',
-              fit: BoxFit.cover,
-            ),
-            const DecoratedBox(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Color(0xC800090C),
-                    Color(0x26000000),
-                    Color(0xE000080B),
-                  ],
-                ),
-              ),
-            ),
-            SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(34, 18, 34, 10),
-                child: Column(
-                  children: [
-                    _StatusRow(now: now),
-                    const SizedBox(height: 34),
-                    ScaleTransition(scale: _pulse, child: const _PrayerIcon()),
-                    const SizedBox(height: 22),
-                    const Text(
-                      'Đã đến giờ',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
-                    Text(
-                      alarm.prayerName,
-                      maxLines: 1,
-                      style: const TextStyle(
-                        color: Color(0xFF97D12D),
-                        fontSize: 58,
-                        height: .95,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      '──  ${alarm.prayerNameLocalized}  ──',
-                      style: const TextStyle(
-                        color: Color(0xFF97D12D),
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    const Spacer(flex: 5),
-                    _QuoteCard(quote: alarm.quote),
-                    const SizedBox(height: 16),
-                    Text(
-                      DateFormat('HH:mm').format(now),
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 43,
-                        height: .95,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    const SizedBox(height: 6),
-                    Text(
-                      '${_gregorianDateText(now)}\n(${_hijriDateText(now)})',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white.withValues(alpha: .7),
-                        fontSize: 11,
-                        height: 1.35,
-                      ),
-                    ),
-                    const SizedBox(height: 18),
-                    _ActionButton(
-                      label: 'Hướng Qibla & Bắt đầu cầu nguyện',
-                      icon: Icons.self_improvement,
-                      filled: true,
-                      onPressed: _dismiss,
-                    ),
-                    const SizedBox(height: 12),
-                    _ActionButton(
-                      label: 'Nhắc tôi sau ${alarm.snoozeMinutes} phút',
-                      icon: Icons.notifications_none_rounded,
-                      onPressed: _snooze,
-                    ),
-                    const SizedBox(height: 20),
-                    Text(
-                      'Vuốt lên hoặc xuống để tắt',
-                      style: TextStyle(
-                        color: Colors.white.withValues(alpha: .55),
-                        fontSize: 13,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }
@@ -192,34 +228,27 @@ class _PrayerAlarmScreenState extends State<PrayerAlarmScreen>
     );
     final firstDayOfMonth = _islamicToJulian(islamicYear, islamicMonth, 1);
     final islamicDay = (jd - firstDayOfMonth + 1).floor().clamp(1, 30);
-    const months = [
+    final months = [
       'Muharram',
       'Safar',
-      'Rabi Al-Awwal',
-      'Rabi Al-Thani',
-      'Jumada Al-Awwal',
-      'Jumada Al-Thani',
+      AppLocalizations.of(context).rabiAlAwwal,
+      AppLocalizations.of(context).rabiAlThani,
+      AppLocalizations.of(context).jumadaAlAwwal,
+      AppLocalizations.of(context).jumadaAlThani,
       'Rajab',
       'Sha\'ban',
       'Ramadan',
       'Shawwal',
-      'Dhu Al-Qadah',
-      'Dhu Al-Hijjah',
+      AppLocalizations.of(context).dhuAlQadah,
+      AppLocalizations.of(context).dhuAlHijjah,
     ];
     return '$islamicDay ${months[islamicMonth - 1]} $islamicYear';
   }
 
   String _gregorianDateText(DateTime date) {
-    const weekdays = [
-      'Thứ Hai',
-      'Thứ Ba',
-      'Thứ Tư',
-      'Thứ Năm',
-      'Thứ Sáu',
-      'Thứ Bảy',
-      'Chủ Nhật',
-    ];
-    return '${weekdays[date.weekday - 1]}, ${date.day} Tháng ${date.month}, ${date.year}';
+    return DateFormat.yMMMMEEEEd(
+      Localizations.localeOf(context).toString(),
+    ).format(date);
   }
 
   double _julianDay(int year, int month, int day) {
@@ -262,15 +291,11 @@ class _StatusRow extends StatelessWidget {
           ),
         ),
         const Spacer(),
-        const Icon(
-          Icons.signal_cellular_alt_rounded,
-          color: Colors.white,
-          size: 15,
-        ),
+        const Icon(AppIcons.signalCellularAlt, color: Colors.white, size: 15),
         const SizedBox(width: 4),
-        const Icon(Icons.wifi_rounded, color: Colors.white, size: 15),
+        const Icon(AppIcons.wifi, color: Colors.white, size: 15),
         const SizedBox(width: 4),
-        const Icon(Icons.battery_full_rounded, color: Colors.white, size: 18),
+        const Icon(AppIcons.batteryFull, color: Colors.white, size: 18),
       ],
     );
   }
@@ -289,17 +314,21 @@ class _PrayerIcon extends StatelessWidget {
         gradient: const LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xFF1A6928), Color(0xFF5BB220), Color(0xFF083D23)],
+          colors: [
+            AppColors.forestGreen,
+            AppColors.brightGreen,
+            AppColors.darkForest,
+          ],
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF97D12D).withValues(alpha: .35),
+            color: AppColors.lime.withValues(alpha: .35),
             blurRadius: 24,
             spreadRadius: 8,
           ),
         ],
       ),
-      child: const Icon(Icons.mosque_rounded, color: Colors.white, size: 34),
+      child: const Icon(AppIcons.mosque, color: Colors.white, size: 34),
     );
   }
 }
@@ -317,9 +346,9 @@ class _QuoteCard extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 30),
       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
       decoration: BoxDecoration(
-        color: const Color(0x91001D1F),
+        color: AppColors.deepTeal,
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: const Color(0x5076D559)),
+        border: Border.all(color: AppColors.borderGreen),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -327,7 +356,7 @@ class _QuoteCard extends StatelessWidget {
           const Text(
             '❝',
             style: TextStyle(
-              color: Color(0xFF97D12D),
+              color: AppColors.lime,
               fontSize: 24,
               height: .8,
               fontWeight: FontWeight.w900,
@@ -345,9 +374,9 @@ class _QuoteCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 4),
-          const Text(
-            '(Surah Al-Baqarah 2:238)',
-            style: TextStyle(color: Color(0xFF97D12D), fontSize: 11),
+          Text(
+            AppLocalizations.of(context).surahAlBaqarah2238,
+            style: const TextStyle(color: AppColors.lime, fontSize: 11),
           ),
         ],
       ),
@@ -378,15 +407,15 @@ class _ActionButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(29),
           gradient: filled
               ? const LinearGradient(
-                  colors: [Color(0xFFBAE747), Color(0xFF52A31C)],
+                  colors: [AppColors.limeGreen, AppColors.leafGreen],
                 )
               : null,
-          color: filled ? null : const Color(0xBE052629),
-          border: filled ? null : Border.all(color: const Color(0x5F3F8466)),
+          color: filled ? null : AppColors.darkTeal,
+          border: filled ? null : Border.all(color: AppColors.mutedTeal),
           boxShadow: filled
               ? [
                   BoxShadow(
-                    color: const Color(0xFF97D12D).withValues(alpha: .35),
+                    color: AppColors.lime.withValues(alpha: .35),
                     blurRadius: 16,
                     offset: const Offset(0, 7),
                   ),
@@ -395,10 +424,7 @@ class _ActionButton extends StatelessWidget {
         ),
         child: TextButton.icon(
           onPressed: onPressed,
-          icon: Icon(
-            icon,
-            color: filled ? Colors.white : const Color(0xFF97D12D),
-          ),
+          icon: Icon(icon, color: filled ? Colors.white : AppColors.lime),
           label: Text(
             label,
             overflow: TextOverflow.ellipsis,

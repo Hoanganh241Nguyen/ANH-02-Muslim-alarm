@@ -10,12 +10,14 @@ class PrayerAlarmPage extends StatelessWidget {
     this.id = 9900,
     this.scheduledTime,
     this.quote = 'Hãy tạm dừng công việc và dành thời gian cho Allah.',
+    this.soundAsset = 'noti_adhan_al_afassi.mp3',
   });
 
   final int id;
   final String prayerName;
   final DateTime? scheduledTime;
   final String quote;
+  final String soundAsset;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class PrayerAlarmPage extends StatelessWidget {
         prayerNameLocalized: PrayerAlarmModel.localizedName(cleanPrayerName),
         scheduledTime: scheduledTime ?? DateTime.now(),
         quote: quote,
+        soundAsset: soundAsset,
       ),
     );
   }

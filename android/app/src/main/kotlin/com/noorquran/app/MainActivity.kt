@@ -8,13 +8,18 @@ import android.os.Bundle
 import android.os.PowerManager
 import android.provider.Settings
 import com.ryanheise.audioservice.AudioServiceActivity
+import com.noorquran.app.ads.NativeAdTemplateFactory
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
+import io.flutter.plugins.googlemobileads.GoogleMobileAdsPlugin
 
 class MainActivity : AudioServiceActivity() {
     private val CHANNEL = "com.noorquran.app/battery"
     private var initialAlarmPayload: String? = null
     private var alarmBridge: PrayerAlarmBridge? = null
+    private var batteryChannel: MethodChannel? = null
+    private val LOCATION_CHANNEL = "com.noorquran.app/location"
+    private var locationChannel: MethodChannel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +37,24 @@ class MainActivity : AudioServiceActivity() {
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
-        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL).setMethodCallHandler { call, result ->
+        GoogleMobileAdsPlugin.registerNativeAdFactory(
+            flutterEngine,
+            "native_temple_high",
+            NativeAdTemplateFactory(this, R.layout.layout_native_template_high)
+        )
+        GoogleMobileAdsPlugin.registerNativeAdFactory(
+            flutterEngine,
+            "native_temple_small",
+            NativeAdTemplateFactory(this, R.layout.layout_native_template_small)
+        )
+        GoogleMobileAdsPlugin.registerNativeAdFactory(
+            flutterEngine,
+            "native_fullscreen",
+            NativeAdTemplateFactory(this, R.layout.layout_native_template_fullscreen)
+        )
+
+        batteryChannel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL)
+        batteryChannel?.setMethodCallHandler { call, result ->
             when (call.method) {
                 "isBatteryOptimizationIgnored" -> {
                     result.success(isBatteryOptimizationIgnored())
@@ -51,7 +73,30 @@ class MainActivity : AudioServiceActivity() {
             }
         }
 
+        // Device time zone (IANA id), used to estimate the location when
+        // location permission is not granted.
+        locationChannel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, LOCATION_CHANNEL)
+        locationChannel?.setMethodCallHandler { call, result ->
+            when (call.method) {
+                "getTimeZoneId" -> result.success(java.util.TimeZone.getDefault().id)
+                else -> result.notImplemented()
+            }
+        }
+
         alarmBridge = PrayerAlarmBridge(this, flutterEngine)
+    }
+
+    override fun cleanUpFlutterEngine(flutterEngine: FlutterEngine) {
+        batteryChannel?.setMethodCallHandler(null)
+        batteryChannel = null
+        locationChannel?.setMethodCallHandler(null)
+        locationChannel = null
+        alarmBridge?.dispose()
+        alarmBridge = null
+        GoogleMobileAdsPlugin.unregisterNativeAdFactory(flutterEngine, "native_temple_high")
+        GoogleMobileAdsPlugin.unregisterNativeAdFactory(flutterEngine, "native_temple_small")
+        GoogleMobileAdsPlugin.unregisterNativeAdFactory(flutterEngine, "native_fullscreen")
+        super.cleanUpFlutterEngine(flutterEngine)
     }
 
     private fun captureAlarmPayload(intent: Intent?) {
@@ -71,10 +116,21 @@ class MainActivity : AudioServiceActivity() {
 
     private fun requestIgnoreBatteryOptimizations() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
-            intent.data = Uri.parse("package:$packageName")
-            startActivity(intent)
+            try {
+                val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+                intent.data = Uri.parse("package:$packageName")
+                startActivity(intent)
+            } catch (e: Exception) {
+                openAppDetailsSettings()
+            }
         }
+    }
+
+    private fun openAppDetailsSettings() {
+        val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+        intent.data = Uri.parse("package:$packageName")
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
     }
 
     private fun openAutostartSettings() {
@@ -93,9 +149,7 @@ class MainActivity : AudioServiceActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         } catch (e: Exception) {
-            val defaultIntent = Intent(Settings.ACTION_SETTINGS)
-            defaultIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(defaultIntent)
+            openAppDetailsSettings()
         }
     }
 }

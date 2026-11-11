@@ -7,6 +7,10 @@ class Surah extends Equatable {
   final String englishTranslate;
   final String revelationType;
   final int numberOfAyahs;
+  final int? firstPage;
+  final int? lastPage;
+  final int pageCount;
+  final int? onJuz;
 
   const Surah({
     required this.number,
@@ -15,8 +19,23 @@ class Surah extends Equatable {
     required this.englishTranslate,
     required this.revelationType,
     required this.numberOfAyahs,
+    this.firstPage,
+    this.lastPage,
+    this.pageCount = 0,
+    this.onJuz,
   });
 
   @override
-  List<Object?> get props => [number, name, englishName, englishTranslate, revelationType, numberOfAyahs];
+  List<Object?> get props => [
+    number,
+    name,
+    englishName,
+    englishTranslate,
+    revelationType,
+    numberOfAyahs,
+    firstPage,
+    lastPage,
+    pageCount,
+    onJuz,
+  ];
 }

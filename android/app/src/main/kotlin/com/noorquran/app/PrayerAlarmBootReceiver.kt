@@ -19,7 +19,13 @@ class PrayerAlarmBootReceiver : BroadcastReceiver() {
             .filter { it.enabled && it.scheduledTime > now }
             .forEach {
                 Log.d(TAG, "Rescheduling prayer alarm after boot/package replace: id=${it.id}")
-                PrayerAlarmReceiver.schedule(context, it)
+                try {
+                    PrayerAlarmReceiver.schedule(context, it)
+                } catch (e: SecurityException) {
+                    Log.w(TAG, "Skip exact reschedule until permission is granted: id=${it.id}", e)
+                } catch (e: Exception) {
+                    Log.e(TAG, "Failed to reschedule prayer alarm: id=${it.id}", e)
+                }
             }
     }
 

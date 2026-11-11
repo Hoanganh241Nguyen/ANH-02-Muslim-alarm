@@ -22,7 +22,7 @@ class PrayerAlarmService {
     required DateTime scheduledTime,
     String? prayerNameLocalized,
     String quote = 'Hãy tạm dừng công việc và dành thời gian cho Allah.',
-    String soundAsset = 'adhan',
+    String soundAsset = 'noti_adhan_al_afassi.mp3',
     int snoozeMinutes = 10,
     bool enabled = true,
     String? body,
@@ -57,11 +57,23 @@ class PrayerAlarmService {
 
   Future<void> snoozePrayerAlarm(PrayerAlarmModel alarm) async {
     final snoozed = alarm.copyWith(
-      id: alarm.id + 1,
+      id: snoozeIdFor(alarm.id),
       scheduledTime: DateTime.now().add(Duration(minutes: alarm.snoozeMinutes)),
     );
     await _storage.save(snoozed);
     await _methodChannel.snooze(alarm);
+  }
+
+  /// Must match PrayerAlarmReceiver.snoozeId on Android. Prayer alarm ids are
+  /// consecutive (prayer index + day * 10), so `id + 1` would overwrite the
+  /// next prayer's alarm; snoozes get their own range instead.
+  static int snoozeIdFor(int id) =>
+      id >= _snoozeIdBase ? id : _snoozeIdBase + id;
+
+  static const int _snoozeIdBase = 5000;
+
+  Future<void> startAlarmSound(PrayerAlarmModel alarm) {
+    return _methodChannel.startSound(alarm);
   }
 
   Future<void> dismissPrayerAlarm(int id) => _methodChannel.dismiss(id);

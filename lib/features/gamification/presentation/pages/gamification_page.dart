@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import '../../../../language/generated/app_localizations.dart';
+import '../../../../core/constants/app_icons.dart';
 import 'package:provider/provider.dart';
 import '../../../../core/constants/app_colors.dart';
+import '../../../../core/widgets/base_app_bar.dart';
 import '../providers/gamification_provider.dart';
 
 class GamificationPage extends StatelessWidget {
@@ -14,36 +17,39 @@ class GamificationPage extends StatelessWidget {
         child: Consumer<GamificationProvider>(
           builder: (context, provider, child) {
             final stats = provider.stats;
-            
+
             return CustomScrollView(
               slivers: [
-                _buildSliverHeader(),
+                _buildSliverHeader(context),
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.all(24.0),
                     child: Column(
                       children: [
-                        _buildHasanatCard(stats?.hasanat ?? 0),
+                        _buildHasanatCard(context, stats?.hasanat ?? 0),
                         const SizedBox(height: 24),
-                        _buildStreakSection(stats?.streakCount ?? 0),
+                        _buildStreakSection(context, stats?.streakCount ?? 0),
                         const SizedBox(height: 32),
-                        _buildDailyQuestsHeader(),
+                        _buildDailyQuestsHeader(context),
                         const SizedBox(height: 16),
                         _buildQuestItem(
-                          'Quran Recitation',
-                          'Listen to or read any Ayah today',
+                          context,
+                          AppLocalizations.of(context).quranRecitation,
+                          AppLocalizations.of(context).listenToOrReadAnyAyahToday,
                           '10',
                           true,
                         ),
                         _buildQuestItem(
-                          'Daily Tasbih',
-                          'Complete at least 33 dhikr',
+                          context,
+                          AppLocalizations.of(context).dailyTasbih,
+                          AppLocalizations.of(context).completeAtLeast33Dhikr,
                           '20',
                           false,
                         ),
                         _buildQuestItem(
-                          'Qibla Finder',
-                          'Calibrate your direction',
+                          context,
+                          AppLocalizations.of(context).qiblaFinder,
+                          AppLocalizations.of(context).calibrateYourDirection,
                           '5',
                           false,
                         ),
@@ -59,7 +65,7 @@ class GamificationPage extends StatelessWidget {
     );
   }
 
-  Widget _buildSliverHeader() {
+  Widget _buildSliverHeader(BuildContext context) {
     return SliverAppBar(
       expandedHeight: 120,
       backgroundColor: Colors.transparent,
@@ -69,33 +75,31 @@ class GamificationPage extends StatelessWidget {
       flexibleSpace: FlexibleSpaceBar(
         titlePadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
         centerTitle: false,
-        title: const Text(
-          'Hasanat Hub',
-          style: TextStyle(
-            color: AppColors.primaryText,
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-            fontFamily: 'Serif',
+        title: Text(
+          AppLocalizations.of(context).hasanatHub,
+          style: AppBarTextStyles.title(
+            context,
+            color: AppColors.adaptiveText(context),
           ),
         ),
       ),
     );
   }
 
-  Widget _buildHasanatCard(int amount) {
+  Widget _buildHasanatCard(BuildContext context, int amount) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(28),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFFFBBF24), Color(0xFFD97706)],
+          colors: [AppColors.hasanatGold, AppColors.amber],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(32),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFD97706).withOpacity(0.3),
+            color: AppColors.amber.withValues(alpha: 0.3),
             blurRadius: 20,
             offset: const Offset(0, 10),
           ),
@@ -103,8 +107,8 @@ class GamificationPage extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const Text(
-            'TOTAL HASANAT',
+          Text(
+            AppLocalizations.of(context).totalHasanat,
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w800,
@@ -116,7 +120,7 @@ class GamificationPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.stars_rounded, color: Colors.white, size: 40),
+              const Icon(AppIcons.stars, color: Colors.white, size: 40),
               const SizedBox(width: 12),
               Text(
                 '$amount',
@@ -132,12 +136,16 @@ class GamificationPage extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(20),
             ),
-            child: const Text(
-              'Keep it up! You\'re doing great.',
-              style: TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w500),
+            child: Text(
+              AppLocalizations.of(context).keepItUpYouReDoingGreat,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 13,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
         ],
@@ -145,26 +153,36 @@ class GamificationPage extends StatelessWidget {
     );
   }
 
-  Widget _buildStreakSection(int streak) {
+  Widget _buildStreakSection(BuildContext context, int streak) {
+    final isDark = AppColors.isDark(context);
     return Row(
       children: [
         Expanded(
           child: Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.7),
+              color: AppColors.adaptiveCard(context, lightAlpha: 0.7),
               borderRadius: BorderRadius.circular(24),
-              border: Border.all(color: const Color(0xFFFEF3C7).withOpacity(0.5), width: 2),
+              border: Border.all(
+                color: AppColors.adaptiveBorder(context, alpha: 0.1),
+                width: 2,
+              ),
             ),
             child: Row(
               children: [
                 Container(
                   padding: const EdgeInsets.all(12),
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFFEF3C7),
+                  decoration: BoxDecoration(
+                    color: isDark
+                        ? AppColors.softGold.withValues(alpha: 0.12)
+                        : AppColors.streakBg,
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(Icons.local_fire_department_rounded, color: Color(0xFFD97706), size: 30),
+                  child: Icon(
+                    AppIcons.localFireDepartment,
+                    color: isDark ? AppColors.softGold : AppColors.amber,
+                    size: 30,
+                  ),
                 ),
                 const SizedBox(width: 16),
                 Column(
@@ -172,17 +190,17 @@ class GamificationPage extends StatelessWidget {
                   children: [
                     Text(
                       '$streak DAYS',
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        color: AppColors.primaryText,
+                        color: AppColors.adaptiveText(context),
                       ),
                     ),
-                    const Text(
-                      'Current Streak',
+                    Text(
+                      AppLocalizations.of(context).currentStreak,
                       style: TextStyle(
                         fontSize: 13,
-                        color: AppColors.secondaryText,
+                        color: AppColors.adaptiveSecondaryText(context),
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -196,34 +214,52 @@ class GamificationPage extends StatelessWidget {
     );
   }
 
-  Widget _buildDailyQuestsHeader() {
+  Widget _buildDailyQuestsHeader(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text(
-          'Daily Quests',
+        Text(
+          AppLocalizations.of(context).dailyQuests,
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
-            color: AppColors.primaryText,
+            color: AppColors.adaptiveText(context),
           ),
         ),
         TextButton(
           onPressed: () {},
-          child: const Text('View All', style: TextStyle(color: AppColors.emerald)),
+          child: Text(
+            AppLocalizations.of(context).viewAll,
+            style: TextStyle(color: AppColors.emerald),
+          ),
         ),
       ],
     );
   }
 
-  Widget _buildQuestItem(String title, String desc, String reward, bool isDone) {
+  Widget _buildQuestItem(
+    BuildContext context,
+    String title,
+    String desc,
+    String reward,
+    bool isDone,
+  ) {
+    final isDark = AppColors.isDark(context);
+    final textColor = AppColors.adaptiveText(context);
+    final secondaryTextColor = AppColors.adaptiveSecondaryText(context);
+
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.7),
+        color: AppColors.adaptiveCard(context, lightAlpha: 0.7),
         borderRadius: BorderRadius.circular(20),
-        border: isDone ? Border.all(color: AppColors.emerald.withOpacity(0.3), width: 1) : null,
+        border: isDone
+            ? Border.all(
+                color: AppColors.emerald.withValues(alpha: 0.3),
+                width: 1,
+              )
+            : Border.all(color: AppColors.adaptiveBorder(context), width: 1),
       ),
       child: Row(
         children: [
@@ -231,12 +267,16 @@ class GamificationPage extends StatelessWidget {
             width: 48,
             height: 48,
             decoration: BoxDecoration(
-              color: isDone ? AppColors.emerald.withOpacity(0.1) : Colors.white.withOpacity(0.5),
+              color: isDone
+                  ? AppColors.emerald.withValues(alpha: 0.1)
+                  : AppColors.adaptiveMutedSurface(context),
               borderRadius: BorderRadius.circular(14),
             ),
             child: Icon(
-              isDone ? Icons.check_circle_rounded : Icons.radio_button_off_rounded,
-              color: isDone ? AppColors.emerald : AppColors.secondaryText,
+              isDone
+                  ? AppIcons.checkCircle
+                  : AppIcons.radioButtonOff,
+              color: isDone ? AppColors.emerald : secondaryTextColor,
             ),
           ),
           const SizedBox(width: 16),
@@ -249,13 +289,13 @@ class GamificationPage extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
-                    color: isDone ? AppColors.secondaryText : AppColors.primaryText,
+                    color: isDone ? secondaryTextColor : textColor,
                     decoration: isDone ? TextDecoration.lineThrough : null,
                   ),
                 ),
                 Text(
                   desc,
-                  style: const TextStyle(fontSize: 12, color: AppColors.secondaryText),
+                  style: TextStyle(fontSize: 12, color: secondaryTextColor),
                 ),
               ],
             ),
@@ -263,13 +303,15 @@ class GamificationPage extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
-              color: const Color(0xFFFEF3C7),
+              color: isDark
+                  ? AppColors.softGold.withValues(alpha: 0.15)
+                  : AppColors.streakBg,
               borderRadius: BorderRadius.circular(8),
             ),
             child: Text(
               '+$reward',
-              style: const TextStyle(
-                color: Color(0xFFD97706),
+              style: TextStyle(
+                color: isDark ? AppColors.softGold : AppColors.amber,
                 fontWeight: FontWeight.bold,
                 fontSize: 12,
               ),
@@ -280,4 +322,3 @@ class GamificationPage extends StatelessWidget {
     );
   }
 }
-

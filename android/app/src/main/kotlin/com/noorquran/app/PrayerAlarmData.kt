@@ -1,6 +1,7 @@
 package com.noorquran.app
 
 import android.content.Intent
+import org.json.JSONObject
 
 data class PrayerAlarmData(
     val id: Int,
@@ -24,7 +25,18 @@ data class PrayerAlarmData(
             putExtra(PrayerAlarmReceiver.EXTRA_SNOOZE_MINUTES, snoozeMinutes)
             putExtra(PrayerAlarmReceiver.EXTRA_ENABLED, enabled)
             putExtra(PrayerAlarmReceiver.EXTRA_BODY, body)
-            putExtra(PrayerAlarmReceiver.EXTRA_PAYLOAD, prayerName)
+            putExtra(
+                PrayerAlarmReceiver.EXTRA_PAYLOAD,
+                JSONObject()
+                    .put("id", id)
+                    .put("prayerName", prayerName)
+                    .put("prayerNameLocalized", prayerNameLocalized)
+                    .put("prayerTime", scheduledTime)
+                    .put("quote", quote)
+                    .put("soundAsset", soundAsset)
+                    .put("snoozeMinutes", snoozeMinutes)
+                    .toString()
+            )
         }
 
     companion object {
@@ -42,7 +54,8 @@ data class PrayerAlarmData(
                 ),
                 quote = intent.getStringExtra(PrayerAlarmReceiver.EXTRA_QUOTE)
                     ?: "Hãy tạm dừng công việc và dành thời gian cho Allah.",
-                soundAsset = intent.getStringExtra(PrayerAlarmReceiver.EXTRA_SOUND_ASSET) ?: "adhan",
+                soundAsset = intent.getStringExtra(PrayerAlarmReceiver.EXTRA_SOUND_ASSET)
+                    ?: "noti_adhan_al_afassi.mp3",
                 snoozeMinutes = intent.getIntExtra(PrayerAlarmReceiver.EXTRA_SNOOZE_MINUTES, 10),
                 enabled = intent.getBooleanExtra(PrayerAlarmReceiver.EXTRA_ENABLED, true),
                 body = intent.getStringExtra(PrayerAlarmReceiver.EXTRA_BODY) ?: "Đã đến giờ cầu nguyện",
@@ -62,7 +75,7 @@ data class PrayerAlarmData(
                     ?: System.currentTimeMillis(),
                 quote = map?.get("quote") as? String
                     ?: "Hãy tạm dừng công việc và dành thời gian cho Allah.",
-                soundAsset = map?.get("soundAsset") as? String ?: "adhan",
+                soundAsset = map?.get("soundAsset") as? String ?: "noti_adhan_al_afassi.mp3",
                 snoozeMinutes = (map?.get("snoozeMinutes") as? Number)?.toInt() ?: 10,
                 enabled = map?.get("enabled") as? Boolean ?: true,
                 body = map?.get("body") as? String ?: "Đã đến giờ $prayerName",

@@ -40,6 +40,12 @@ class PrayerAlarmBridge(
                     PrayerAlarmReceiver.snooze(activity, alarm)
                     result.success(true)
                 }
+                "startAlarmSound" -> {
+                    val alarm = PrayerAlarmData.fromMap(call.arguments as? Map<*, *>)
+                    PrayerAlarmReceiver.createChannel(activity)
+                    PrayerAlarmSoundService.start(activity, alarm)
+                    result.success(true)
+                }
                 "dismissAlarm" -> {
                     val id = call.argument<Int>("id") ?: PrayerAlarmReceiver.DEFAULT_ID
                     (activity as? PrayerAlarmActivity)?.markDismissedByFlutter()
@@ -75,6 +81,10 @@ class PrayerAlarmBridge(
 
     fun dispatchAlarm(payload: String?) {
         channel.invokeMethod("onNativeAlarm", payload)
+    }
+
+    fun dispose() {
+        channel.setMethodCallHandler(null)
     }
 
     private fun canScheduleExactAlarms(): Boolean {

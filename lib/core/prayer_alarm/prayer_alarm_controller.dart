@@ -18,6 +18,8 @@ class PrayerAlarmController extends ChangeNotifier {
 
   bool get isClosing => _isClosing;
 
+  Future<void> startSound() => _service.startAlarmSound(_alarm);
+
   Future<void> dismiss() async {
     if (_isClosing) return;
     _isClosing = true;

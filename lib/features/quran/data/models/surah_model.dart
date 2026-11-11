@@ -8,9 +8,20 @@ class SurahModel extends Surah {
     required super.englishTranslate,
     required super.revelationType,
     required super.numberOfAyahs,
+    super.firstPage,
+    super.lastPage,
+    super.pageCount,
+    super.onJuz,
   });
 
-  factory SurahModel.fromJson(Map<String, dynamic> json, int ayahsCount) {
+  factory SurahModel.fromJson(
+    Map<String, dynamic> json, {
+    required int ayahsCount,
+    int? firstPage,
+    int? lastPage,
+    int pageCount = 0,
+    int? onJuz,
+  }) {
     return SurahModel(
       number: json['number'],
       name: json['name'],
@@ -18,6 +29,10 @@ class SurahModel extends Surah {
       englishTranslate: json['englishTranslate'],
       revelationType: json['revelationType'],
       numberOfAyahs: ayahsCount,
+      firstPage: firstPage,
+      lastPage: lastPage,
+      pageCount: pageCount,
+      onJuz: onJuz,
     );
   }
 }

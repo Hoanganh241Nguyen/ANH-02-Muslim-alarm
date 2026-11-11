@@ -76,7 +76,7 @@ object PrayerAlarmStore {
             prayerNameLocalized = json.optString("prayerNameLocalized", "Giờ cầu nguyện"),
             scheduledTime = json.optLong("scheduledTime", System.currentTimeMillis()),
             quote = json.optString("quote", "Hãy tạm dừng công việc và dành thời gian cho Allah."),
-            soundAsset = json.optString("soundAsset", "adhan"),
+            soundAsset = json.optString("soundAsset", "noti_adhan_al_afassi.mp3"),
             snoozeMinutes = json.optInt("snoozeMinutes", 10),
             enabled = json.optBoolean("enabled", true),
             body = json.optString("body", "Đã đến giờ cầu nguyện"),

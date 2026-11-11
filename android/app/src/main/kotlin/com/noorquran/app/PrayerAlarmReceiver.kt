@@ -38,16 +38,13 @@ class PrayerAlarmReceiver : BroadcastReceiver() {
             Log.w(TAG, "POST_NOTIFICATIONS is not granted; full-screen intent may still open", e)
         }
 
-        try {
-            context.startActivity(activityIntent(context, alarm))
-        } catch (e: Exception) {
-            Log.e(TAG, "Fallback failed to start PrayerAlarmActivity", e)
-        }
+        launchAlarmActivity(context, alarm)
     }
 
     companion object {
-        const val CHANNEL_ID = "prayer_alarm_channel_app_sound_v2"
+        const val CHANNEL_ID = "m27_prayer_alarm_fullscreen_v1"
         const val ACTION_OPEN_ALARM = "com.noorquran.app.action.OPEN_ALARM"
+        const val ACTION_FIRE_ALARM = "com.noorquran.app.action.FIRE_ALARM"
         const val ACTION_DISMISS_ALARM = "com.noorquran.app.action.DISMISS_ALARM"
         const val ACTION_SNOOZE_ALARM = "com.noorquran.app.action.SNOOZE_ALARM"
         const val EXTRA_ID = "extra_id"
@@ -62,6 +59,7 @@ class PrayerAlarmReceiver : BroadcastReceiver() {
         const val EXTRA_SNOOZE_MINUTES = "extra_snooze_minutes"
         const val EXTRA_ENABLED = "extra_enabled"
         const val DEFAULT_ID = 9900
+        private const val SNOOZE_ID_BASE = 5000
         private const val TAG = "PrayerAlarmReceiver"
         private const val REQUEST_OPEN_OFFSET = 10_000
         private const val REQUEST_DISMISS_OFFSET = 20_000
@@ -74,45 +72,43 @@ class PrayerAlarmReceiver : BroadcastReceiver() {
             PrayerAlarmStore.save(context, alarm)
 
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            val openIntent = activityIntent(context, alarm)
-            val operation = PendingIntent.getActivity(
-                context,
-                alarm.id,
-                openIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
-            )
-
+            // The alarm fires this receiver rather than the activity: Android 14+ blocks
+            // activity PendingIntents fired by AlarmManager while the app process is dead
+            // ("Background activity launch blocked"). The receiver may start the sound
+            // service and post the full-screen notification, which opens
+            // PrayerAlarmActivity over the lock screen.
+            val operation = firePendingIntent(context, alarm)
             val showOperation = PendingIntent.getActivity(
                 context,
                 alarm.id + REQUEST_OPEN_OFFSET,
-                openIntent,
+                activityIntent(context, alarm),
                 PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
             )
 
-            Log.d(TAG, "Scheduling direct activity prayer alarm: id=${alarm.id} triggerAt=${alarm.scheduledTime}")
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                alarmManager.setAlarmClock(
-                    AlarmManager.AlarmClockInfo(alarm.scheduledTime, showOperation),
-                    operation,
-                )
-            } else {
-                alarmManager.setExact(AlarmManager.RTC_WAKEUP, alarm.scheduledTime, operation)
-            }
+            // Alarms scheduled by older builds targeted the activity directly; drop them.
+            cancelLegacyActivityAlarms(context, alarm, alarmManager)
 
-            scheduleBroadcastFallback(context, alarm, alarmManager)
+            Log.d(TAG, "Scheduling prayer alarm broadcast: id=${alarm.id} triggerAt=${alarm.scheduledTime}")
+            try {
+                if (canScheduleExactAlarms(alarmManager)) {
+                    alarmManager.setAlarmClock(
+                        AlarmManager.AlarmClockInfo(alarm.scheduledTime, showOperation),
+                        operation,
+                    )
+                } else {
+                    scheduleInexactAlarm(alarmManager, alarm, operation)
+                }
+            } catch (e: SecurityException) {
+                Log.w(TAG, "Exact alarm permission missing; scheduling inexact alarm for id=${alarm.id}", e)
+                scheduleInexactAlarm(alarmManager, alarm, operation)
+            }
         }
 
         fun cancel(context: Context, id: Int) {
             val alarm = PrayerAlarmStore.get(context, id) ?: PrayerAlarmData.fromMap(mapOf("id" to id))
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            val operation = PendingIntent.getActivity(
-                context,
-                id,
-                activityIntent(context, alarm),
-                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
-            )
-            alarmManager.cancel(operation)
-            alarmManager.cancel(fallbackPendingIntent(context, alarm))
+            alarmManager.cancel(firePendingIntent(context, alarm))
+            cancelLegacyActivityAlarms(context, alarm, alarmManager)
             PrayerAlarmStore.delete(context, id)
             NotificationManagerCompat.from(context).cancel(id)
         }
@@ -127,12 +123,19 @@ class PrayerAlarmReceiver : BroadcastReceiver() {
         fun snooze(context: Context, alarm: PrayerAlarmData) {
             dismiss(context, alarm.id)
             val snoozed = alarm.copy(
-                id = alarm.id + 1,
+                id = snoozeId(alarm.id),
                 scheduledTime = System.currentTimeMillis() + alarm.snoozeMinutes * 60_000L,
                 body = "Nhắc lại: đã đến giờ ${alarm.prayerName}",
             )
             schedule(context, snoozed)
         }
+
+        /**
+         * Prayer alarm ids are consecutive (prayer index + day * 10), so `id + 1` would
+         * replace the next prayer's alarm. Snoozes use their own range; a snoozed alarm
+         * keeps its id when snoozed again. Must match PrayerAlarmService.snoozeIdFor.
+         */
+        fun snoozeId(id: Int): Int = if (id >= SNOOZE_ID_BASE) id else SNOOZE_ID_BASE + id
 
         fun createChannel(context: Context) {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
@@ -204,40 +207,75 @@ class PrayerAlarmReceiver : BroadcastReceiver() {
                 alarm.putInto(this)
             }
 
-        private fun scheduleBroadcastFallback(
-            context: Context,
-            alarm: PrayerAlarmData,
-            alarmManager: AlarmManager,
-        ) {
-            val fallback = fallbackPendingIntent(context, alarm)
-            val fallbackAt = alarm.scheduledTime + 2_000L
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S || alarmManager.canScheduleExactAlarms()) {
-                    alarmManager.setExactAndAllowWhileIdle(
-                        AlarmManager.RTC_WAKEUP,
-                        fallbackAt,
-                        fallback,
-                    )
-                } else {
-                    alarmManager.setAndAllowWhileIdle(
-                        AlarmManager.RTC_WAKEUP,
-                        fallbackAt,
-                        fallback,
-                    )
-                }
-            } else {
-                alarmManager.setExact(AlarmManager.RTC_WAKEUP, fallbackAt, fallback)
-            }
-        }
-
-        private fun fallbackPendingIntent(context: Context, alarm: PrayerAlarmData): PendingIntent =
+        private fun firePendingIntent(context: Context, alarm: PrayerAlarmData): PendingIntent =
             PendingIntent.getBroadcast(
                 context,
-                alarm.id + REQUEST_FALLBACK_OFFSET,
+                alarm.id,
                 Intent(context, PrayerAlarmReceiver::class.java).apply {
+                    action = ACTION_FIRE_ALARM
                     alarm.putInto(this)
                 },
                 PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
             )
+
+        private fun cancelLegacyActivityAlarms(
+            context: Context,
+            alarm: PrayerAlarmData,
+            alarmManager: AlarmManager,
+        ) {
+            listOf(alarm.id, alarm.id + REQUEST_FALLBACK_OFFSET).forEach { requestCode ->
+                PendingIntent.getActivity(
+                    context,
+                    requestCode,
+                    activityIntent(context, alarm),
+                    PendingIntent.FLAG_NO_CREATE or PendingIntent.FLAG_IMMUTABLE,
+                )?.let {
+                    alarmManager.cancel(it)
+                    it.cancel()
+                }
+            }
+        }
+
+        private fun launchAlarmActivity(context: Context, alarm: PrayerAlarmData) {
+            val openPendingIntent = PendingIntent.getActivity(
+                context,
+                alarm.id + REQUEST_OPEN_OFFSET,
+                activityIntent(context, alarm),
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+            )
+            try {
+                openPendingIntent.send()
+            } catch (e: PendingIntent.CanceledException) {
+                Log.w(TAG, "PendingIntent failed to open PrayerAlarmActivity; trying direct start", e)
+                try {
+                    context.startActivity(activityIntent(context, alarm))
+                } catch (startError: Exception) {
+                    Log.e(TAG, "Fallback failed to start PrayerAlarmActivity", startError)
+                }
+            }
+        }
+
+        private fun canScheduleExactAlarms(alarmManager: AlarmManager): Boolean =
+            Build.VERSION.SDK_INT < Build.VERSION_CODES.S || alarmManager.canScheduleExactAlarms()
+
+        private fun scheduleInexactAlarm(
+            alarmManager: AlarmManager,
+            alarm: PrayerAlarmData,
+            operation: PendingIntent,
+        ) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                alarmManager.setAndAllowWhileIdle(
+                    AlarmManager.RTC_WAKEUP,
+                    alarm.scheduledTime,
+                    operation,
+                )
+            } else {
+                alarmManager.set(
+                    AlarmManager.RTC_WAKEUP,
+                    alarm.scheduledTime,
+                    operation,
+                )
+            }
+        }
     }
 }

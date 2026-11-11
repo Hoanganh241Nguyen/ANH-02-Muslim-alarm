@@ -17,9 +17,10 @@ class PrayerAlarmStorage {
 
   Future<List<PrayerAlarmModel>> loadAll() async {
     final file = await _file();
-    if (!await file.exists()) return const [];
+    // Growable lists: save() and delete() modify the result.
+    if (!await file.exists()) return [];
     final raw = await file.readAsString();
-    if (raw.trim().isEmpty) return const [];
+    if (raw.trim().isEmpty) return [];
     final items = jsonDecode(raw) as List<dynamic>;
     return items
         .whereType<Map<String, dynamic>>()

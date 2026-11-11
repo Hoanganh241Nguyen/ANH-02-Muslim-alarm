@@ -24,6 +24,7 @@ class PrayerAlarmActivity : FlutterActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         openAlarm(intent)
+        flutterEngine?.navigationChannel?.pushRoute(getInitialRoute())
         alarmBridge?.dispatchAlarm(intent.getStringExtra(PrayerAlarmReceiver.EXTRA_PAYLOAD))
     }
 

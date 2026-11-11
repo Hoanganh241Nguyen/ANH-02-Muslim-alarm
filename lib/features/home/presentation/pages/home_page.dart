@@ -1,154 +1,45 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import '../../../../core/constants/app_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import '../../../../core/constants/app_colors.dart';
+import '../../../../core/services/analytics_service.dart';
+import '../../../../core/theme/app_typography.dart';
 import '../../../gamification/presentation/providers/gamification_provider.dart';
-import '../../../../core/services/notification_service.dart';
 import '../../../../core/services/battery_service.dart';
-import '../pages/prayer_alarm_page.dart';
+import '../../../../core/widgets/app_settings_button.dart';
+import '../../../../core/widgets/base_app_bar.dart';
+import '../../../../language/generated/app_localizations.dart';
 import '../providers/prayer_time_provider.dart';
 import '../widgets/prayer_card.dart';
 
+part 'home_page_parts/home_battery_dialog.dart';
+part 'home_page_parts/home_sections.dart';
+
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({super.key}); 
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  Timer? _testAlarmTimer;
-  int _testAlarmRemainingSeconds = 0;
-
   @override
   void initState() {
     super.initState();
+    AnalyticsService().trackScreenView('home_page_widget', source: 'page_init');
     _checkBatteryOptimization();
   }
 
-  @override
-  void dispose() {
-    _testAlarmTimer?.cancel();
-    super.dispose();
-  }
-
   Future<void> _checkBatteryOptimization() async {
-    bool isIgnored = await BatteryService.isBatteryOptimizationIgnored();
-    if (!isIgnored && mounted) {
+    final shouldShow = await BatteryService.shouldShowPrompt();
+    await Future<void>.delayed(const Duration(milliseconds: 350));
+    if (shouldShow && mounted && ModalRoute.of(context)?.isCurrent == true) {
+      unawaited(BatteryService.snoozePrompt());
       _showBatteryOptimizationDialog();
-    }
-  }
-
-  void _showBatteryOptimizationDialog() {
-    showDialog(
-      context: context,
-      builder:
-          (context) => AlertDialog(
-            title: const Text('Optimize Adhan Performance'),
-            content: const Text(
-              'To ensure the prayer calls (Adhan) work reliably even when the app is closed, please perform the following steps:\n\n'
-              '1. Disable Battery Optimization\n'
-              '2. Enable Auto-start (especially for Xiaomi, Oppo, Vivo, Huawei devices)',
-            ),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: const Text('LATER'),
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  ElevatedButton(
-                    onPressed: () async {
-                      await BatteryService.requestIgnoreBatteryOptimizations();
-                      if (mounted) Navigator.pop(context);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.emerald,
-                    ),
-                    child: const Text(
-                      '1. DISABLE OPTIMIZATION',
-                      style: TextStyle(color: Colors.white, fontSize: 12),
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  ElevatedButton(
-                    onPressed: () async {
-                      await BatteryService.openAutostartSettings();
-                      if (mounted) Navigator.pop(context);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.emerald,
-                    ),
-                    child: const Text(
-                      '2. OPEN AUTO-START',
-                      style: TextStyle(color: Colors.white, fontSize: 12),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-    );
-  }
-
-  Future<void> _scheduleTestPrayerAlarm() async {
-    _testAlarmTimer?.cancel();
-    await NotificationService().requestPermissions(includeAlarmSettings: true);
-
-    const countdownSeconds = 20;
-    final scheduledDate = DateTime.now().add(
-      const Duration(seconds: countdownSeconds),
-    );
-
-    setState(() {
-      _testAlarmRemainingSeconds = countdownSeconds;
-    });
-
-    _testAlarmTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (!mounted) {
-        timer.cancel();
-        return;
-      }
-
-      setState(() {
-        _testAlarmRemainingSeconds--;
-      });
-
-      if (_testAlarmRemainingSeconds <= 0) {
-        timer.cancel();
-      }
-    });
-
-    try {
-      await NotificationService().scheduleNotification(
-        id: 9900,
-        title: 'Thời gian cầu nguyện',
-        body: 'Test: đã đến giờ Fajr',
-        scheduledDate: scheduledDate,
-        payload: 'Fajr',
-      );
-
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text(
-            'Test alarm đã đặt sau 20 giây. Có thể tắt màn hình để thử.',
-          ),
-        ),
-      );
-    } catch (e) {
-      _testAlarmTimer?.cancel();
-      if (!mounted) return;
-      setState(() {
-        _testAlarmRemainingSeconds = 0;
-      });
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Không đặt được test alarm: $e')));
     }
   }
 
@@ -161,316 +52,39 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.transparent,
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: 10),
-              _buildHeader(context, prayerProvider, gamificationProvider),
-              const SizedBox(height: 20),
-              _buildMainBanner(prayerProvider),
-              const SizedBox(height: 25),
-
-              _buildScheduleHeader(),
-              const SizedBox(height: 15),
-              ...prayerProvider.prayerTimes.map(
-                (prayer) => PrayerCard(prayer: prayer),
-              ),
-              const SizedBox(height: 30),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildHeader(
-    BuildContext context,
-    PrayerTimeProvider prayerProvider,
-    GamificationProvider gamificationProvider,
-  ) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text(
-              'Sakina',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF1E3A34),
-                fontFamily: 'Serif',
-              ),
-            ),
-            const Spacer(),
-            IconButton(
-              tooltip: 'Settings',
-              onPressed: () {
-                showModalBottomSheet(
-                  context: context,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-                  ),
-                  builder: (context) => _buildSettingsSheet(context),
-                );
-              },
-              icon: const Icon(
-                Icons.settings_outlined,
-                color: Color(0xFF1E3A34),
-                size: 20,
-              ),
-              padding: EdgeInsets.zero,
-              constraints: const BoxConstraints(),
-            ),
-          ],
-        ),
-        const SizedBox(height: 12),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 2),
-              child: Icon(
-                Icons.location_on_outlined,
-                color: AppColors.emerald,
-                size: 16,
-              ),
-            ),
-            const SizedBox(width: 4),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Text(
-                    'Location',
-                    style: TextStyle(
-                      fontSize: 10,
-                      color: AppColors.secondaryText,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 10),
+                _buildHeader(context, prayerProvider, gamificationProvider),
+                const SizedBox(height: 20),
+                _buildMainBanner(prayerProvider),
+                const SizedBox(height: 25),
+                _buildScheduleHeader(),
+                const SizedBox(height: 15),
+                if (prayerProvider.prayerTimes.isEmpty &&
+                    prayerProvider.isLoading)
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 28),
+                    child: Center(
+                      child: CircularProgressIndicator(
+                        color: AppColors.emerald
+                      ),
                     ),
+                  )
+                else if (prayerProvider.prayerTimes.isEmpty)
+                  _buildPrayerTimesEmptyState(context)
+                else
+                  ...prayerProvider.prayerTimes.map(
+                    (prayer) => PrayerCard(prayer: prayer),
                   ),
-                  Text(
-                    prayerProvider.currentAddress,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.primaryText,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(width: 16),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-              decoration: BoxDecoration(
-                color: AppColors.streakBg,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(
-                    Icons.local_fire_department,
-                    color: AppColors.gold,
-                    size: 14,
-                  ),
-                  const SizedBox(width: 4),
-                  Text(
-                    '${gamificationProvider.stats?.streakCount ?? 0} Days',
-                    style: const TextStyle(
-                      fontSize: 11,
-                      fontWeight: FontWeight.bold,
-                      color: AppColors.gold,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget _buildMainBanner(PrayerTimeProvider provider) {
-    final nextPrayerName =
-        provider.nextPrayer?.name.toUpperCase() ?? 'NEXT PRAYER';
-
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(24),
-      decoration: BoxDecoration(
-        image: const DecorationImage(
-          image: AssetImage('assets/images/img_home_widget.png'),
-          fit: BoxFit.cover,
-        ),
-        borderRadius: BorderRadius.circular(32),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.emerald.withValues(alpha: 0.3),
-            blurRadius: 20,
-            offset: const Offset(0, 10),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 10,
-              vertical: 4,
-            ),
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.2),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Text(
-              'UPCOMING: $nextPrayerName',
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 10,
-                fontWeight: FontWeight.w800,
-                letterSpacing: 1,
-              ),
-            ),
-          ),
-          const SizedBox(height: 16),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.baseline,
-            textBaseline: TextBaseline.alphabetic,
-            children: [
-              Text(
-                provider.timeRemainingString,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 52,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: -1,
-                ),
-              ),
-              const SizedBox(width: 8),
-              Text(
-                'left',
-                style: TextStyle(
-                  color: Colors.white.withValues(alpha: 0.7),
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 24),
-          Row(
-            children: [
-              const Icon(
-                Icons.wb_sunny_outlined,
-                color: Colors.white70,
-                size: 16,
-              ),
-              const SizedBox(width: 8),
-              const Text(
-                '28°C - Clear Sky',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 13,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              const Spacer(),
-              Icon(
-                Icons.arrow_forward_ios_rounded,
-                color: Colors.white70,
-                size: 14,
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildScheduleHeader() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const Text(
-          'Prayer Schedule',
-          style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-            color: AppColors.primaryText,
-            letterSpacing: -0.5,
-          ),
-        ),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.5),
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.white24, width: 1),
-          ),
-          child: Text(
-            DateFormat('MMM dd, yyyy').format(DateTime.now()),
-            style: const TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w600,
-              color: AppColors.secondaryText,
+                const SizedBox(height: 30),
+              ],
             ),
           ),
         ),
-      ],
-    );
-  }
-
-  Widget _buildSettingsSheet(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(24),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            'Cài đặt',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: AppColors.primaryText,
-            ),
-          ),
-          const SizedBox(height: 24),
-          ListTile(
-            leading: const Icon(Icons.notifications_active_outlined, color: AppColors.emerald),
-            title: const Text('Quyền thông báo & Báo thức'),
-            subtitle: const Text('Đảm bảo báo thức hoạt động chính xác'),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () {
-              Navigator.pop(context);
-              NotificationService().requestPermissions(includeAlarmSettings: true);
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.battery_saver_outlined, color: Colors.orange),
-            title: const Text('Tối ưu pin'),
-            subtitle: const Text('Tắt tối ưu để không bị lỡ giờ cầu nguyện'),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () {
-              Navigator.pop(context);
-              _showBatteryOptimizationDialog();
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.info_outline, color: Colors.blue),
-            title: const Text('Phiên bản'),
-            subtitle: const Text('1.0.0'),
-          ),
-          const SizedBox(height: 16),
-        ],
       ),
     );
   }

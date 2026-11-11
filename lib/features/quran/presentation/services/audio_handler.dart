@@ -1,4 +1,5 @@
 import 'package:audio_service/audio_service.dart';
+import 'package:flutter/foundation.dart';
 import 'package:just_audio/just_audio.dart';
 
 class QuranAudioHandler extends BaseAudioHandler with SeekHandler {
@@ -43,7 +44,7 @@ class QuranAudioHandler extends BaseAudioHandler with SeekHandler {
     
     // KHÔNG await ở đây để UI không bị block bởi network
     _player.setAudioSource(_playlist, preload: true).catchError((e) {
-      print("Preload error: $e");
+      debugPrint("Preload error: $e");
       return null;
     });
   }
