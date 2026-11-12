@@ -24,7 +24,10 @@ class PrayerAlarmController extends ChangeNotifier {
     if (_isClosing) return;
     _isClosing = true;
     notifyListeners();
-    await _service.dismissPrayerAlarm(_alarm.id);
+    await _service.dismissPrayerAlarm(
+      _alarm.id,
+      scheduledTime: _alarm.scheduledTime,
+    );
     await _service.closeAlarmActivity();
   }
 

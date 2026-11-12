@@ -1,10 +1,12 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/home/domain/entities/prayer_time.dart';
 import '../../features/home/presentation/pages/prayer_alarm_page.dart';
 import '../prayer_alarm/prayer_alarm_model.dart';
+import '../prayer_alarm/prayer_alarm_schedule_policy.dart';
 import 'analytics_service.dart';
 
 class InAppPrayerScheduler {
@@ -22,9 +24,15 @@ class InAppPrayerScheduler {
 
   void schedule(List<PrayerTime> prayerTimes) {
     cancelAll();
+    // On Android the native AlarmManager alarm already rings the athan and
+    // opens PrayerAlarmActivity, even with the app in the foreground. A second
+    // Dart timer here pushed another alarm screen that restarted the athan
+    // after the user stopped it (Dart timers do not count deep-sleep time, so
+    // they fire late, after the native alarm was already handled).
+    if (defaultTargetPlatform == TargetPlatform.android) return;
     final now = DateTime.now();
     for (final prayer in prayerTimes) {
-      if (!prayer.time.isAfter(now)) continue;
+      if (!PrayerAlarmSchedulePolicy.isSchedulable(prayer.time, now)) continue;
       _timers.add(
         Timer(prayer.time.difference(now), () => _showPrayerAlarm(prayer)),
       );

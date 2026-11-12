@@ -6,6 +6,7 @@ import 'package:adhan/adhan.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import '../../../../core/location/device_location_info.dart';
 import '../../../../core/location/prayer_calculation.dart';
+import '../../../../core/prayer_alarm/prayer_alarm_schedule_policy.dart';
 import '../../../../core/services/in_app_prayer_scheduler.dart';
 import '../../../../core/services/notification_service.dart';
 import '../../../onboarding/presentation/pages/onboarding_gate.dart';
@@ -430,7 +431,10 @@ class PrayerTimeProvider extends ChangeNotifier with WidgetsBindingObserver {
       final dailyPrayers = _convertToList(prayerTimesData);
 
       for (var prayer in dailyPrayers) {
-        if (prayer.time.isAfter(DateTime.now())) {
+        if (PrayerAlarmSchedulePolicy.isSchedulable(
+          prayer.time,
+          DateTime.now(),
+        )) {
           await notificationService.scheduleNotification(
             id: prayer.type.index + (i * 10),
             // Unique ID cho mỗi ngày

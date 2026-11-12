@@ -30,9 +30,11 @@ class MainActivity : AudioServiceActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         captureAlarmPayload(intent)
-        initialAlarmPayload?.let { payload ->
-            alarmBridge?.dispatchAlarm(payload)
-        }
+        // Only forward an alarm carried by THIS intent: re-dispatching an old payload on
+        // every launcher tap reopened the alarm screen (and its athan) after it was stopped.
+        intent.getStringExtra(PrayerAlarmReceiver.EXTRA_PAYLOAD)
+            ?.takeIf { it.isNotBlank() }
+            ?.let { payload -> alarmBridge?.dispatchAlarm(payload) }
     }
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
