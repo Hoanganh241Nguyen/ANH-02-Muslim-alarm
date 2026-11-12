@@ -42,14 +42,21 @@ class PrayerAlarmBridge(
                 }
                 "startAlarmSound" -> {
                     val alarm = PrayerAlarmData.fromMap(call.arguments as? Map<*, *>)
-                    PrayerAlarmReceiver.createChannel(activity)
-                    PrayerAlarmSoundService.start(activity, alarm)
-                    result.success(true)
+                    // A Dart alarm screen built after the user pressed "Tắt" (late engine
+                    // start, route rebuilt, in-app timer) must not bring the athan back.
+                    if (PrayerAlarmReceiver.canRing(activity, alarm)) {
+                        PrayerAlarmReceiver.createChannel(activity)
+                        PrayerAlarmSoundService.start(activity, alarm)
+                        result.success(true)
+                    } else {
+                        result.success(false)
+                    }
                 }
                 "dismissAlarm" -> {
                     val id = call.argument<Int>("id") ?: PrayerAlarmReceiver.DEFAULT_ID
+                    val scheduledTime = call.argument<Number>("scheduledTime")?.toLong() ?: 0L
                     (activity as? PrayerAlarmActivity)?.markDismissedByFlutter()
-                    PrayerAlarmReceiver.dismiss(activity, id)
+                    PrayerAlarmReceiver.dismiss(activity, id, scheduledTime)
                     result.success(true)
                 }
                 "closeAlarmActivity" -> {

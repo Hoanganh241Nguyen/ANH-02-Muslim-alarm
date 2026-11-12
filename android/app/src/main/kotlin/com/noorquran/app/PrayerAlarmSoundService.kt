@@ -25,7 +25,17 @@ class PrayerAlarmSoundService : Service() {
     private var audioManager: AudioManager? = null
     private var audioFocusRequest: AudioFocusRequest? = null
     private val handler = Handler(Looper.getMainLooper())
-    private val timeoutRunnable = Runnable { stopSelf() }
+    private var playingAlarm: PrayerAlarmData? = null
+
+    // Auto-stop after MAX_ALARM_DURATION_MS counts as the user stopping it, so a recreated
+    // alarm screen cannot start the same athan again.
+    private val timeoutRunnable = Runnable {
+        val alarm = playingAlarm
+        if (alarm != null) {
+            PrayerAlarmReceiver.dismiss(this, alarm.id, alarm.scheduledTime)
+        }
+        stopSelf()
+    }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (intent == null) {
@@ -42,6 +52,13 @@ class PrayerAlarmSoundService : Service() {
         PrayerAlarmReceiver.createChannel(this)
         if (!startAlarmForeground(alarm)) {
             stopSelf(startId)
+            return START_NOT_STICKY
+        }
+        if (mediaPlayer == null && PrayerAlarmStore.isHandled(this, alarm.scheduledTime)) {
+            // Stopped while this start request was in flight: startForeground() above
+            // satisfied startForegroundService(); now go away without playing.
+            Log.d(TAG, "Not playing prayer alarm that was already stopped: id=${alarm.id}")
+            stopSelf()
             return START_NOT_STICKY
         }
         startAudio(alarm)
@@ -73,6 +90,8 @@ class PrayerAlarmSoundService : Service() {
 
     override fun onDestroy() {
         handler.removeCallbacks(timeoutRunnable)
+        playingAlarm = null
+        PrayerAlarmStore.setPlaying(this, null)
         stopAudio()
         stopVibration()
         super.onDestroy()
@@ -82,6 +101,8 @@ class PrayerAlarmSoundService : Service() {
 
     private fun startAudio(alarm: PrayerAlarmData) {
         if (mediaPlayer != null) return
+        playingAlarm = alarm
+        PrayerAlarmStore.setPlaying(this, alarm)
         audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
 
         val focusGranted = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -256,6 +277,10 @@ class PrayerAlarmSoundService : Service() {
         private const val MAX_ALARM_DURATION_MS = 10 * 60 * 1000L
 
         fun start(context: Context, alarm: PrayerAlarmData) {
+            if (PrayerAlarmStore.isHandled(context, alarm.scheduledTime)) {
+                Log.d(TAG, "Prayer alarm id=${alarm.id} was already stopped; not starting sound")
+                return
+            }
             val intent = Intent(context, PrayerAlarmSoundService::class.java).also { alarm.putInto(it) }
             try {
                 ContextCompat.startForegroundService(context, intent)

@@ -41,6 +41,7 @@
         </activity>
         <activity
             android:name=".PrayerAlarmActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:excludeFromRecents="true"
             android:exported="true"
             android:launchMode="singleTask"

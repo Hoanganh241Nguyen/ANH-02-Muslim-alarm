@@ -38,9 +38,13 @@ class PrayerAlarmMethodChannel {
     await _channel.invokeMethod<bool>('startAlarmSound', alarm.toJson());
   }
 
-  Future<void> dismiss(int id) async {
+  Future<void> dismiss(int id, {DateTime? scheduledTime}) async {
     if (defaultTargetPlatform != TargetPlatform.android) return;
-    await _channel.invokeMethod<bool>('dismissAlarm', {'id': id});
+    await _channel.invokeMethod<bool>('dismissAlarm', {
+      'id': id,
+      if (scheduledTime != null)
+        'scheduledTime': scheduledTime.millisecondsSinceEpoch,
+    });
   }
 
   Future<void> closeAlarmActivity() async {

@@ -2,6 +2,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 import 'prayer_alarm_method_channel.dart';
 import 'prayer_alarm_model.dart';
+import 'prayer_alarm_schedule_policy.dart';
 import 'prayer_alarm_storage.dart';
 
 class PrayerAlarmService {
@@ -27,7 +28,10 @@ class PrayerAlarmService {
     bool enabled = true,
     String? body,
   }) async {
-    if (scheduledTime.isBefore(DateTime.now()) || !enabled) return;
+    if (!enabled ||
+        !PrayerAlarmSchedulePolicy.isSchedulable(scheduledTime, DateTime.now())) {
+      return;
+    }
     final alarm = PrayerAlarmModel(
       id: id,
       prayerName: prayerName,
@@ -76,7 +80,10 @@ class PrayerAlarmService {
     return _methodChannel.startSound(alarm);
   }
 
-  Future<void> dismissPrayerAlarm(int id) => _methodChannel.dismiss(id);
+  /// Stops the athan for [id] everywhere and remembers it as handled natively,
+  /// so no screen, rescheduling or duplicate alarm can start it again.
+  Future<void> dismissPrayerAlarm(int id, {DateTime? scheduledTime}) =>
+      _methodChannel.dismiss(id, scheduledTime: scheduledTime);
 
   Future<void> closeAlarmActivity() => _methodChannel.closeAlarmActivity();
 

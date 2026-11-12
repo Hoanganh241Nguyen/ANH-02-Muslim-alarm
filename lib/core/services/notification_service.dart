@@ -8,6 +8,7 @@ import 'package:timezone/data/latest.dart' as tz;
 import '../constants/app_colors.dart';
 import 'analytics_service.dart';
 import '../prayer_alarm/prayer_alarm_model.dart';
+import '../prayer_alarm/prayer_alarm_schedule_policy.dart';
 
 class NotificationService {
   static final NotificationService _instance = NotificationService._internal();
@@ -208,7 +209,12 @@ class NotificationService {
       await init((_) {});
     }
 
-    if (scheduledDate.isBefore(DateTime.now())) return;
+    if (!PrayerAlarmSchedulePolicy.isSchedulable(
+      scheduledDate,
+      DateTime.now(),
+    )) {
+      return;
+    }
 
     final prayerName = payload ?? title;
     final soundAsset = _soundAssetForPrayer();
